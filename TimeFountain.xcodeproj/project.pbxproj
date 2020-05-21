@@ -16,16 +16,46 @@
 		7536E2B92470206B0002BB65 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7536E2B72470206B0002BB65 /* LaunchScreen.storyboard */; };
 		7536E2C42470206B0002BB65 /* TimeFountainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7536E2C32470206B0002BB65 /* TimeFountainTests.swift */; };
 		7536E2CF2470206B0002BB65 /* TimeFountainUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7536E2CE2470206B0002BB65 /* TimeFountainUITests.swift */; };
-		75A5802724764C14000D976C /* MetaData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A5802624764C14000D976C /* MetaData.swift */; };
-		75A5802924764C74000D976C /* CancelTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A5802824764C74000D976C /* CancelTime.swift */; };
-		75A5802B24764C9B000D976C /* ChildOrderStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A5802A24764C9B000D976C /* ChildOrderStrategy.swift */; };
-		75A5802D24764CC6000D976C /* OrderLegCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A5802C24764CC6000D976C /* OrderLegCollection.swift */; };
 		75A5803224764E12000D976C /* Instrument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A5803124764E12000D976C /* Instrument.swift */; };
 		75A5803524764EAF000D976C /* FixedIncome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A5803424764EAF000D976C /* FixedIncome.swift */; };
 		75A5803724764EE4000D976C /* MutualFund.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A5803624764EE4000D976C /* MutualFund.swift */; };
 		75A5803924764EFA000D976C /* CashEquivalent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A5803824764EFA000D976C /* CashEquivalent.swift */; };
 		75A5803B24764F39000D976C /* Option.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A5803A24764F39000D976C /* Option.swift */; };
 		75A5803D24764F5A000D976C /* Execution.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A5803C24764F5A000D976C /* Execution.swift */; };
+		75A580402476512E000D976C /* OrderGet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A5803F2476512E000D976C /* OrderGet.swift */; };
+		75A580422476515E000D976C /* CancelTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A580412476515E000D976C /* CancelTime.swift */; };
+		75A580442476517B000D976C /* ChildOrderStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A580432476517B000D976C /* ChildOrderStrategy.swift */; };
+		75A5804624765193000D976C /* OrderLegCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A5804524765193000D976C /* OrderLegCollection.swift */; };
+		75A5804824765237000D976C /* EndPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A5804724765237000D976C /* EndPoints.swift */; };
+		75A5804A247653DC000D976C /* CandleList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A58049247653DC000D976C /* CandleList.swift */; };
+		75A5804C247653FF000D976C /* Candle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A5804B247653FF000D976C /* Candle.swift */; };
+		75A58050247654D5000D976C /* Bond.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A5804F247654D5000D976C /* Bond.swift */; };
+		75A58052247654F9000D976C /* FundamentalData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A58051247654F9000D976C /* FundamentalData.swift */; };
+		75A5805424765544000D976C /* Fundamental.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A5805324765544000D976C /* Fundamental.swift */; };
+		75A580562476555A000D976C /* FundamentalClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A580552476555A000D976C /* FundamentalClass.swift */; };
+		75A58058247655A3000D976C /* InstrumentDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A58057247655A3000D976C /* InstrumentDetails.swift */; };
+		75A5805A247656A8000D976C /* Mover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A58059247656A8000D976C /* Mover.swift */; };
+		75A5805E247657B5000D976C /* OptionChain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A5805D247657B5000D976C /* OptionChain.swift */; };
+		75A58060247657CD000D976C /* Underlying.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A5805F247657CD000D976C /* Underlying.swift */; };
+		75A580622476582A000D976C /* Option.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A580612476582A000D976C /* Option.swift */; };
+		75A5806424765854000D976C /* OptionDeliverableList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A5806324765854000D976C /* OptionDeliverableList.swift */; };
+		75A58066247658EA000D976C /* ExpirationDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A58065247658EA000D976C /* ExpirationDate.swift */; };
+		75A58068247658FF000D976C /* OptionDeliverables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A58067247658FF000D976C /* OptionDeliverables.swift */; };
+		75A5806D247659C4000D976C /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A5806C247659C4000D976C /* Account.swift */; };
+		75A5806F247659E3000D976C /* MarginAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A5806E247659E3000D976C /* MarginAccount.swift */; };
+		75A58071247659FE000D976C /* Balances.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A58070247659FE000D976C /* Balances.swift */; };
+		75A5807324765A13000D976C /* InitialBalances.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A5807224765A13000D976C /* InitialBalances.swift */; };
+		75A5807524765A26000D976C /* OrderStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A5807424765A26000D976C /* OrderStrategy.swift */; };
+		75A5807924765BC5000D976C /* Hours.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A5807824765BC5000D976C /* Hours.swift */; };
+		75A5807B24765C21000D976C /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A5807A24765C21000D976C /* Token.swift */; };
+		75A5807E24765D18000D976C /* QuoteMutualFund.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A5807D24765D18000D976C /* QuoteMutualFund.swift */; };
+		75A5808024765D41000D976C /* QuoteFuture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A5807F24765D41000D976C /* QuoteFuture.swift */; };
+		75A5808224765D61000D976C /* QuoteFutureOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A5808124765D61000D976C /* QuoteFutureOption.swift */; };
+		75A5808424765D8C000D976C /* QuoteIndex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A5808324765D8C000D976C /* QuoteIndex.swift */; };
+		75A5808624765DB8000D976C /* QuoteOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A5808524765DB8000D976C /* QuoteOption.swift */; };
+		75A5808824765DDA000D976C /* QuoteForex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A5808724765DDA000D976C /* QuoteForex.swift */; };
+		75A5808A24765DF4000D976C /* ETF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A5808924765DF4000D976C /* ETF.swift */; };
+		75A5808C24765E28000D976C /* QuoteEquity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A5808B24765E28000D976C /* QuoteEquity.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,16 +91,46 @@
 		7536E2CA2470206B0002BB65 /* TimeFountainUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TimeFountainUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7536E2CE2470206B0002BB65 /* TimeFountainUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeFountainUITests.swift; sourceTree = "<group>"; };
 		7536E2D02470206B0002BB65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		75A5802624764C14000D976C /* MetaData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetaData.swift; sourceTree = "<group>"; };
-		75A5802824764C74000D976C /* CancelTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelTime.swift; sourceTree = "<group>"; };
-		75A5802A24764C9B000D976C /* ChildOrderStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildOrderStrategy.swift; sourceTree = "<group>"; };
-		75A5802C24764CC6000D976C /* OrderLegCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderLegCollection.swift; sourceTree = "<group>"; };
 		75A5803124764E12000D976C /* Instrument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Instrument.swift; sourceTree = "<group>"; };
 		75A5803424764EAF000D976C /* FixedIncome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixedIncome.swift; sourceTree = "<group>"; };
 		75A5803624764EE4000D976C /* MutualFund.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MutualFund.swift; sourceTree = "<group>"; };
 		75A5803824764EFA000D976C /* CashEquivalent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CashEquivalent.swift; sourceTree = "<group>"; };
 		75A5803A24764F39000D976C /* Option.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Option.swift; sourceTree = "<group>"; };
 		75A5803C24764F5A000D976C /* Execution.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Execution.swift; sourceTree = "<group>"; };
+		75A5803F2476512E000D976C /* OrderGet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderGet.swift; sourceTree = "<group>"; };
+		75A580412476515E000D976C /* CancelTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelTime.swift; sourceTree = "<group>"; };
+		75A580432476517B000D976C /* ChildOrderStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildOrderStrategy.swift; sourceTree = "<group>"; };
+		75A5804524765193000D976C /* OrderLegCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderLegCollection.swift; sourceTree = "<group>"; };
+		75A5804724765237000D976C /* EndPoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoints.swift; sourceTree = "<group>"; };
+		75A58049247653DC000D976C /* CandleList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandleList.swift; sourceTree = "<group>"; };
+		75A5804B247653FF000D976C /* Candle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Candle.swift; sourceTree = "<group>"; };
+		75A5804F247654D5000D976C /* Bond.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bond.swift; sourceTree = "<group>"; };
+		75A58051247654F9000D976C /* FundamentalData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundamentalData.swift; sourceTree = "<group>"; };
+		75A5805324765544000D976C /* Fundamental.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fundamental.swift; sourceTree = "<group>"; };
+		75A580552476555A000D976C /* FundamentalClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundamentalClass.swift; sourceTree = "<group>"; };
+		75A58057247655A3000D976C /* InstrumentDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstrumentDetails.swift; sourceTree = "<group>"; };
+		75A58059247656A8000D976C /* Mover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mover.swift; sourceTree = "<group>"; };
+		75A5805D247657B5000D976C /* OptionChain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionChain.swift; sourceTree = "<group>"; };
+		75A5805F247657CD000D976C /* Underlying.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Underlying.swift; sourceTree = "<group>"; };
+		75A580612476582A000D976C /* Option.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Option.swift; sourceTree = "<group>"; };
+		75A5806324765854000D976C /* OptionDeliverableList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionDeliverableList.swift; sourceTree = "<group>"; };
+		75A58065247658EA000D976C /* ExpirationDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpirationDate.swift; sourceTree = "<group>"; };
+		75A58067247658FF000D976C /* OptionDeliverables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionDeliverables.swift; sourceTree = "<group>"; };
+		75A5806C247659C4000D976C /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
+		75A5806E247659E3000D976C /* MarginAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarginAccount.swift; sourceTree = "<group>"; };
+		75A58070247659FE000D976C /* Balances.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Balances.swift; sourceTree = "<group>"; };
+		75A5807224765A13000D976C /* InitialBalances.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialBalances.swift; sourceTree = "<group>"; };
+		75A5807424765A26000D976C /* OrderStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderStrategy.swift; sourceTree = "<group>"; };
+		75A5807824765BC5000D976C /* Hours.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hours.swift; sourceTree = "<group>"; };
+		75A5807A24765C21000D976C /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
+		75A5807D24765D18000D976C /* QuoteMutualFund.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteMutualFund.swift; sourceTree = "<group>"; };
+		75A5807F24765D41000D976C /* QuoteFuture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteFuture.swift; sourceTree = "<group>"; };
+		75A5808124765D61000D976C /* QuoteFutureOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteFutureOption.swift; sourceTree = "<group>"; };
+		75A5808324765D8C000D976C /* QuoteIndex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteIndex.swift; sourceTree = "<group>"; };
+		75A5808524765DB8000D976C /* QuoteOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteOption.swift; sourceTree = "<group>"; };
+		75A5808724765DDA000D976C /* QuoteForex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteForex.swift; sourceTree = "<group>"; };
+		75A5808924765DF4000D976C /* ETF.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETF.swift; sourceTree = "<group>"; };
+		75A5808B24765E28000D976C /* QuoteEquity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteEquity.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,29 +223,22 @@
 		75A5802524764BFA000D976C /* TDAmeritrade */ = {
 			isa = PBXGroup;
 			children = (
-				75A5802E24764CEC000D976C /* PlaceOrder */,
+				75A5805C24765758000D976C /* OptionChains */,
+				75A5804E247654C6000D976C /* Instruments */,
+				75A5803F2476512E000D976C /* OrderGet.swift */,
+				75A5807824765BC5000D976C /* Hours.swift */,
+				75A580412476515E000D976C /* CancelTime.swift */,
+				75A580432476517B000D976C /* ChildOrderStrategy.swift */,
+				75A5804524765193000D976C /* OrderLegCollection.swift */,
+				75A5807A24765C21000D976C /* Token.swift */,
+				75A5803324764E59000D976C /* Instrument */,
+				75A5804724765237000D976C /* EndPoints.swift */,
+				75A58059247656A8000D976C /* Mover.swift */,
+				75A5807C24765CFE000D976C /* Quotes */,
+				75A5806B247659B7000D976C /* Account */,
+				75A5804D24765405000D976C /* Candles */,
 			);
 			path = TDAmeritrade;
-			sourceTree = "<group>";
-		};
-		75A5802E24764CEC000D976C /* PlaceOrder */ = {
-			isa = PBXGroup;
-			children = (
-				75A5802F24764DEF000D976C /* MetaData */,
-				75A5803324764E59000D976C /* Instrument */,
-			);
-			path = PlaceOrder;
-			sourceTree = "<group>";
-		};
-		75A5802F24764DEF000D976C /* MetaData */ = {
-			isa = PBXGroup;
-			children = (
-				75A5802A24764C9B000D976C /* ChildOrderStrategy.swift */,
-				75A5802C24764CC6000D976C /* OrderLegCollection.swift */,
-				75A5802824764C74000D976C /* CancelTime.swift */,
-				75A5802624764C14000D976C /* MetaData.swift */,
-			);
-			path = MetaData;
 			sourceTree = "<group>";
 		};
 		75A5803324764E59000D976C /* Instrument */ = {
@@ -199,6 +252,67 @@
 				75A5803C24764F5A000D976C /* Execution.swift */,
 			);
 			path = Instrument;
+			sourceTree = "<group>";
+		};
+		75A5804D24765405000D976C /* Candles */ = {
+			isa = PBXGroup;
+			children = (
+				75A58049247653DC000D976C /* CandleList.swift */,
+				75A5804B247653FF000D976C /* Candle.swift */,
+			);
+			path = Candles;
+			sourceTree = "<group>";
+		};
+		75A5804E247654C6000D976C /* Instruments */ = {
+			isa = PBXGroup;
+			children = (
+				75A5804F247654D5000D976C /* Bond.swift */,
+				75A58051247654F9000D976C /* FundamentalData.swift */,
+				75A5805324765544000D976C /* Fundamental.swift */,
+				75A580552476555A000D976C /* FundamentalClass.swift */,
+				75A58057247655A3000D976C /* InstrumentDetails.swift */,
+			);
+			path = Instruments;
+			sourceTree = "<group>";
+		};
+		75A5805C24765758000D976C /* OptionChains */ = {
+			isa = PBXGroup;
+			children = (
+				75A5805D247657B5000D976C /* OptionChain.swift */,
+				75A5805F247657CD000D976C /* Underlying.swift */,
+				75A580612476582A000D976C /* Option.swift */,
+				75A5806324765854000D976C /* OptionDeliverableList.swift */,
+				75A58065247658EA000D976C /* ExpirationDate.swift */,
+				75A58067247658FF000D976C /* OptionDeliverables.swift */,
+			);
+			path = OptionChains;
+			sourceTree = "<group>";
+		};
+		75A5806B247659B7000D976C /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				75A5806C247659C4000D976C /* Account.swift */,
+				75A5806E247659E3000D976C /* MarginAccount.swift */,
+				75A58070247659FE000D976C /* Balances.swift */,
+				75A5807224765A13000D976C /* InitialBalances.swift */,
+				75A5807424765A26000D976C /* OrderStrategy.swift */,
+			);
+			path = Account;
+			sourceTree = "<group>";
+		};
+		75A5807C24765CFE000D976C /* Quotes */ = {
+			isa = PBXGroup;
+			children = (
+				75A5807D24765D18000D976C /* QuoteMutualFund.swift */,
+				75A5807F24765D41000D976C /* QuoteFuture.swift */,
+				75A5808124765D61000D976C /* QuoteFutureOption.swift */,
+				75A5808324765D8C000D976C /* QuoteIndex.swift */,
+				75A5808524765DB8000D976C /* QuoteOption.swift */,
+				75A5808724765DDA000D976C /* QuoteForex.swift */,
+				75A5808924765DF4000D976C /* ETF.swift */,
+				75A5808B24765E28000D976C /* QuoteEquity.swift */,
+			);
+			path = Quotes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -332,19 +446,49 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				75A5802924764C74000D976C /* CancelTime.swift in Sources */,
+				75A5807524765A26000D976C /* OrderStrategy.swift in Sources */,
+				75A5804C247653FF000D976C /* Candle.swift in Sources */,
+				75A58052247654F9000D976C /* FundamentalData.swift in Sources */,
+				75A580422476515E000D976C /* CancelTime.swift in Sources */,
+				75A5804824765237000D976C /* EndPoints.swift in Sources */,
+				75A58066247658EA000D976C /* ExpirationDate.swift in Sources */,
+				75A5807924765BC5000D976C /* Hours.swift in Sources */,
+				75A5808024765D41000D976C /* QuoteFuture.swift in Sources */,
+				75A5804624765193000D976C /* OrderLegCollection.swift in Sources */,
+				75A5808424765D8C000D976C /* QuoteIndex.swift in Sources */,
+				75A5807324765A13000D976C /* InitialBalances.swift in Sources */,
+				75A5806424765854000D976C /* OptionDeliverableList.swift in Sources */,
 				75A5803524764EAF000D976C /* FixedIncome.swift in Sources */,
 				7536E2B4247020680002BB65 /* TimeFountain.xcdatamodeld in Sources */,
-				75A5802B24764C9B000D976C /* ChildOrderStrategy.swift in Sources */,
+				75A5805424765544000D976C /* Fundamental.swift in Sources */,
+				75A580562476555A000D976C /* FundamentalClass.swift in Sources */,
+				75A58058247655A3000D976C /* InstrumentDetails.swift in Sources */,
+				75A5808824765DDA000D976C /* QuoteForex.swift in Sources */,
 				75A5803924764EFA000D976C /* CashEquivalent.swift in Sources */,
-				75A5802D24764CC6000D976C /* OrderLegCollection.swift in Sources */,
+				75A5806D247659C4000D976C /* Account.swift in Sources */,
+				75A5808624765DB8000D976C /* QuoteOption.swift in Sources */,
 				7536E2AE247020680002BB65 /* ViewController.swift in Sources */,
 				75A5803B24764F39000D976C /* Option.swift in Sources */,
-				75A5802724764C14000D976C /* MetaData.swift in Sources */,
 				75A5803724764EE4000D976C /* MutualFund.swift in Sources */,
+				75A5807B24765C21000D976C /* Token.swift in Sources */,
 				75A5803D24764F5A000D976C /* Execution.swift in Sources */,
+				75A58071247659FE000D976C /* Balances.swift in Sources */,
+				75A5808C24765E28000D976C /* QuoteEquity.swift in Sources */,
+				75A580402476512E000D976C /* OrderGet.swift in Sources */,
+				75A5805E247657B5000D976C /* OptionChain.swift in Sources */,
+				75A5808A24765DF4000D976C /* ETF.swift in Sources */,
 				7536E2AA247020680002BB65 /* AppDelegate.swift in Sources */,
+				75A5805A247656A8000D976C /* Mover.swift in Sources */,
+				75A58060247657CD000D976C /* Underlying.swift in Sources */,
+				75A580622476582A000D976C /* Option.swift in Sources */,
+				75A5807E24765D18000D976C /* QuoteMutualFund.swift in Sources */,
+				75A5806F247659E3000D976C /* MarginAccount.swift in Sources */,
+				75A5808224765D61000D976C /* QuoteFutureOption.swift in Sources */,
+				75A580442476517B000D976C /* ChildOrderStrategy.swift in Sources */,
+				75A58050247654D5000D976C /* Bond.swift in Sources */,
 				75A5803224764E12000D976C /* Instrument.swift in Sources */,
+				75A5804A247653DC000D976C /* CandleList.swift in Sources */,
+				75A58068247658FF000D976C /* OptionDeliverables.swift in Sources */,
 				7536E2AC247020680002BB65 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

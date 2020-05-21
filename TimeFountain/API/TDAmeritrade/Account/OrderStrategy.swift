@@ -1,15 +1,14 @@
 //
-//  MetaData.swift
+//  OrderStrategy.swift
 //  TimeFountain
 //
 //  Created by Scott Lydon on 5/21/20.
 //  Copyright © 2020 Scott Lydon. All rights reserved.
-//   let welcome = try? newJSONDecoder().decode(Welcome.self, from: jsonData)
+//
 
 import Foundation
 
-
-struct MetaData: Codable {
+struct OrderStrategy: Codable {
     let session, duration, orderType: String
     let cancelTime: CancelTime
     let complexOrderStrategyType: String
@@ -26,7 +25,7 @@ struct MetaData: Codable {
     let specialInstruction, orderStrategyType: String
     let orderID: Int
     let cancelable, editable: Bool
-    let status, enteredTime, closeTime: String
+    let status, enteredTime, closeTime, tag: String
     let accountID: Int
     let orderActivityCollection: [String]
     let replacingOrderCollection, childOrderStrategies: [ChildOrderStrategy]
@@ -35,7 +34,7 @@ struct MetaData: Codable {
     enum CodingKeys: String, CodingKey {
         case session, duration, orderType, cancelTime, complexOrderStrategyType, quantity, filledQuantity, remainingQuantity, requestedDestination, destinationLinkName, releaseTime, stopPrice, stopPriceLinkBasis, stopPriceLinkType, stopPriceOffset, stopType, priceLinkBasis, priceLinkType, price, taxLotMethod, orderLegCollection, activationPrice, specialInstruction, orderStrategyType
         case orderID = "orderId"
-        case cancelable, editable, status, enteredTime, closeTime
+        case cancelable, editable, status, enteredTime, closeTime, tag
         case accountID = "accountId"
         case orderActivityCollection, replacingOrderCollection, childOrderStrategies, statusDescription
     }

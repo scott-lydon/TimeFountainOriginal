@@ -1,5 +1,5 @@
 //
-//  CancelTime.swift
+//  OptionDeliverableList.swift
 //  TimeFountain
 //
 //  Created by Scott Lydon on 5/21/20.
@@ -8,7 +8,6 @@
 
 import Foundation
 
-struct CancelTime: Codable {
-    let date: String
-    let shortFormat: Bool
+struct OptionDeliverablesList: Codable {
+    let symbol, assetType, deliverableUnits, currencyType: String
 }
