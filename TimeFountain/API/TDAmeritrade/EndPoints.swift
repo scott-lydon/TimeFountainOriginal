@@ -65,8 +65,25 @@ extension URL {
         return URL(string: "https://api.tdameritrade.com/v1/marketdata/{STOCK}/quotes")
     }
     
+    static var transactions: URL? {
+        return URL(string: "https://api.tdameritrade.com/v1/accounts/494547284/transactions")
+    }
     
+    static var transactions: URL? {
+        return URL(string: "https://api.tdameritrade.com/v1/accounts/494547284/preferences")
+    }
     
+    static var transactions: URL? {
+        return URL(string: "https://api.tdameritrade.com/v1/userprincipals/streamersubscriptionkeys")
+    }
+    
+    static var watchlist: URL? {
+        return URL(string: "https://api.tdameritrade.com/v1/accounts/494547284/watchlists/{watchlistid}")
+    }
+    
+    static var watchlists: URL? {
+        return URL(string: "https://api.tdameritrade.com/v1/accounts/494547284/watchlists")
+    }
    
     
 }
