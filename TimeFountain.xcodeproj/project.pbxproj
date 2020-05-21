@@ -16,6 +16,16 @@
 		7536E2B92470206B0002BB65 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7536E2B72470206B0002BB65 /* LaunchScreen.storyboard */; };
 		7536E2C42470206B0002BB65 /* TimeFountainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7536E2C32470206B0002BB65 /* TimeFountainTests.swift */; };
 		7536E2CF2470206B0002BB65 /* TimeFountainUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7536E2CE2470206B0002BB65 /* TimeFountainUITests.swift */; };
+		75A5802724764C14000D976C /* MetaData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A5802624764C14000D976C /* MetaData.swift */; };
+		75A5802924764C74000D976C /* CancelTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A5802824764C74000D976C /* CancelTime.swift */; };
+		75A5802B24764C9B000D976C /* ChildOrderStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A5802A24764C9B000D976C /* ChildOrderStrategy.swift */; };
+		75A5802D24764CC6000D976C /* OrderLegCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A5802C24764CC6000D976C /* OrderLegCollection.swift */; };
+		75A5803224764E12000D976C /* Instrument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A5803124764E12000D976C /* Instrument.swift */; };
+		75A5803524764EAF000D976C /* FixedIncome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A5803424764EAF000D976C /* FixedIncome.swift */; };
+		75A5803724764EE4000D976C /* MutualFund.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A5803624764EE4000D976C /* MutualFund.swift */; };
+		75A5803924764EFA000D976C /* CashEquivalent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A5803824764EFA000D976C /* CashEquivalent.swift */; };
+		75A5803B24764F39000D976C /* Option.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A5803A24764F39000D976C /* Option.swift */; };
+		75A5803D24764F5A000D976C /* Execution.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A5803C24764F5A000D976C /* Execution.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +61,16 @@
 		7536E2CA2470206B0002BB65 /* TimeFountainUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TimeFountainUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7536E2CE2470206B0002BB65 /* TimeFountainUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeFountainUITests.swift; sourceTree = "<group>"; };
 		7536E2D02470206B0002BB65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		75A5802624764C14000D976C /* MetaData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetaData.swift; sourceTree = "<group>"; };
+		75A5802824764C74000D976C /* CancelTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelTime.swift; sourceTree = "<group>"; };
+		75A5802A24764C9B000D976C /* ChildOrderStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildOrderStrategy.swift; sourceTree = "<group>"; };
+		75A5802C24764CC6000D976C /* OrderLegCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderLegCollection.swift; sourceTree = "<group>"; };
+		75A5803124764E12000D976C /* Instrument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Instrument.swift; sourceTree = "<group>"; };
+		75A5803424764EAF000D976C /* FixedIncome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixedIncome.swift; sourceTree = "<group>"; };
+		75A5803624764EE4000D976C /* MutualFund.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MutualFund.swift; sourceTree = "<group>"; };
+		75A5803824764EFA000D976C /* CashEquivalent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CashEquivalent.swift; sourceTree = "<group>"; };
+		75A5803A24764F39000D976C /* Option.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Option.swift; sourceTree = "<group>"; };
+		75A5803C24764F5A000D976C /* Execution.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Execution.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +124,7 @@
 				7536E2A9247020680002BB65 /* AppDelegate.swift */,
 				7536E2AB247020680002BB65 /* SceneDelegate.swift */,
 				7536E2AD247020680002BB65 /* ViewController.swift */,
+				75A5802424764BEE000D976C /* API */,
 				7536E2AF247020680002BB65 /* Main.storyboard */,
 				7536E2B52470206B0002BB65 /* Assets.xcassets */,
 				7536E2B72470206B0002BB65 /* LaunchScreen.storyboard */,
@@ -129,6 +150,55 @@
 				7536E2D02470206B0002BB65 /* Info.plist */,
 			);
 			path = TimeFountainUITests;
+			sourceTree = "<group>";
+		};
+		75A5802424764BEE000D976C /* API */ = {
+			isa = PBXGroup;
+			children = (
+				75A5802524764BFA000D976C /* TDAmeritrade */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		75A5802524764BFA000D976C /* TDAmeritrade */ = {
+			isa = PBXGroup;
+			children = (
+				75A5802E24764CEC000D976C /* PlaceOrder */,
+			);
+			path = TDAmeritrade;
+			sourceTree = "<group>";
+		};
+		75A5802E24764CEC000D976C /* PlaceOrder */ = {
+			isa = PBXGroup;
+			children = (
+				75A5802F24764DEF000D976C /* MetaData */,
+				75A5803324764E59000D976C /* Instrument */,
+			);
+			path = PlaceOrder;
+			sourceTree = "<group>";
+		};
+		75A5802F24764DEF000D976C /* MetaData */ = {
+			isa = PBXGroup;
+			children = (
+				75A5802A24764C9B000D976C /* ChildOrderStrategy.swift */,
+				75A5802C24764CC6000D976C /* OrderLegCollection.swift */,
+				75A5802824764C74000D976C /* CancelTime.swift */,
+				75A5802624764C14000D976C /* MetaData.swift */,
+			);
+			path = MetaData;
+			sourceTree = "<group>";
+		};
+		75A5803324764E59000D976C /* Instrument */ = {
+			isa = PBXGroup;
+			children = (
+				75A5803124764E12000D976C /* Instrument.swift */,
+				75A5803424764EAF000D976C /* FixedIncome.swift */,
+				75A5803624764EE4000D976C /* MutualFund.swift */,
+				75A5803824764EFA000D976C /* CashEquivalent.swift */,
+				75A5803A24764F39000D976C /* Option.swift */,
+				75A5803C24764F5A000D976C /* Execution.swift */,
+			);
+			path = Instrument;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,9 +332,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75A5802924764C74000D976C /* CancelTime.swift in Sources */,
+				75A5803524764EAF000D976C /* FixedIncome.swift in Sources */,
 				7536E2B4247020680002BB65 /* TimeFountain.xcdatamodeld in Sources */,
+				75A5802B24764C9B000D976C /* ChildOrderStrategy.swift in Sources */,
+				75A5803924764EFA000D976C /* CashEquivalent.swift in Sources */,
+				75A5802D24764CC6000D976C /* OrderLegCollection.swift in Sources */,
 				7536E2AE247020680002BB65 /* ViewController.swift in Sources */,
+				75A5803B24764F39000D976C /* Option.swift in Sources */,
+				75A5802724764C14000D976C /* MetaData.swift in Sources */,
+				75A5803724764EE4000D976C /* MutualFund.swift in Sources */,
+				75A5803D24764F5A000D976C /* Execution.swift in Sources */,
 				7536E2AA247020680002BB65 /* AppDelegate.swift in Sources */,
+				75A5803224764E12000D976C /* Instrument.swift in Sources */,
 				7536E2AC247020680002BB65 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
