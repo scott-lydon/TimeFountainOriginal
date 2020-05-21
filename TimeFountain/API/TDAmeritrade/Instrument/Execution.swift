@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Execution: Codable, Instrument {
+struct Execution: Codable {
     let activityType, executionType: String
     let quantity, orderRemainingQuantity: Int
     let executionLegs: [ExecutionLeg]

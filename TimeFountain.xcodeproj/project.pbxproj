@@ -16,7 +16,7 @@
 		7536E2B92470206B0002BB65 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7536E2B72470206B0002BB65 /* LaunchScreen.storyboard */; };
 		7536E2C42470206B0002BB65 /* TimeFountainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7536E2C32470206B0002BB65 /* TimeFountainTests.swift */; };
 		7536E2CF2470206B0002BB65 /* TimeFountainUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7536E2CE2470206B0002BB65 /* TimeFountainUITests.swift */; };
-		75A5803224764E12000D976C /* Instrument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A5803124764E12000D976C /* Instrument.swift */; };
+		75A5803224764E12000D976C /* GeneralInstrument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A5803124764E12000D976C /* GeneralInstrument.swift */; };
 		75A5803524764EAF000D976C /* FixedIncome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A5803424764EAF000D976C /* FixedIncome.swift */; };
 		75A5803724764EE4000D976C /* MutualFund.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A5803624764EE4000D976C /* MutualFund.swift */; };
 		75A5803924764EFA000D976C /* CashEquivalent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A5803824764EFA000D976C /* CashEquivalent.swift */; };
@@ -37,11 +37,11 @@
 		75A5805A247656A8000D976C /* Mover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A58059247656A8000D976C /* Mover.swift */; };
 		75A5805E247657B5000D976C /* OptionChain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A5805D247657B5000D976C /* OptionChain.swift */; };
 		75A58060247657CD000D976C /* Underlying.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A5805F247657CD000D976C /* Underlying.swift */; };
-		75A580622476582A000D976C /* Option.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A580612476582A000D976C /* Option.swift */; };
+		75A580622476582A000D976C /* ChainOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A580612476582A000D976C /* ChainOption.swift */; };
 		75A5806424765854000D976C /* OptionDeliverableList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A5806324765854000D976C /* OptionDeliverableList.swift */; };
 		75A58066247658EA000D976C /* ExpirationDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A58065247658EA000D976C /* ExpirationDate.swift */; };
 		75A58068247658FF000D976C /* OptionDeliverables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A58067247658FF000D976C /* OptionDeliverables.swift */; };
-		75A5806D247659C4000D976C /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A5806C247659C4000D976C /* Account.swift */; };
+		75A5806D247659C4000D976C /* GeneralAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A5806C247659C4000D976C /* GeneralAccount.swift */; };
 		75A5806F247659E3000D976C /* MarginAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A5806E247659E3000D976C /* MarginAccount.swift */; };
 		75A58071247659FE000D976C /* Balances.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A58070247659FE000D976C /* Balances.swift */; };
 		75A5807324765A13000D976C /* InitialBalances.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A5807224765A13000D976C /* InitialBalances.swift */; };
@@ -70,6 +70,7 @@
 		75A580AB247663F0000D976C /* Watchlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A580AA247663F0000D976C /* Watchlist.swift */; };
 		75A580AD24766403000D976C /* WatchlistItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A580AC24766403000D976C /* WatchlistItem.swift */; };
 		75A580AF24766411000D976C /* Instrument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A580AE24766411000D976C /* Instrument.swift */; };
+		75A580B32476BDD6000D976C /* Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A580B22476BDD6000D976C /* Position.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,7 +106,7 @@
 		7536E2CA2470206B0002BB65 /* TimeFountainUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TimeFountainUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7536E2CE2470206B0002BB65 /* TimeFountainUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeFountainUITests.swift; sourceTree = "<group>"; };
 		7536E2D02470206B0002BB65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		75A5803124764E12000D976C /* Instrument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Instrument.swift; sourceTree = "<group>"; };
+		75A5803124764E12000D976C /* GeneralInstrument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralInstrument.swift; sourceTree = "<group>"; };
 		75A5803424764EAF000D976C /* FixedIncome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixedIncome.swift; sourceTree = "<group>"; };
 		75A5803624764EE4000D976C /* MutualFund.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MutualFund.swift; sourceTree = "<group>"; };
 		75A5803824764EFA000D976C /* CashEquivalent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CashEquivalent.swift; sourceTree = "<group>"; };
@@ -126,11 +127,11 @@
 		75A58059247656A8000D976C /* Mover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mover.swift; sourceTree = "<group>"; };
 		75A5805D247657B5000D976C /* OptionChain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionChain.swift; sourceTree = "<group>"; };
 		75A5805F247657CD000D976C /* Underlying.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Underlying.swift; sourceTree = "<group>"; };
-		75A580612476582A000D976C /* Option.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Option.swift; sourceTree = "<group>"; };
+		75A580612476582A000D976C /* ChainOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChainOption.swift; sourceTree = "<group>"; };
 		75A5806324765854000D976C /* OptionDeliverableList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionDeliverableList.swift; sourceTree = "<group>"; };
 		75A58065247658EA000D976C /* ExpirationDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpirationDate.swift; sourceTree = "<group>"; };
 		75A58067247658FF000D976C /* OptionDeliverables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionDeliverables.swift; sourceTree = "<group>"; };
-		75A5806C247659C4000D976C /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
+		75A5806C247659C4000D976C /* GeneralAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralAccount.swift; sourceTree = "<group>"; };
 		75A5806E247659E3000D976C /* MarginAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarginAccount.swift; sourceTree = "<group>"; };
 		75A58070247659FE000D976C /* Balances.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Balances.swift; sourceTree = "<group>"; };
 		75A5807224765A13000D976C /* InitialBalances.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialBalances.swift; sourceTree = "<group>"; };
@@ -159,6 +160,7 @@
 		75A580AA247663F0000D976C /* Watchlist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Watchlist.swift; sourceTree = "<group>"; };
 		75A580AC24766403000D976C /* WatchlistItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchlistItem.swift; sourceTree = "<group>"; };
 		75A580AE24766411000D976C /* Instrument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Instrument.swift; sourceTree = "<group>"; };
+		75A580B22476BDD6000D976C /* Position.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Position.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -277,7 +279,7 @@
 		75A5803324764E59000D976C /* Instrument */ = {
 			isa = PBXGroup;
 			children = (
-				75A5803124764E12000D976C /* Instrument.swift */,
+				75A5803124764E12000D976C /* GeneralInstrument.swift */,
 				75A5803424764EAF000D976C /* FixedIncome.swift */,
 				75A5803624764EE4000D976C /* MutualFund.swift */,
 				75A5803824764EFA000D976C /* CashEquivalent.swift */,
@@ -313,7 +315,7 @@
 			children = (
 				75A5805D247657B5000D976C /* OptionChain.swift */,
 				75A5805F247657CD000D976C /* Underlying.swift */,
-				75A580612476582A000D976C /* Option.swift */,
+				75A580612476582A000D976C /* ChainOption.swift */,
 				75A5806324765854000D976C /* OptionDeliverableList.swift */,
 				75A58065247658EA000D976C /* ExpirationDate.swift */,
 				75A58067247658FF000D976C /* OptionDeliverables.swift */,
@@ -324,8 +326,9 @@
 		75A5806B247659B7000D976C /* Account */ = {
 			isa = PBXGroup;
 			children = (
-				75A5806C247659C4000D976C /* Account.swift */,
+				75A5806C247659C4000D976C /* GeneralAccount.swift */,
 				75A5806E247659E3000D976C /* MarginAccount.swift */,
+				75A580B22476BDD6000D976C /* Position.swift */,
 				75A58070247659FE000D976C /* Balances.swift */,
 				75A5807224765A13000D976C /* InitialBalances.swift */,
 				75A5807424765A26000D976C /* OrderStrategy.swift */,
@@ -555,7 +558,7 @@
 				75A5808824765DDA000D976C /* QuoteForex.swift in Sources */,
 				75A580A424766299000D976C /* PrincipalQuotes.swift in Sources */,
 				75A5803924764EFA000D976C /* CashEquivalent.swift in Sources */,
-				75A5806D247659C4000D976C /* Account.swift in Sources */,
+				75A5806D247659C4000D976C /* GeneralAccount.swift in Sources */,
 				75A5808624765DB8000D976C /* QuoteOption.swift in Sources */,
 				7536E2AE247020680002BB65 /* ViewController.swift in Sources */,
 				75A5803B24764F39000D976C /* Option.swift in Sources */,
@@ -569,11 +572,12 @@
 				75A580402476512E000D976C /* OrderGet.swift in Sources */,
 				75A5805E247657B5000D976C /* OptionChain.swift in Sources */,
 				75A5808A24765DF4000D976C /* ETF.swift in Sources */,
+				75A580B32476BDD6000D976C /* Position.swift in Sources */,
 				75A5809624766079000D976C /* Preferences.swift in Sources */,
 				7536E2AA247020680002BB65 /* AppDelegate.swift in Sources */,
 				75A5805A247656A8000D976C /* Mover.swift in Sources */,
 				75A58060247657CD000D976C /* Underlying.swift in Sources */,
-				75A580622476582A000D976C /* Option.swift in Sources */,
+				75A580622476582A000D976C /* ChainOption.swift in Sources */,
 				75A5807E24765D18000D976C /* QuoteMutualFund.swift in Sources */,
 				75A5806F247659E3000D976C /* MarginAccount.swift in Sources */,
 				75A5808224765D61000D976C /* QuoteFutureOption.swift in Sources */,
@@ -581,7 +585,7 @@
 				75A580AF24766411000D976C /* Instrument.swift in Sources */,
 				75A580442476517B000D976C /* ChildOrderStrategy.swift in Sources */,
 				75A58050247654D5000D976C /* Bond.swift in Sources */,
-				75A5803224764E12000D976C /* Instrument.swift in Sources */,
+				75A5803224764E12000D976C /* GeneralInstrument.swift in Sources */,
 				75A5804A247653DC000D976C /* CandleList.swift in Sources */,
 				75A580A22476622C000D976C /* PreferencesPrincipal.swift in Sources */,
 				75A58068247658FF000D976C /* OptionDeliverables.swift in Sources */,

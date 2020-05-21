@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct FixedIncome: Codable, Instrument {
+struct FixedIncome: Codable {
     let assetType, cusip, symbol, fixedIncomeDescription: String
     let maturityDate: String
     let variableRate, factor: Int

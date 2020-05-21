@@ -14,7 +14,7 @@ struct UserPrincipals: Codable {
     let stalePassword: Bool
     let streamerInfo: StreamerInfo
     let professionalStatus: String
-    let quotes: Quotes
+    let quotes: PrincipalQuotes
     let streamerSubscriptionKeys: StreamerSubscriptionKeys
     let accounts: [Account]
 

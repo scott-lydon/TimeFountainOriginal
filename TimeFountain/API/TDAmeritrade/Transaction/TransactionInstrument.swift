@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Instrument: Codable {
+struct TransactionInstrument: Codable {
     let symbol, underlyingSymbol, optionExpirationDate: String
     let optionStrikePrice: Int
     let putCall, cusip, instrumentDescription, assetType: String

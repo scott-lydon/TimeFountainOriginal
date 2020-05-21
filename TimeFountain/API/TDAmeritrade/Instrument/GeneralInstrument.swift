@@ -8,6 +8,6 @@
 
 import Foundation
 
-protocol Instrument {
-    
-}
+//protocol Instrument {
+//    
+//}

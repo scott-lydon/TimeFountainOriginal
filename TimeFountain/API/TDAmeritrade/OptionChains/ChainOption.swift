@@ -1,5 +1,5 @@
 //
-//  Option.swift
+//  ChainOption.swift
 //  TimeFountain
 //
 //  Created by Scott Lydon on 5/21/20.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Option: Codable {
+struct ChainOption: Codable {
     let putCall, symbol, optionDescription, exchangeName: String
     let bidPrice, askPrice, lastPrice, markPrice: Int
     let bidSize, askSize, lastSize, highPrice: Int

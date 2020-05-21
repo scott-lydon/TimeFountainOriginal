@@ -11,7 +11,7 @@ import Foundation
 struct Account: Codable {
     let accountID, accountDescription, displayName, accountCDDomainID: String
     let company, segment, surrogateIDS: String
-    let preferences: Preferences
+    let preferences: PreferencesPrincipal
     let acl: String
     let authorizations: Authorizations
 

@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct MutualFund: Codable, Instrument {
+struct MutualFund: Codable {
     let assetType, cusip, symbol, mutualFundDescription: String
     let type: String
 

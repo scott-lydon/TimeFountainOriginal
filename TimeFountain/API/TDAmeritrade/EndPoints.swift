@@ -61,7 +61,7 @@ extension URL {
         return URL(string: "https://api.tdameritrade.com/v1/oauth2/token")
     }
     
-    static var token: URL? {
+    static var quotes: URL? {
         return URL(string: "https://api.tdameritrade.com/v1/marketdata/{STOCK}/quotes")
     }
     
@@ -69,14 +69,18 @@ extension URL {
         return URL(string: "https://api.tdameritrade.com/v1/accounts/494547284/transactions")
     }
     
-    static var transactions: URL? {
+    static var preferences: URL? {
         return URL(string: "https://api.tdameritrade.com/v1/accounts/494547284/preferences")
     }
     
-    static var transactions: URL? {
+    static var subscriptionKey: URL? {
         return URL(string: "https://api.tdameritrade.com/v1/userprincipals/streamersubscriptionkeys")
     }
     
+    static var userPrincipals: URL? {
+        return URL(string: "https://api.tdameritrade.com/v1/userprincipals")
+    }
+        
     static var watchlist: URL? {
         return URL(string: "https://api.tdameritrade.com/v1/accounts/494547284/watchlists/{watchlistid}")
     }

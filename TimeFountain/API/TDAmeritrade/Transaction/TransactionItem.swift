@@ -12,7 +12,7 @@ struct TransactionItem: Codable {
     let accountID, amount, price, cost: Int
     let parentOrderKey: Int
     let parentChildIndicator, instruction, positionEffect: String
-    let instrument: Instrument
+    let instrument: TransactionInstrument
 
     enum CodingKeys: String, CodingKey {
         case accountID = "accountId"

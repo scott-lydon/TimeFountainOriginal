@@ -8,6 +8,6 @@
 
 import Foundation
 
-struct Account: Codable {
+struct GeneralAccount: Codable {
     let securitiesAccount: String
 }

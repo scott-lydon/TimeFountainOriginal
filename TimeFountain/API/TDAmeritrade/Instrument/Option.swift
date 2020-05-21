@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Option: Codable, Instrument {
+struct Option: Codable {
     let assetType, cusip, symbol, optionDescription: String
     let type, putCall, underlyingSymbol: String
     let optionMultiplier: Int
