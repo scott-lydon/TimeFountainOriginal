@@ -9,8 +9,8 @@
 import Foundation
 
 struct Candle: Codable {
-    let close, datetime, high, low: Int
-    let candleOpen, volume: Int
+    let close, datetime, high, low: Double
+    let candleOpen, volume: Double
 
     enum CodingKeys: String, CodingKey {
         case close, datetime, high, low

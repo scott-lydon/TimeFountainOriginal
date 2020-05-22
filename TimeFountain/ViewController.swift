@@ -7,14 +7,38 @@
 //
 
 import UIKit
+import ScottLydon
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+    
+        URL.priceHistory(
+            period: .days(.ten,.fiveMinutes),
+            ticker: "TSLA"
+        ).getData { data in
+            print(CandleList(data))
+        }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        print(Bundle.tdAccount_id ?? "nil")
+        print(Bundle.td_api_key ?? "nil")
+        print("passed it...")
     }
 
 
 }
+
 
