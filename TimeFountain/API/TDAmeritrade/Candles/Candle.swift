@@ -17,4 +17,8 @@ struct Candle: Codable {
         case candleOpen = "open"
         case volume
     }
+    
+    enum Component {
+        case close, high, low, candleOpen
+    }
 }

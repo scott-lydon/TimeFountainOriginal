@@ -18,27 +18,22 @@ class ViewController: UIViewController {
             period: .days(.ten,.fiveMinutes),
             ticker: "TSLA"
         ).getData { data in
-            print(CandleList(data))
+            
+            print(CandleList(data) ?? "nil")
         }
         
         
+        // Get the algorithms fro tos
         
         
         
         
-        
-        
-        
-        
-        
-        
+    
         
         print(Bundle.tdAccount_id ?? "nil")
         print(Bundle.td_api_key ?? "nil")
         print("passed it...")
     }
-
-
 }
 
 
