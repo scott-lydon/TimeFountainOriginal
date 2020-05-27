@@ -12,16 +12,15 @@ class ViewController: NSViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("Happy boy")
+        
+        ["cat", "dog", "slippery"]
+        
+        guard let dataframe = DataFrame([
+            DataFrame.Column(header: "date", cells: ["Monday", "Tuesday"]),
+            DataFrame.Column(header: "Values", cells: [349.string, 34.string]),
+        ]) else { return }
+        print(dataframe.stringMatrix)
+       // dataframe.asCSVString.save(root: .desktopDirectory, pathStr: "TestWorked2.csv")
         // Do any additional setup after loading the view.
     }
-
-    override var representedObject: Any? {
-        didSet {
-        // Update the view, if already loaded.
-        }
-    }
-
-
 }
-

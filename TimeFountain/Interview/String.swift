@@ -115,4 +115,20 @@ public extension String {
         assert(url != nil)
         url?.sessionDataTask(provideString: stringAction)?.resume()
     }
+    
+    func save(root: FileManager.SearchPathDirectory, pathStr: String) {
+        let fileManager = FileManager.default
+        do {
+            let path = try fileManager.url(
+                for: root,
+                in: .allDomainsMask,
+                appropriateFor: nil,
+                create: true
+            )
+            let fileURL = path.appendingPathComponent(pathStr)
+            try write(to: fileURL, atomically: true, encoding: .utf8)
+        } catch {
+            print("error creating file")
+        }
+    }
 }

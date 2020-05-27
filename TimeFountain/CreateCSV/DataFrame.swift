@@ -8,17 +8,24 @@
 
 import Foundation
 
-struct DataFrame {
+struct DataFrame: Equatable {
     
-    struct Column {
+    static func == (lhs: DataFrame, rhs: DataFrame) -> Bool {
+        return lhs.columns == rhs.columns
+    }
+    
+    struct Column: Equatable {
+        static func == (lhs: DataFrame.Column, rhs: DataFrame.Column) -> Bool {
+            return lhs.header == rhs.header && lhs.cells == rhs.cells
+        }
         var header: String
-        var cells: [CSVRepresentable]
+        var cells: [String]
     }
     
     var columns: [Column]
     
     init?(_ columns: [Column]) {
-        guard columns.map({ $0.cells.count }).allEqual else { return nil }
+        guard columns.map({ $0.cells.count }).allEqual, columns.count > 0 else { return nil }
         self.columns = columns
     }
     
@@ -27,40 +34,24 @@ struct DataFrame {
         path: String = "/iOS/DataFrame",
         name: String = Date().description
     ) {
-        asCSVString.save(root: root, pathStr: path + name + ".csv")
+        stringMatrix.asCSV.save(root: root, pathStr: path + name + ".csv")
     }
     
-    var asCSVString: String {
-        return ""
-    }
-}
-
-extension String {
-    func save(root: FileManager.SearchPathDirectory, pathStr: String) {
-        print("WTF", #line)
-        let fileManager = FileManager.default
-        do {
-            let path = try fileManager.url(
-                for: root,
-                in: .allDomainsMask,
-                appropriateFor: nil,
-                create: true
-            )
-            let fileURL = path.appendingPathComponent(pathStr)
-            try write(to: fileURL, atomically: true, encoding: .utf8)
-        } catch {
-            print("error creating file")
+    var stringMatrix: [[String]] {
+        guard let height = columns.first?.cells.count else {
+            print("cells are empty")
+            return []
         }
+        var rows: [[String]] = [
+            columns.map({ $0.header }),
+        ]
+        for row in 0..<height {
+            var rowArr: [String] = []
+            for col in 0..<columns.count {
+                rowArr.append(columns[col].cells[row].description)
+            }
+            rows.append(rowArr)
+        }
+        return rows
     }
 }
-
-
-
-func createCSV(from recArray:[Dictionary<String, Any>]) {
-    var csvString = "\("Employee ID"),\("Employee Name")\n\n"
-    for dct in recArray {
-        csvString = csvString.appending("\(String(describing: dct["EmpID"]!)) ,\(String(describing: dct["EmpName"]!))\n")
-    }
-
-}
-

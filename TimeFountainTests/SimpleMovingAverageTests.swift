@@ -47,34 +47,36 @@ FUNC
 
  
  */
-class SimpleMovingTests: TimeFountainTests {
+
+fileprivate struct SmaInOuts {
+    var prices: [Double]
+    var range: Int
+    var values: [Double?]
+}
+
+// Takes an array of tick values (price, close, high, open)
+//  price: CLOSE
+//  length: 180
+fileprivate var inputOutputs: [SmaInOuts] = [
+    SmaInOuts(
+        prices: [3, 5, 1, 4],
+        range: 2,
+        values: [nil, 4, 3, 2.5]
+    ),
+    SmaInOuts(
+        prices: [3, 5, 1, 6],
+        range: 3,
+        values: [nil, nil, 3, 4]
+    ),
+    SmaInOuts(
+        prices: [3,   5,    1,    4,  34, 1, 41, 8],
+        range: 4,
+        values: [nil, nil, nil, 3.25, 11, 10, 20, 21]
+    ),
+]
+
+extension TimeFountainTests {
     
-    struct SmaInOuts {
-        var prices: [Double]
-        var range: Int
-        var values: [Double?]
-    }
-    
-    // Takes an array of tick values (price, close, high, open)
-    //  price: CLOSE
-    //  length: 180
-    var inputOutputs: [SmaInOuts] = [
-        SmaInOuts(
-            prices: [3, 5, 1, 4],
-            range: 2,
-            values: [nil, 4, 3, 2.5]
-        ),
-        SmaInOuts(
-            prices: [3, 5, 1, 6],
-            range: 3,
-            values: [nil, nil, 3, 4]
-        ),
-        SmaInOuts(
-            prices: [3,   5,    1,    4,  34, 1, 41, 8],
-            range: 4,
-            values: [nil, nil, nil, 3.25, 11, 10, 20, 21]
-        ),
-    ]
     
     func testSimpleMovingAverage() {
         inputOutputs.forEach {
