@@ -1,14 +1,31 @@
 //
 //  Bundle.swift
-//  TimeFountain
+//  ScottLydon
 //
-//  Created by Scott Lydon on 5/21/20.
-//  Copyright © 2020 Scott Lydon. All rights reserved.
+//  Created by Scott Lydon on 10/2/19.
+//  Copyright © 2019 ElevatedUnderdogs. All rights reserved.
 //
 
 import Foundation
 
-extension Bundle {
+public extension Bundle {
+    
+    var displayName: String? {
+        return object(forInfoDictionaryKey: "CFBundleDisplayName") as? String
+    }
+    
+    static var appName: String? {
+        return Bundle.main.infoDictionary?["CFBundleName"] as? String
+    }
+    
+//    static func thisApp: Bundle {
+//        return Bundle(for: AppDelegate.self)
+//    }
+    
+    static var version: String? {
+        return Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String
+    }
+    
     static var tdAccount_id: String? {
         return plist?["ACCOUNT_ID"] as? String
     }

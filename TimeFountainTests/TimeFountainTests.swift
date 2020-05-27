@@ -2,7 +2,7 @@
 //  TimeFountainTests.swift
 //  TimeFountainTests
 //
-//  Created by Scott Lydon on 5/16/20.
+//  Created by Scott Lydon on 5/26/20.
 //  Copyright © 2020 Scott Lydon. All rights reserved.
 //
 
@@ -30,7 +30,5 @@ class TimeFountainTests: XCTestCase {
             // Put the code you want to measure the time of here.
         }
     }
-    
 
 }
-

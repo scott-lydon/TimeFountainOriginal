@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import ScottLydon
 
 extension URL {
     

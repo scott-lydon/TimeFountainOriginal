@@ -10,14 +10,6 @@ import Foundation
 
 extension String {
     
-    var scaped: String? {
-        return addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
-    }
-    
-    init(key: String, _ value: String) {
-        self = "\(key)=\(value.scaped ?? "")&"
-    }
-    
     static var baseURL: String {
         return "https://api.tdameritrade.com/v1/"
     }

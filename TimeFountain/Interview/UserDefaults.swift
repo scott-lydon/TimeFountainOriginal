@@ -2,14 +2,13 @@
 //  UserDefaults.swift
 //  TimeFountain
 //
-//  Created by Scott Lydon on 5/21/20.
+//  Created by Scott Lydon on 5/26/20.
 //  Copyright © 2020 Scott Lydon. All rights reserved.
 //
 
 import Foundation
 
 extension UserDefaults {
-    
     static var baseUrlToUse: String {
         get {
             if let baseUrl = UserDefaults.standard.string(forKey: #function) {

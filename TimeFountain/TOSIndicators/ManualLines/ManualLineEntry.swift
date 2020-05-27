@@ -91,4 +91,38 @@ struct ManualLinesEntry {
  Stock is no longer trading between $1-5, previous range deleted
  [6:31 AM, 5/26/2020] Sean Taylor: No clue how to answer that other than what you already know, which is the price action being outside the price range setup by your support/resistance
  [6:32 AM, 5/26/2020] Scott: Well you’ve mentioned another way: manual lines becoming distinctly more static than dynamic.
+ 
+ [3:02 PM, 5/26/2020] Scott: Not sure where I last updated.  I have an array of prices, and I've created the algorithm to convert the prices to sma. I could convert the sma to a categorical value, but I'd rather get the coreml data frame working first.  I think it would be more MVP like to do that first.
+ [3:03 PM, 5/26/2020] Scott: I also did the SMA in a TDD fashion so I can count on it working.
+ [3:10 PM, 5/26/2020] Scott: So why was the 740 line drawn? It seems like the only time it was used was 4/20.
+ [3:12 PM, 5/26/2020] Scott: *There was a reversal at 4/20
+ [3:24 PM, 5/26/2020] Sean Taylor: Strong line from February and March
+ [3:34 PM, 5/26/2020] Scott: I thought we discard lines as we exist their time frames.  Are exceptions made for static(flat) lines and or lines with a significant number of confirmations?
+ [3:35 PM, 5/26/2020] Sean Taylor: Significant confirmations
+ [3:36 PM, 5/26/2020] Sean Taylor: No need to code the exceptions
+ [3:37 PM, 5/26/2020] Scott: If you value them in your trades I should probably code these exceptions.  I don't think its going to be in my first MVPs. What makes a confirmation more or less significant than another confirmation?
+ [3:38 PM, 5/26/2020] Sean Taylor: Frequency
+ [3:38 PM, 5/26/2020] Scott: okay
+ [3:38 PM, 5/26/2020] Scott: got it
+ [3:38 PM, 5/26/2020] Sean Taylor: Which is stronger.
+
+ A lime that acts as a support 46 times over 8 months or a line that acts as support 2 times over 8 months?
+ [3:38 PM, 5/26/2020] Sean Taylor: Line*
+ [3:39 PM, 5/26/2020] Scott: Well assuming they are spread out equally, then 46 times
+ [3:39 PM, 5/26/2020] Scott: right? or regardless of how they are spread out?
+ [3:40 PM, 5/26/2020] Sean Taylor: Doesn't matter how they're spread out unless they are grouped around something you have decided to specifically look for
+ [3:40 PM, 5/26/2020] Scott: For example, if the 46 times only happened the first day of the 8 months, and the 2 times for the other line happened on the last day of the 8 months would we value the 2 times more?
+ [3:40 PM, 5/26/2020] Scott: *2 times line
+ [3:41 PM, 5/26/2020] Scott: * 2 confirmation line
+ [3:41 PM, 5/26/2020] Sean Taylor: No
+ [3:41 PM, 5/26/2020] Scott: ah
+ [3:44 PM, 5/26/2020] Scott: What if instead of 46 it were 3 times confirmed on the first day of the last 8 months for line A vs 2 times confirmed yesterday for line B? Would you value line A or B more?
+ [3:45 PM, 5/26/2020] Sean Taylor: Am I trading in the immediate short term,  or long term enough that the 8 months is still revelant
+ [3:48 PM, 5/26/2020] Scott: What is the answer for both.
+ [3:49 PM, 5/26/2020] Sean Taylor: What do you think the answer is
+ [3:52 PM, 5/26/2020] Sean Taylor: When you're driving, are you concerned about maneuvering offensively/defensively around the cars immediately adjacent to you, (up to the limit of your perception), or the cars 8 miles up/down the road?
+
+ Unless a specific reference event (an accident / unusual traffic, vehicles changing lanes en mas, etc) has happened, you're likely not too concerned about the cars 8 miles ahead/behind.
+ [3:53 PM, 5/26/2020] Scott: short term means only would value the recent one more even though it has fewer confirmations, longer term would value the one with more confirmations.  You didn't ask me that for the 46 time question though which I took to mean that even if I'm trading in the short term, 46 is so many confirmations, it is useful for short term trading.  I'd like to know what the turning point is for when the number of confirmations outweighs its age, and when it doesn't.  It might be the kind of thing I can figure out with models, but it will probably be tricky.
+ [3:57 PM, 5/26/2020] Sean Taylor: As long as the line is still visible, and reasonably within or adjacent to the current time frame and price range you're working in.
  */

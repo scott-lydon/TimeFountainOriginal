@@ -2,38 +2,26 @@
 //  ViewController.swift
 //  TimeFountain
 //
-//  Created by Scott Lydon on 5/16/20.
+//  Created by Scott Lydon on 5/26/20.
 //  Copyright © 2020 Scott Lydon. All rights reserved.
 //
 
-import UIKit
-import ScottLydon
+import Cocoa
 
-class ViewController: UIViewController {
+class ViewController: NSViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-    
-        URL.priceHistory(
-            period: .days(.ten,.fiveMinutes),
-            ticker: "TSLA"
-        ).getData { data in
-            
-            print(CandleList(data) ?? "nil")
-        }
-        
-        
-        // Get the algorithms fro tos
-        
-        
-        
-        
-    
-        
-        print(Bundle.tdAccount_id ?? "nil")
-        print(Bundle.td_api_key ?? "nil")
-        print("passed it...")
+        print("Happy boy")
+        // Do any additional setup after loading the view.
     }
-}
 
+    override var representedObject: Any? {
+        didSet {
+        // Update the view, if already loaded.
+        }
+    }
+
+
+}
 
