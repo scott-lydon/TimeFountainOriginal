@@ -123,6 +123,7 @@
 		754C054B247ED8BF00A12CF7 /* StringMatrixTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754C054A247ED8BF00A12CF7 /* StringMatrixTests.swift */; };
 		754C054D247ED8ED00A12CF7 /* CSVTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754C054C247ED8ED00A12CF7 /* CSVTests.swift */; };
 		754C054F247EF57300A12CF7 /* CommaSeparatedArraytests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754C054E247EF57300A12CF7 /* CommaSeparatedArraytests.swift */; };
+		754C0551247F4CF900A12CF7 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 754C0550247F4CF900A12CF7 /* Info.plist */; };
 		75A4FC4B247E049C00E4DC0B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A4FC4A247E049C00E4DC0B /* AppDelegate.swift */; };
 		75A4FC4D247E049C00E4DC0B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A4FC4C247E049C00E4DC0B /* ViewController.swift */; };
 		75A4FC50247E049C00E4DC0B /* TimeFountain.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 75A4FC4E247E049C00E4DC0B /* TimeFountain.xcdatamodeld */; };
@@ -266,13 +267,13 @@
 		754C054A247ED8BF00A12CF7 /* StringMatrixTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringMatrixTests.swift; sourceTree = "<group>"; };
 		754C054C247ED8ED00A12CF7 /* CSVTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSVTests.swift; sourceTree = "<group>"; };
 		754C054E247EF57300A12CF7 /* CommaSeparatedArraytests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommaSeparatedArraytests.swift; sourceTree = "<group>"; };
+		754C0550247F4CF900A12CF7 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		75A4FC47247E049C00E4DC0B /* TimeFountain.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeFountain.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		75A4FC4A247E049C00E4DC0B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		75A4FC4C247E049C00E4DC0B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		75A4FC4F247E049C00E4DC0B /* TimeFountain.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TimeFountain.xcdatamodel; sourceTree = "<group>"; };
 		75A4FC51247E049F00E4DC0B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		75A4FC54247E049F00E4DC0B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		75A4FC56247E049F00E4DC0B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		75A4FC57247E049F00E4DC0B /* TimeFountain.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TimeFountain.entitlements; sourceTree = "<group>"; };
 		75A4FC5C247E049F00E4DC0B /* TimeFountainTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TimeFountainTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		75A4FC60247E049F00E4DC0B /* TimeFountainTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeFountainTests.swift; sourceTree = "<group>"; };
@@ -604,7 +605,7 @@
 				754C03BA247E068400A12CF7 /* API */,
 				75A4FC51247E049F00E4DC0B /* Assets.xcassets */,
 				75A4FC53247E049F00E4DC0B /* Main.storyboard */,
-				75A4FC56247E049F00E4DC0B /* Info.plist */,
+				754C0550247F4CF900A12CF7 /* Info.plist */,
 				75A4FC57247E049F00E4DC0B /* TimeFountain.entitlements */,
 				75A4FC4E247E049C00E4DC0B /* TimeFountain.xcdatamodeld */,
 			);
@@ -741,6 +742,7 @@
 			files = (
 				75A4FC52247E049F00E4DC0B /* Assets.xcassets in Resources */,
 				75A4FC55247E049F00E4DC0B /* Main.storyboard in Resources */,
+				754C0551247F4CF900A12CF7 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -27,11 +27,11 @@ public extension Bundle {
     }
     
     static var tdAccount_id: String? {
-        return plist?["ACCOUNT_ID"] as? String
+        return plist?[accountidKey] as? String
     }
     
     static var td_api_key: String? {
-        return plist?["TDAMERITRADE_API_KEY"] as? String
+        return plist?[apikeyKey] as? String
     }
     
     static var plist: [String: Any]? {

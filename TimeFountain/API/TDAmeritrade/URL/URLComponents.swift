@@ -8,6 +8,8 @@
 
 import Foundation
 
+let apikeyKey = "TDAMERITRADE_API_KEY"
+let accountidKey = "ACCOUNT_ID"
 
 class TDAmeritradeURL {
     
@@ -29,7 +31,7 @@ class TDAmeritradeURL {
     
     func apiKey(_ apiKey: String?) -> TDAmeritradeURL {
         if apiKey == "" || apiKey == nil {
-            print("ERROR: API KEY WAS NOT SET PROPERLY")
+            print("ERROR: API KEY WAS NOT SET PROPERLY, please visit: https://medium.com/p/6ce316a5887/edit to get your account id and api key.  Set the them as values for \(apikeyKey) key and \(accountidKey)" )
         }
         return kv(.apikey, apiKey)
     }

@@ -13,14 +13,23 @@ class ViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        ["cat", "dog", "slippery"]
+        let ticker = "TSLA"
+        let url = URL.priceHistory(
+            period: .days(.ten, .oneMinute),
+            ticker: ticker
+        )
+        print(url.absoluteString)
+        url.getData { data in
+            guard let candleList = CandleList(data),
+                let dataframe = DataFrame([
+                    DataFrame.Column(header: "date", cells: candleList.dates.asStrings),
+                    DataFrame.Column(header: "close", cells: candleList.closes.asStrings),
+                    DataFrame.Column(header: "SMA", cells: candleList.closes.sma(for: 180).asStrings)
+                ]) else { return }
+            print(dataframe.convertToCSV(subPathSlashesBetween: ticker + "/" + "priceHistory"))
+        }
+
         
-        guard let dataframe = DataFrame([
-            DataFrame.Column(header: "date", cells: ["Monday", "Tuesday"]),
-            DataFrame.Column(header: "Values", cells: [349.string, 34.string]),
-        ]) else { return }
-        print(dataframe.stringMatrix)
-       // dataframe.asCSVString.save(root: .desktopDirectory, pathStr: "TestWorked2.csv")
-        // Do any additional setup after loading the view.
+        
     }
 }

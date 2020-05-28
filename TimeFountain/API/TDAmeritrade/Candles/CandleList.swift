@@ -12,4 +12,12 @@ struct CandleList: Codable {
     let candles: [Candle]
     let empty: Bool
     let symbol: String
+    
+    var closes: [Double] {
+        return candles.map {$0.close}
+    }
+    
+    var dates: [Double] {
+        return candles.map { $0.datetime }
+    }
 }

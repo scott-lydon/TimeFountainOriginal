@@ -29,12 +29,16 @@ struct DataFrame: Equatable {
         self.columns = columns
     }
     
+    @discardableResult
     func convertToCSV(
         root: FileManager.SearchPathDirectory = .desktopDirectory,
-        path: String = "/iOS/DataFrame",
-        name: String = Date().description
-    ) {
-        stringMatrix.asCSV.save(root: root, pathStr: path + name + ".csv")
+        generalPath: String = "/iOS/DataFrame/",
+        subPathSlashesBetween: String,
+        named csvname: String = Date().description
+    ) -> String {
+        let postPath = generalPath + subPathSlashesBetween + "/" + csvname + ".csv"
+        stringMatrix.asCSV.save(root: root, pathStr: postPath)
+        return postPath
     }
     
     var stringMatrix: [[String]] {
