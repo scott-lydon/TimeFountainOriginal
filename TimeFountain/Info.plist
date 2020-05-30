@@ -36,5 +36,7 @@
 	<string></string>
 	<key>ACCOUNT_ID</key>
 	<string></string>
+	<key>CFBundleURLSchemes</key>
+	<string>ScottLydon.TimeFountain</string>
 </dict>
 </plist>

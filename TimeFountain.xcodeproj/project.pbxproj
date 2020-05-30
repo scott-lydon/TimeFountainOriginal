@@ -124,6 +124,10 @@
 		754C054D247ED8ED00A12CF7 /* CSVTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754C054C247ED8ED00A12CF7 /* CSVTests.swift */; };
 		754C054F247EF57300A12CF7 /* CommaSeparatedArraytests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754C054E247EF57300A12CF7 /* CommaSeparatedArraytests.swift */; };
 		754C0551247F4CF900A12CF7 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 754C0550247F4CF900A12CF7 /* Info.plist */; };
+		754C0553247F98C900A12CF7 /* TSLA.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 754C0552247F98C900A12CF7 /* TSLA.mlmodel */; };
+		754C055D2480520200A12CF7 /* UserPrincipalsURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754C055C2480520200A12CF7 /* UserPrincipalsURL.swift */; };
+		754C055F2480552100A12CF7 /* oauth2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754C055E2480552100A12CF7 /* oauth2.swift */; };
+		754C0563248067DF00A12CF7 /* authURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754C0562248067DF00A12CF7 /* authURL.swift */; };
 		75A4FC4B247E049C00E4DC0B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A4FC4A247E049C00E4DC0B /* AppDelegate.swift */; };
 		75A4FC4D247E049C00E4DC0B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A4FC4C247E049C00E4DC0B /* ViewController.swift */; };
 		75A4FC50247E049C00E4DC0B /* TimeFountain.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 75A4FC4E247E049C00E4DC0B /* TimeFountain.xcdatamodeld */; };
@@ -268,6 +272,10 @@
 		754C054C247ED8ED00A12CF7 /* CSVTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSVTests.swift; sourceTree = "<group>"; };
 		754C054E247EF57300A12CF7 /* CommaSeparatedArraytests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommaSeparatedArraytests.swift; sourceTree = "<group>"; };
 		754C0550247F4CF900A12CF7 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		754C0552247F98C900A12CF7 /* TSLA.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = TSLA.mlmodel; sourceTree = "<group>"; };
+		754C055C2480520200A12CF7 /* UserPrincipalsURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPrincipalsURL.swift; sourceTree = "<group>"; };
+		754C055E2480552100A12CF7 /* oauth2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = oauth2.swift; sourceTree = "<group>"; };
+		754C0562248067DF00A12CF7 /* authURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = authURL.swift; sourceTree = "<group>"; };
 		75A4FC47247E049C00E4DC0B /* TimeFountain.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeFountain.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		75A4FC4A247E049C00E4DC0B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		75A4FC4C247E049C00E4DC0B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -448,6 +456,9 @@
 				754C0424247E0D3300A12CF7 /* EndPoints.swift */,
 				754C0423247E0D3200A12CF7 /* PeriodFrequencies.swift */,
 				754C0420247E0D3200A12CF7 /* URL+Factory.swift */,
+				754C055C2480520200A12CF7 /* UserPrincipalsURL.swift */,
+				754C055E2480552100A12CF7 /* oauth2.swift */,
+				754C0562248067DF00A12CF7 /* authURL.swift */,
 				754C041F247E0D3200A12CF7 /* URL+Key.swift */,
 				754C0422247E0D3200A12CF7 /* URL+String.swift */,
 				754C0421247E0D3200A12CF7 /* URLComponents.swift */,
@@ -596,6 +607,7 @@
 		75A4FC49247E049C00E4DC0B /* TimeFountain */ = {
 			isa = PBXGroup;
 			children = (
+				754C0552247F98C900A12CF7 /* TSLA.mlmodel */,
 				75A4FC4A247E049C00E4DC0B /* AppDelegate.swift */,
 				75A4FC4C247E049C00E4DC0B /* ViewController.swift */,
 				754C0476247E151F00A12CF7 /* Interview */,
@@ -780,6 +792,8 @@
 				754C0471247E0E5D00A12CF7 /* Angle.swift in Sources */,
 				754C050A247E17DD00A12CF7 /* IndexPath.swift in Sources */,
 				754C0418247E0CFC00A12CF7 /* StreamerSubscriptionKey.swift in Sources */,
+				754C055F2480552100A12CF7 /* oauth2.swift in Sources */,
+				754C0563248067DF00A12CF7 /* authURL.swift in Sources */,
 				75A4FC4D247E049C00E4DC0B /* ViewController.swift in Sources */,
 				754C03E7247E0C6800A12CF7 /* CashEquivalent.swift in Sources */,
 				754C03C8247E06CE00A12CF7 /* OrderLegCollection.swift in Sources */,
@@ -809,6 +823,7 @@
 				754C046F247E0E5D00A12CF7 /* Array+Resistance.swift in Sources */,
 				754C0475247E0E6E00A12CF7 /* SimpleMovingAvg.swift in Sources */,
 				754C052F247E17DD00A12CF7 /* sockaddr_in.swift in Sources */,
+				754C0553247F98C900A12CF7 /* TSLA.mlmodel in Sources */,
 				754C03D4247E06F900A12CF7 /* MarginAccount.swift in Sources */,
 				754C03D3247E06F900A12CF7 /* InitialBalances.swift in Sources */,
 				754C043E247E0D5D00A12CF7 /* Instrument.swift in Sources */,
@@ -854,6 +869,7 @@
 				754C0538247E17DD00A12CF7 /* UNUserNotificationCenter.swift in Sources */,
 				754C046E247E0E5D00A12CF7 /* Resistance.swift in Sources */,
 				754C040F247E0CDC00A12CF7 /* ETF.swift in Sources */,
+				754C055D2480520200A12CF7 /* UserPrincipalsURL.swift in Sources */,
 				754C0513247E17DD00A12CF7 /* Data.swift in Sources */,
 				754C046D247E0E5D00A12CF7 /* ManualLineEntry.swift in Sources */,
 				754C0428247E0D3300A12CF7 /* URL+String.swift in Sources */,

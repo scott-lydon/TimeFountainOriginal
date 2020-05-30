@@ -35,16 +35,27 @@ public extension Bundle {
     }
     
     static var plist: [String: Any]? {
+        print("plist: --> ", #line)
         guard let fileUrl = Bundle.main.url(
             forResource: "Info",
             withExtension: "plist"
             ) else { return nil }
+        print("File url: --> ", fileUrl)
         do {
             let data = try Data.init(contentsOf: fileUrl)
             let plist = try! PropertyListSerialization.propertyList(from:data, options: [], format: nil) as! [String:Any]
             return plist
-        } catch {
+        } catch let err {
+            print(err.localizedDescription)
             return nil
         }
+    }
+    
+    static func getPath() -> String {
+        let plistFileName = "Info.plist"
+        let paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
+        let documentPath = paths[0] as NSString
+        let plistPath = documentPath.appendingPathComponent(plistFileName)
+        return plistPath
     }
 }

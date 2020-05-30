@@ -10,6 +10,10 @@ import Foundation
 
 extension TDAmeritradeURL {
     
+    enum Path: String {
+        case marketdata, pricehistory, oauth2, userprincipals, token, auth
+    }
+    
     enum Key: String {
         case apikey
         case periodType
@@ -19,8 +23,13 @@ extension TDAmeritradeURL {
         case endDate
         case startDate
         case needsExtendedHoursData
-        
-        
+        case fields
+        case grant_type
+        case refresh_token
+        case access_type
+        case code
+        case client_id
+        case response_type, redirect_uri
 //        case access_token
 //        case allowsCourtesyCalls
 //        case alwaysInUse

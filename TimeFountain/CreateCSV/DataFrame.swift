@@ -24,7 +24,7 @@ struct DataFrame: Equatable {
     
     var columns: [Column]
     
-    init?(_ columns: [Column]) {
+    init?(_ columns: Column...) {
         guard columns.map({ $0.cells.count }).allEqual, columns.count > 0 else { return nil }
         self.columns = columns
     }
@@ -32,13 +32,11 @@ struct DataFrame: Equatable {
     @discardableResult
     func convertToCSV(
         root: FileManager.SearchPathDirectory = .desktopDirectory,
-        generalPath: String = "/iOS/DataFrame/",
-        subPathSlashesBetween: String,
-        named csvname: String = Date().description
-    ) -> String {
-        let postPath = generalPath + subPathSlashesBetween + "/" + csvname + ".csv"
-        stringMatrix.asCSV.save(root: root, pathStr: postPath)
-        return postPath
+        generalPath: String = "iOS/DataFrame/",
+       // subPathSlashesBetween: String = "",
+        named csvname: String = Int(Date().timeIntervalSince1970).description
+    ) -> URL? {
+        stringMatrix.asCSV.save(root: root, pathStr: generalPath + /*subPathSlashesBetween +*/ csvname + ".csv")
     }
     
     var stringMatrix: [[String]] {

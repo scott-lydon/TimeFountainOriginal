@@ -37,4 +37,8 @@ extension String {
     static func slashes(_ folders: String...) -> String {
         return folders.joined(separator: "/")
     }
+    
+    static func slashes(_ folders: [String]) -> String {
+        folders.joined(separator: "/")
+    }
 }

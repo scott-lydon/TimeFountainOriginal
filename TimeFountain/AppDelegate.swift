@@ -8,13 +8,44 @@
 
 import Cocoa
 
+let OAuth2AppDidReceiveCallbackNotification = NSNotification.Name(rawValue: "OAuth2AppDidReceiveCallback")
+
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
-
-
-
+    
+    func application(_ application: NSApplication, open urls: [URL]) {
+        print("Got a response")
+    }
+    
+    func applicationWillFinishLaunching(_ notification: Notification) {
+        NSAppleEventManager.shared().setEventHandler(
+            self,
+            andSelector: #selector(self.handleAppleEvent(event:replyEvent:)),
+            forEventClass: AEEventClass(kInternetEventClass),
+            andEventID: AEEventID(kAEGetURL)
+        )
+    }
+    
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         // Insert code here to initialize your application
+    }
+    
+    @objc
+    func handleAppleEvent(
+        event: NSAppleEventDescriptor,
+        replyEvent reply: NSAppleEventDescriptor
+    ) {
+        if let urlString = event.paramDescriptor(forKeyword: AEKeyword(keyDirectObject))?.stringValue {
+            if let url = URL(string: urlString), "ppoauthapp" == url.scheme && "oauth" == url.host {
+                NotificationCenter.default.post(
+                    name: OAuth2AppDidReceiveCallbackNotification,
+                    object: url
+                )
+            }
+        }
+        else {
+            NSLog("No valid URL to handle")
+        }
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {

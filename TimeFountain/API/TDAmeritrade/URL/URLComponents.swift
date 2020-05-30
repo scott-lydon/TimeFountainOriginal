@@ -29,7 +29,7 @@ class TDAmeritradeURL {
         return self
     }
     
-    func apiKey(_ apiKey: String?) -> TDAmeritradeURL {
+    func apiKey(_ apiKey: String? = Bundle.td_api_key) -> TDAmeritradeURL {
         if apiKey == "" || apiKey == nil {
             print("ERROR: API KEY WAS NOT SET PROPERLY, please visit: https://medium.com/p/6ce316a5887/edit to get your account id and api key.  Set the them as values for \(apikeyKey) key and \(accountidKey)" )
         }
@@ -51,6 +51,8 @@ class TDAmeritradeURL {
     func needsExtendedHoursData(_ needsExtendedHoursData: Bool?) -> TDAmeritradeURL {
         return kv(.needsExtendedHoursData, needsExtendedHoursData?.string)
     }
+    
+   
 //    func row(_ value: Int) -> TDAmeritradeURL {
 //        return kv(.row, String(value))
 //    }
@@ -61,7 +63,27 @@ class TDAmeritradeURL {
     
     var str = ""
     init(path: String) {
-        str.append(UserDefaults.baseUrlToUse + path + "?")
+        str.append(String.baseURL + path + "?")
+    }
+    
+    init(authPath: String) {
+        str.append(String.authURL + authPath + "?")
+    }
+    
+    convenience init(authPath: Path) {
+        self.init(authPath: authPath.rawValue)
+    }
+    
+    convenience init(path: Path) {
+        self.init(path: path.rawValue)
+    }
+    
+    convenience init(paths: [Path]) {
+        self.init(path: .slashes(paths.map({ $0.rawValue})))
+    }
+    
+    convenience init(paths: Path...) {
+        self.init(path: .slashes(paths.map({ $0.rawValue})))
     }
     
     var build: URL {

@@ -116,8 +116,9 @@ public extension String {
         url?.sessionDataTask(provideString: stringAction)?.resume()
     }
     
-    func save(root: FileManager.SearchPathDirectory, pathStr: String) {
+    func save(root: FileManager.SearchPathDirectory, pathStr: String) -> URL? {
         let fileManager = FileManager.default
+        var fileURL: URL?
         do {
             let path = try fileManager.url(
                 for: root,
@@ -125,10 +126,23 @@ public extension String {
                 appropriateFor: nil,
                 create: true
             )
-            let fileURL = path.appendingPathComponent(pathStr)
-            try write(to: fileURL, atomically: true, encoding: .utf8)
-        } catch {
-            print("error creating file")
+            let url = path.appendingPathComponent(pathStr)
+           fileURL = url
+//            guard let fileURL = URL(string: "/Users/scottlydon/Desktop/iOS/DataFrame/TSLA/priceHistory/1590632452.csv") else { return }
+            // TODO https://stackoverflow.com/questions/41162610/create-directory-in-swift-3-0
+            try write(to: url, atomically: true, encoding: .utf8)
+        } catch let err {
+            print("error creating file: \(err.localizedDescription)")
         }
+        return fileURL
+    }
+    
+    func save() {
+        let fileManager = FileManager()
+        fileManager.createFile(
+            atPath: "/Users/scottlydon/Desktop/iOS/DataFrame/TSLA/priceHistory/1590632452.csv",
+            contents: data(using: .utf8),
+            attributes: nil
+        )
     }
 }
