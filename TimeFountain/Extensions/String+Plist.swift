@@ -41,4 +41,11 @@ extension String {
     static func slashes(_ folders: [String]) -> String {
         folders.joined(separator: "/")
     }
+    
+    var tdDate: Date? {
+        let df = DateFormatter()
+        df.dateFormat = .tdAmeritradeFormat
+        df.timeZone = TimeZone(identifier: "GMT")
+        return df.date(from: self)
+    }
 }

@@ -66,7 +66,7 @@ extension URL {
 
 extension TDAmeritradeURL {
 
-    func grant_type(_ grant_type: URL.GrantType) -> TDAmeritradeURL {
+    func grant_type(_ grant_type: GrantType) -> TDAmeritradeURL {
         return kv(.grant_type, grant_type.rawValue)
     }
     
@@ -75,7 +75,7 @@ extension TDAmeritradeURL {
         return kv(.refresh_token, refresh_token)
     }
     
-    func access_type(_ access_type: URL.AccessType?) -> TDAmeritradeURL {
+    func access_type(_ access_type: AccessType?) -> TDAmeritradeURL {
         guard let access_type = access_type else { return self }
         return kv(.access_type, access_type.rawValue)
     }

@@ -64,14 +64,14 @@ public extension String {
     
     var date: Date? {
         let df = DateFormatter()
-        df.dateFormat = "YYYY-MM-dd HH:mm:ss"
+        df.dateFormat = .commonDateFormat
         df.timeZone = TimeZone(identifier: "GMT")
         return df.date(from: self)
     }
     
     var dateFromAPI: Date? {
         let df = DateFormatter()
-        df.dateFormat = "YYYY-MM-dd HH:mm:ss"
+        df.dateFormat = .commonDateFormat
         df.timeZone = TimeZone(identifier: "GMT")
         return df.date(from: self)
     }

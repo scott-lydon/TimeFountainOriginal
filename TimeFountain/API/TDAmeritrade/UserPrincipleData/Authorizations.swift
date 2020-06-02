@@ -9,8 +9,7 @@
 import Foundation
 
 struct Authorizations: Codable {
-    let apex, levelTwoQuotes, stockTrading, marginTrading: Bool
-    let streamingNews: Bool
+    let advancedMargin, apex, levelTwoQuotes, marginTrading, scottradeAccount, stockTrading, streamerAccess, streamingNews: Bool
     let optionTradingLevel: String
-    let streamerAccess, advancedMargin, scottradeAccount: Bool
 }
+

@@ -8,20 +8,19 @@
 
 import Foundation
 
+
 struct Account: Codable {
-    let accountID, accountDescription, displayName, accountCDDomainID: String
-    let company, segment, surrogateIDS: String
-    let preferences: PreferencesPrincipal
-    let acl: String
+    let displayName, accountID, accountCDDomainID, segment: String
+    let preferences: Preferences
+    let company, acl: String
     let authorizations: Authorizations
+    let surrogateIDS: SurrogateIDS
 
     enum CodingKeys: String, CodingKey {
-        case accountID = "accountId"
-        case accountDescription = "description"
         case displayName
+        case accountID = "accountId"
         case accountCDDomainID = "accountCdDomainId"
-        case company, segment
+        case segment, preferences, company, acl, authorizations
         case surrogateIDS = "surrogateIds"
-        case preferences, acl, authorizations
     }
 }

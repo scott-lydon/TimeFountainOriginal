@@ -9,13 +9,20 @@
 import Foundation
 
 struct StreamerInfo: Codable {
-    let streamerBinaryURL, streamerSocketURL, token, tokenTimestamp: String
-    let userGroup, accessLevel, acl, appID: String
+    let streamerBinaryURL: String
+    let tokenTimestamp: String // Date
+    let acl, appID, streamerSocketURL, token: String
+    let userGroup, accessLevel: String
+    
+    var tokenTimeStamp: Date? {
+        tokenTimestamp.tdDate
+    }
 
     enum CodingKeys: String, CodingKey {
         case streamerBinaryURL = "streamerBinaryUrl"
-        case streamerSocketURL = "streamerSocketUrl"
-        case token, tokenTimestamp, userGroup, accessLevel, acl
+        case tokenTimestamp, acl
         case appID = "appId"
+        case streamerSocketURL = "streamerSocketUrl"
+        case token, userGroup, accessLevel
     }
 }

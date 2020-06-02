@@ -63,7 +63,6 @@
 		754C0434247E0D4A00A12CF7 /* UserPrincipals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754C042D247E0D4A00A12CF7 /* UserPrincipals.swift */; };
 		754C0435247E0D4A00A12CF7 /* PrincipalQuotes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754C042E247E0D4A00A12CF7 /* PrincipalQuotes.swift */; };
 		754C0436247E0D4A00A12CF7 /* UpdatePrincipalData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754C042F247E0D4A00A12CF7 /* UpdatePrincipalData.swift */; };
-		754C0437247E0D4A00A12CF7 /* PreferencesPrincipal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754C0430247E0D4A00A12CF7 /* PreferencesPrincipal.swift */; };
 		754C0438247E0D4A00A12CF7 /* StreamerInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754C0431247E0D4A00A12CF7 /* StreamerInfo.swift */; };
 		754C0439247E0D4A00A12CF7 /* AccountPrincipal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754C0432247E0D4A00A12CF7 /* AccountPrincipal.swift */; };
 		754C043E247E0D5D00A12CF7 /* Instrument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754C043B247E0D5D00A12CF7 /* Instrument.swift */; };
@@ -128,6 +127,10 @@
 		754C055D2480520200A12CF7 /* UserPrincipalsURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754C055C2480520200A12CF7 /* UserPrincipalsURL.swift */; };
 		754C055F2480552100A12CF7 /* oauth2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754C055E2480552100A12CF7 /* oauth2.swift */; };
 		754C0563248067DF00A12CF7 /* authURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754C0562248067DF00A12CF7 /* authURL.swift */; };
+		754C05652482EB8A00A12CF7 /* StreamerSubscriptionKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754C05642482EB8900A12CF7 /* StreamerSubscriptionKeys.swift */; };
+		754C0567248572BB00A12CF7 /* URLRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754C0566248572BB00A12CF7 /* URLRequest.swift */; };
+		754C05692485D8A400A12CF7 /* StringAny.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754C05682485D8A300A12CF7 /* StringAny.swift */; };
+		754C056B2486BFDA00A12CF7 /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754C056A2486BFDA00A12CF7 /* Defaults.swift */; };
 		75A4FC4B247E049C00E4DC0B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A4FC4A247E049C00E4DC0B /* AppDelegate.swift */; };
 		75A4FC4D247E049C00E4DC0B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A4FC4C247E049C00E4DC0B /* ViewController.swift */; };
 		75A4FC50247E049C00E4DC0B /* TimeFountain.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 75A4FC4E247E049C00E4DC0B /* TimeFountain.xcdatamodeld */; };
@@ -211,7 +214,6 @@
 		754C042D247E0D4A00A12CF7 /* UserPrincipals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserPrincipals.swift; sourceTree = "<group>"; };
 		754C042E247E0D4A00A12CF7 /* PrincipalQuotes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrincipalQuotes.swift; sourceTree = "<group>"; };
 		754C042F247E0D4A00A12CF7 /* UpdatePrincipalData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdatePrincipalData.swift; sourceTree = "<group>"; };
-		754C0430247E0D4A00A12CF7 /* PreferencesPrincipal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreferencesPrincipal.swift; sourceTree = "<group>"; };
 		754C0431247E0D4A00A12CF7 /* StreamerInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamerInfo.swift; sourceTree = "<group>"; };
 		754C0432247E0D4A00A12CF7 /* AccountPrincipal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountPrincipal.swift; sourceTree = "<group>"; };
 		754C043B247E0D5D00A12CF7 /* Instrument.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Instrument.swift; sourceTree = "<group>"; };
@@ -276,6 +278,10 @@
 		754C055C2480520200A12CF7 /* UserPrincipalsURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPrincipalsURL.swift; sourceTree = "<group>"; };
 		754C055E2480552100A12CF7 /* oauth2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = oauth2.swift; sourceTree = "<group>"; };
 		754C0562248067DF00A12CF7 /* authURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = authURL.swift; sourceTree = "<group>"; };
+		754C05642482EB8900A12CF7 /* StreamerSubscriptionKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamerSubscriptionKeys.swift; sourceTree = "<group>"; };
+		754C0566248572BB00A12CF7 /* URLRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLRequest.swift; sourceTree = "<group>"; };
+		754C05682485D8A300A12CF7 /* StringAny.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringAny.swift; sourceTree = "<group>"; };
+		754C056A2486BFDA00A12CF7 /* Defaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Defaults.swift; sourceTree = "<group>"; };
 		75A4FC47247E049C00E4DC0B /* TimeFountain.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeFountain.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		75A4FC4A247E049C00E4DC0B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		75A4FC4C247E049C00E4DC0B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -458,6 +464,7 @@
 				754C0420247E0D3200A12CF7 /* URL+Factory.swift */,
 				754C055C2480520200A12CF7 /* UserPrincipalsURL.swift */,
 				754C055E2480552100A12CF7 /* oauth2.swift */,
+				754C05642482EB8900A12CF7 /* StreamerSubscriptionKeys.swift */,
 				754C0562248067DF00A12CF7 /* authURL.swift */,
 				754C041F247E0D3200A12CF7 /* URL+Key.swift */,
 				754C0422247E0D3200A12CF7 /* URL+String.swift */,
@@ -471,7 +478,6 @@
 			children = (
 				754C0432247E0D4A00A12CF7 /* AccountPrincipal.swift */,
 				754C042C247E0D4900A12CF7 /* Authorizations.swift */,
-				754C0430247E0D4A00A12CF7 /* PreferencesPrincipal.swift */,
 				754C042E247E0D4A00A12CF7 /* PrincipalQuotes.swift */,
 				754C0431247E0D4A00A12CF7 /* StreamerInfo.swift */,
 				754C042F247E0D4A00A12CF7 /* UpdatePrincipalData.swift */,
@@ -504,10 +510,13 @@
 			isa = PBXGroup;
 			children = (
 				754C044C247E0DBD00A12CF7 /* Array+Int.swift */,
+				754C05682485D8A300A12CF7 /* StringAny.swift */,
 				754C0449247E0DBC00A12CF7 /* Codable.swift */,
 				754C044E247E0DBD00A12CF7 /* Plist.swift */,
 				754C0447247E0DBC00A12CF7 /* String+Plist.swift */,
 				754C044A247E0DBD00A12CF7 /* URL.swift */,
+				754C0566248572BB00A12CF7 /* URLRequest.swift */,
+				754C056A2486BFDA00A12CF7 /* Defaults.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -794,6 +803,7 @@
 				754C0418247E0CFC00A12CF7 /* StreamerSubscriptionKey.swift in Sources */,
 				754C055F2480552100A12CF7 /* oauth2.swift in Sources */,
 				754C0563248067DF00A12CF7 /* authURL.swift in Sources */,
+				754C0567248572BB00A12CF7 /* URLRequest.swift in Sources */,
 				75A4FC4D247E049C00E4DC0B /* ViewController.swift in Sources */,
 				754C03E7247E0C6800A12CF7 /* CashEquivalent.swift in Sources */,
 				754C03C8247E06CE00A12CF7 /* OrderLegCollection.swift in Sources */,
@@ -814,6 +824,7 @@
 				754C03E4247E0C6800A12CF7 /* Execution.swift in Sources */,
 				754C0453247E0DBD00A12CF7 /* Codable.swift in Sources */,
 				754C0545247E1C7D00A12CF7 /* UserDefaults.swift in Sources */,
+				754C05652482EB8A00A12CF7 /* StreamerSubscriptionKeys.swift in Sources */,
 				754C0425247E0D3300A12CF7 /* URL+Key.swift in Sources */,
 				754C03DC247E0C5000A12CF7 /* CandleList.swift in Sources */,
 				754C03C9247E06CE00A12CF7 /* OrderGet.swift in Sources */,
@@ -882,17 +893,18 @@
 				754C03D6247E06F900A12CF7 /* OrderStrategy.swift in Sources */,
 				754C03F3247E0C8000A12CF7 /* Bond.swift in Sources */,
 				754C051D247E17DD00A12CF7 /* CLLocationManager.swift in Sources */,
+				754C05692485D8A400A12CF7 /* StringAny.swift in Sources */,
 				754C0543247E17DD00A12CF7 /* Keychain.swift in Sources */,
 				754C040E247E0CDC00A12CF7 /* QuoteOption.swift in Sources */,
 				754C0500247E17DD00A12CF7 /* Dictionary.swift in Sources */,
 				754C03FD247E0C9900A12CF7 /* OptionDeliverables.swift in Sources */,
 				754C0426247E0D3300A12CF7 /* URL+Factory.swift in Sources */,
-				754C0437247E0D4A00A12CF7 /* PreferencesPrincipal.swift in Sources */,
 				754C03F0247E0C8000A12CF7 /* Fundamental.swift in Sources */,
 				754C0439247E0D4A00A12CF7 /* AccountPrincipal.swift in Sources */,
 				754C0415247E0CDC00A12CF7 /* QuoteForex.swift in Sources */,
 				754C03C5247E06C600A12CF7 /* Mover.swift in Sources */,
 				754C0539247E17DD00A12CF7 /* TravelMethod.swift in Sources */,
+				754C056B2486BFDA00A12CF7 /* Defaults.swift in Sources */,
 				754C0515247E17DD00A12CF7 /* URL+HELPERS.swift in Sources */,
 				754C03D1247E06F900A12CF7 /* GeneralAccount.swift in Sources */,
 				754C0502247E17DD00A12CF7 /* UNNotificationCategory.swift in Sources */,

@@ -8,9 +8,9 @@
 
 import Foundation
 
+typealias DataAction = (Data) -> Void
+
 extension URL {
-    
-    typealias DataAction = (Data) -> Void
     
     func getData(_ dataAction: DataAction? = nil) {
         sessionDataTask(provideData: dataAction)?.resume()

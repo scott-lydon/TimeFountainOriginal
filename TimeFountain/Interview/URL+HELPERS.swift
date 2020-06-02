@@ -69,12 +69,27 @@ public extension URL {
 public extension URLRequest {
     
     func get(line: Int = #line, file: String = #file, _ jsonAction: URLSession.JSONAction? = nil) {
-        return URLSession.dataTask(
+        URLSession.dataTask(
             with: self,
             line: line,
             file: file,
             jsonAction: jsonAction
         )
+    }
+    
+    internal func getData(_ dataAction: DataAction? = nil) {
+        sessionDataTask(provideData: dataAction)?.resume()
+    }
+    
+    internal func sessionDataTask(provideData: DataAction?) -> URLSessionDataTask? {
+        return URLSession.shared.dataTask(with: self) {
+            data, response, error in
+            guard let data = data else {
+                print("ERROR: data was nil for the call from: \(self), ")
+                return
+            }
+            provideData?(data)
+        }
     }
 }
 
@@ -93,9 +108,17 @@ public extension URLSession {
     ///usage: `URLSession.dataTask(with: "myurlRequest") { json in }
     static func dataTask(with urlRequest: URLRequest, line: Int = #line, file: String = #file, jsonAction: JSONAction? = nil) {
         URLSession.shared.dataTask(with: urlRequest) { data, response, error in
-            let json = [String: Any](data, response, error, line, file, urlRequest.url?.absoluteString ?? "no url in request")
-            jsonAction?(json)
-        }
+            jsonAction?(
+                [String: Any](
+                    data,
+                    response,
+                    error,
+                    line,
+                    file,
+                    urlRequest.url?.absoluteString ?? "no url in request"
+                )
+            )
+        }.resume()
     }
 }
 

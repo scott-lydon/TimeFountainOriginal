@@ -15,3 +15,6 @@ extension Array where Element: Equatable {
         return allSatisfy { $0 == first }
     }
 }
+
+
+
