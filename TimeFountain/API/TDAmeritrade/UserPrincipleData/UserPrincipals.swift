@@ -18,6 +18,17 @@ extension String {
     }
 }
 
+extension Dictionary {
+    var queryString: String {
+        var output: String = ""
+        for (key,value) in self {
+            output +=  "\(key)=\(value)&"
+        }
+        output = String(output.dropLast())
+        return output
+    }
+}
+
 extension DateFormatter {
     convenience init(
         _ format: String,
@@ -57,6 +68,53 @@ struct UserPrincipals: Codable {
     
     var tokenExpirationTimeDate: Date? {
         tokenExpirationTime.tdDate
+    }
+    
+    var loginRequest: [String: Any] {
+        print(accounts?.first ?? "first account was nil")
+        guard let firstAccount = accounts?.first else {
+            assertionFailure("Couldn't get an account from user principals")
+            return [:]
+        }
+        return [
+            "requests": [
+                "service": "ADMIN",
+                "command": "LOGIN",
+                "requestid": 0,
+                "account": firstAccount.accountID,
+                "source": streamerInfo.appID,
+                "parameters": [
+                    "credential": firstAccountCredentials.queryString,
+                    "token": streamerInfo.token,
+                    "version": "1.0"
+                ]
+            ]
+        ]
+    }
+    
+    var firstAccountCredentials: [String: String] {
+        print(accounts?.first ?? "first account was nil", streamerInfo.tokenTimeStamp?.timeIntervalSince1970 ?? "Token was nil")
+        guard let firstAccount = accounts?.first else {
+            assertionFailure("Couldn't get an account from user principals")
+            return [:]
+        }
+        guard let tokenTimeStamp = streamerInfo.tokenTimeStamp?.timeIntervalSince1970 else {
+            assertionFailure("Couldn't get an account from user principals")
+            return [:]
+        }
+        return [
+            "userid":firstAccount.accountID,
+            "token": streamerInfo.token,
+            "company": firstAccount.company,
+            "segment": firstAccount.segment,
+            "cddomain": firstAccount.accountCDDomainID,
+            "usergroup": streamerInfo.userGroup,
+            "accesslevel": streamerInfo.accessLevel,
+            "authorized": "y",
+            "timestamp": String(Int(tokenTimeStamp)),
+            "appid": streamerInfo.appID,
+            "acl": streamerInfo.acl,
+        ]
     }
 
     

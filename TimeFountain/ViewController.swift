@@ -9,6 +9,22 @@
 import Cocoa
 import CoreML
 
+
+struct Stream: Codable {
+    let requests: [Request]
+}
+
+struct Request: Codable {
+    let service, requestid, command, account: String
+    let source: String
+    let parameters: Parameters
+}
+
+struct Parameters: Codable {
+    let keys, fields: String
+}
+
+
 class ViewController: NSViewController {
 
     let model = TSLA()
@@ -16,10 +32,43 @@ class ViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-    
+        let stream = Stream(
+            requests: [
+                Request(
+                    service: "ACCT_ACTIVITY",
+                    requestid: "2",
+                    command: "SUBS",
+                    account: "your_account",
+                    source: "your_source_id",
+                    parameters: Parameters(
+                        keys: "af9997149e43afba25d5a0050e16637d6c24c3493e911161bd7dd017a6f00b4f5",
+                        fields: "0,1,2,3"
+                    )
+                )
+            ]
+        )
     }
 }
+    
+
+
+/*
+ {
+     "requests": [
+         {
+             "service": "ACCT_ACTIVITY",
+             "requestid": "2",
+             "command": "SUBS",
+             "account": "your_account",
+             "source": "your_source_id",
+             "parameters": {
+                 "keys": " af9997149e43afba25d5a0050e16637d6c24c3493e911161bd7dd017a6f00b4f5",
+                 "fields": "0,1,2,3"
+             }
+         }
+     ]
+ }
+ */
 
 
 extension ViewController {
@@ -72,6 +121,7 @@ extension ViewController {
         let key = "userPrincipals"
         if let data = UserDefaults.standard.data(forKey: key) {
             let principals = UserPrincipals(dataWithDate: data)
+            print(principals?.firstAccountCredentials)
         } else {
             prinicpalsReq.getData { data in
                // UserDefaults.standard.set(data, forKey: key)

@@ -46,4 +46,8 @@ extension Dictionary where Key == String, Value == String {
     static func forAccess(_ token: String) -> Self {
         ["Authorization": "Bearer " + token]
     }
+    
+    static var allowHeader: Self {
+        ["Allow": "GET, PUT, POST, DELETE"]
+    }
 }

@@ -130,7 +130,9 @@
 		754C05652482EB8A00A12CF7 /* StreamerSubscriptionKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754C05642482EB8900A12CF7 /* StreamerSubscriptionKeys.swift */; };
 		754C0567248572BB00A12CF7 /* URLRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754C0566248572BB00A12CF7 /* URLRequest.swift */; };
 		754C05692485D8A400A12CF7 /* StringAny.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754C05682485D8A300A12CF7 /* StringAny.swift */; };
-		754C056B2486BFDA00A12CF7 /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754C056A2486BFDA00A12CF7 /* Defaults.swift */; };
+		754C056D2487405400A12CF7 /* StreamRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754C056C2487405300A12CF7 /* StreamRequest.swift */; };
+		754C056F248746FD00A12CF7 /* Encodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754C056E248746FD00A12CF7 /* Encodable.swift */; };
+		754C05732487509700A12CF7 /* TDSocketURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754C05722487509700A12CF7 /* TDSocketURL.swift */; };
 		75A4FC4B247E049C00E4DC0B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A4FC4A247E049C00E4DC0B /* AppDelegate.swift */; };
 		75A4FC4D247E049C00E4DC0B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A4FC4C247E049C00E4DC0B /* ViewController.swift */; };
 		75A4FC50247E049C00E4DC0B /* TimeFountain.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 75A4FC4E247E049C00E4DC0B /* TimeFountain.xcdatamodeld */; };
@@ -281,7 +283,9 @@
 		754C05642482EB8900A12CF7 /* StreamerSubscriptionKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamerSubscriptionKeys.swift; sourceTree = "<group>"; };
 		754C0566248572BB00A12CF7 /* URLRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLRequest.swift; sourceTree = "<group>"; };
 		754C05682485D8A300A12CF7 /* StringAny.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringAny.swift; sourceTree = "<group>"; };
-		754C056A2486BFDA00A12CF7 /* Defaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Defaults.swift; sourceTree = "<group>"; };
+		754C056C2487405300A12CF7 /* StreamRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamRequest.swift; sourceTree = "<group>"; };
+		754C056E248746FD00A12CF7 /* Encodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Encodable.swift; sourceTree = "<group>"; };
+		754C05722487509700A12CF7 /* TDSocketURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TDSocketURL.swift; sourceTree = "<group>"; };
 		75A4FC47247E049C00E4DC0B /* TimeFountain.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeFountain.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		75A4FC4A247E049C00E4DC0B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		75A4FC4C247E049C00E4DC0B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -460,6 +464,7 @@
 			isa = PBXGroup;
 			children = (
 				754C0424247E0D3300A12CF7 /* EndPoints.swift */,
+				754C05722487509700A12CF7 /* TDSocketURL.swift */,
 				754C0423247E0D3200A12CF7 /* PeriodFrequencies.swift */,
 				754C0420247E0D3200A12CF7 /* URL+Factory.swift */,
 				754C055C2480520200A12CF7 /* UserPrincipalsURL.swift */,
@@ -482,6 +487,7 @@
 				754C0431247E0D4A00A12CF7 /* StreamerInfo.swift */,
 				754C042F247E0D4A00A12CF7 /* UpdatePrincipalData.swift */,
 				754C042D247E0D4A00A12CF7 /* UserPrincipals.swift */,
+				754C056C2487405300A12CF7 /* StreamRequest.swift */,
 			);
 			path = UserPrincipleData;
 			sourceTree = "<group>";
@@ -516,7 +522,7 @@
 				754C0447247E0DBC00A12CF7 /* String+Plist.swift */,
 				754C044A247E0DBD00A12CF7 /* URL.swift */,
 				754C0566248572BB00A12CF7 /* URLRequest.swift */,
-				754C056A2486BFDA00A12CF7 /* Defaults.swift */,
+				754C056E248746FD00A12CF7 /* Encodable.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -829,10 +835,12 @@
 				754C03DC247E0C5000A12CF7 /* CandleList.swift in Sources */,
 				754C03C9247E06CE00A12CF7 /* OrderGet.swift in Sources */,
 				754C03E5247E0C6800A12CF7 /* FixedIncome.swift in Sources */,
+				754C056F248746FD00A12CF7 /* Encodable.swift in Sources */,
 				754C043F247E0D5D00A12CF7 /* Watchlist.swift in Sources */,
 				754C053C247E17DD00A12CF7 /* String.swift in Sources */,
 				754C046F247E0E5D00A12CF7 /* Array+Resistance.swift in Sources */,
 				754C0475247E0E6E00A12CF7 /* SimpleMovingAvg.swift in Sources */,
+				754C05732487509700A12CF7 /* TDSocketURL.swift in Sources */,
 				754C052F247E17DD00A12CF7 /* sockaddr_in.swift in Sources */,
 				754C0553247F98C900A12CF7 /* TSLA.mlmodel in Sources */,
 				754C03D4247E06F900A12CF7 /* MarginAccount.swift in Sources */,
@@ -882,6 +890,7 @@
 				754C040F247E0CDC00A12CF7 /* ETF.swift in Sources */,
 				754C055D2480520200A12CF7 /* UserPrincipalsURL.swift in Sources */,
 				754C0513247E17DD00A12CF7 /* Data.swift in Sources */,
+				754C056D2487405400A12CF7 /* StreamRequest.swift in Sources */,
 				754C046D247E0E5D00A12CF7 /* ManualLineEntry.swift in Sources */,
 				754C0428247E0D3300A12CF7 /* URL+String.swift in Sources */,
 				754C0462247E0E4000A12CF7 /* MovAvgExponential.swift in Sources */,
@@ -904,7 +913,6 @@
 				754C0415247E0CDC00A12CF7 /* QuoteForex.swift in Sources */,
 				754C03C5247E06C600A12CF7 /* Mover.swift in Sources */,
 				754C0539247E17DD00A12CF7 /* TravelMethod.swift in Sources */,
-				754C056B2486BFDA00A12CF7 /* Defaults.swift in Sources */,
 				754C0515247E17DD00A12CF7 /* URL+HELPERS.swift in Sources */,
 				754C03D1247E06F900A12CF7 /* GeneralAccount.swift in Sources */,
 				754C0502247E17DD00A12CF7 /* UNNotificationCategory.swift in Sources */,

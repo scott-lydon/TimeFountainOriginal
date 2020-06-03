@@ -17,3 +17,15 @@ extension Dictionary where Key == String, Value == Any {
         return String(data: jsonData, encoding: .ascii)
     }
 }
+
+/*
+ 
+ let dictionary = ["aKey": "aValue", "anotherKey": "anotherValue"]
+if let theJSONData = try? JSONSerialization.data(
+    withJSONObject: dictionary,
+    options: []) {
+    let theJSONText = String(data: theJSONData,
+                               encoding: .ascii)
+    print("JSON string = \(theJSONText!)")
+}
+ */

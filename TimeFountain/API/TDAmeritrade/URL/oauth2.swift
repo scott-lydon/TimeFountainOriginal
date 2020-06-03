@@ -16,33 +16,69 @@ enum AccessType: String {
     case offline
 }
 
-extension URLRequest {
-    static func oauth2(
+
+
+// https://developer.tdameritrade.com/authentication/apis/post/token-0
+extension URL {
+    
+    static func getRefreshToken(
         grant_type: GrantType = .authorization_code,
-        refresh_token: String? = nil,
-        access_type: AccessType? = nil,
-        code: String,
-        client_id: String = Bundle.td_api_key!, // A crash is better than wasting my sisngle auth opportunity.
-        redirect_uri: String = "http://localhost"
-    ) -> URLRequest  {
+        code: String = Bundle.td_AccessToken,// AccessToken
+        access_type: AccessType = .offline,
+        client_id: String = Bundle.td_api_key!,//{Consumer Key} (e.g. EXAMPLE@AMER.OAUTHAP)
+        redirect_uri: String = "https://localhost", //{REDIRECT URI} (e.g. https://127.0.0.1)
+        refreshTokenAction: @escaping StringAction
+    ) {
         let url = URL.oauth2(
             grant_type: grant_type,
-            refresh_token: refresh_token,
             access_type: access_type,
             code: code,
             client_id: client_id,
             redirect_uri: redirect_uri
         )
-        var request = URLRequest(url: url)
-        request.allHTTPHeaderFields = [
-            "Content-Type": "application/x-www-form-urlencoded"
-        ]
-        return request
+        print("-->", url.absoluteURL)
+        url.getData { data in
+            print(String(data) ?? "Could not convert data to String")
+            guard let token = String(data) else { return }
+            refreshTokenAction(token)
+        }
+        url.getJSON { json in
+            print("JSON was: ", json)
+        }
     }
-}
-
-// https://developer.tdameritrade.com/authentication/apis/post/token-0
-extension URL {
+    
+    static func getAccessToken(
+        grant_type: GrantType = .refresh_token, //refresh_token
+        refresh_token: String, //{REFRESH TOKEN}
+        client_id: String = Bundle.td_api_key!,
+        accessToken: @escaping StringAction
+    ) {
+        let url = URL.newToken(
+            grant_type: grant_type,
+            refresh_token: refresh_token,
+            client_id: client_id
+        )
+        url.getData { data in
+            print(String(data) ?? "Could not convert data to String")
+            guard let token = String(data) else { return }
+            accessToken(token)
+        }
+        url.getJSON { json in
+            print(json)
+        }
+    }
+    
+    static func newToken(
+        grant_type: GrantType, //refresh_token
+        refresh_token: String, //{REFRESH TOKEN}
+        client_id: String = Bundle.td_api_key!
+    ) -> URL {
+        TDAmeritradeURL(paths: .oauth2, .token)
+            .grant_type(grant_type)
+            .refresh_token(refresh_token)
+            .client_id(client_id)
+            .build
+    }
     
     static func oauth2(
         grant_type: GrantType,
@@ -52,7 +88,7 @@ extension URL {
         client_id: String = Bundle.td_api_key!,
         redirect_uri: String? = nil
     ) -> URL {
-        return TDAmeritradeURL(paths: .oauth2, .token)
+        TDAmeritradeURL(paths: .oauth2, .token)
             .grant_type(grant_type)
             .refresh_token(refresh_token)
             .access_type(access_type)
