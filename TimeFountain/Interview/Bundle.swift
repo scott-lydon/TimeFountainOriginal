@@ -11,11 +11,11 @@ import Foundation
 public extension Bundle {
     
     var displayName: String? {
-        return object(forInfoDictionaryKey: "CFBundleDisplayName") as? String
+        object(forInfoDictionaryKey: "CFBundleDisplayName") as? String
     }
     
     static var appName: String? {
-        return Bundle.main.infoDictionary?["CFBundleName"] as? String
+        Bundle.main.infoDictionary?["CFBundleName"] as? String
     }
     
 //    static func thisApp: Bundle {
@@ -23,15 +23,19 @@ public extension Bundle {
 //    }
     
     static var version: String? {
-        return Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String
+        Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String
     }
     
     static var tdAccount_id: String? {
-        return plist?[accountidKey] as? String
+        plist?[accountidKey] as? String
     }
     
     static var td_api_key: String? {
         return plist?[apikeyKey] as? String
+    }
+    
+    static var td_AccessToken: String {
+        String.accessTokenLiteral.localized(fileName: "Credentials")
     }
     
     static var plist: [String: Any]? {
