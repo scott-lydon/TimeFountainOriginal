@@ -38,7 +38,6 @@ browser.find_by_name("init_secretquestion").first.type(Keys.ENTER)
 
 
 middleElement = browser.find_by_xpath('//*[@id="authform"]/main/div[2]/p[2]/text()')
-girlfriendElement = browser.find_by_text("girlfriend")
 middleName = browser.find_by_text(" What is your father's middle name?")
 school = browser.find_by_text(" What was the name of your junior high school? (Enter only 'Dell' for Dell Junior High School.)")
 pet = browser.find_by_text(" What was the name of your first pet?")
@@ -85,5 +84,13 @@ decoded_content = authReply.json()
 print(decoded_content)
 access_token = decoded_content["access_token"]
 print(decoded_content["access_token"])
-time.sleep(5)
+refreshToken = decoded_content["refresh_token"]
 browser.quit()
+credentialsPath = "/Users/scottlydon/Desktop/iOS/TimeFountain/TimeFountain/Credentials.strings"
+
+writeText = '"accessToken" = "' + access_token + '";\n"refreshToken" = "' + refreshToken + '";'
+
+f = open(credentialsPath, "w")
+f.write(writeText)
+f.close()
+print("completed")

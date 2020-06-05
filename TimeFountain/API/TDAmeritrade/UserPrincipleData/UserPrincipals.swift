@@ -70,30 +70,42 @@ struct UserPrincipals: Codable {
         tokenExpirationTime.tdDate
     }
     
-    var loginRequest: [String: Any] {
-        print(accounts?.first ?? "first account was nil")
+    var loginRequestDictionary: [String: Any] {
         guard let firstAccount = accounts?.first else {
             assertionFailure("Couldn't get an account from user principals")
             return [:]
         }
+        let qstring = firstAccountCredentials.queryString
+        print("QString: --->\n\n", qstring, "\n\n<-----")
         return [
-            "requests": [
+            "requests": [[
                 "service": "ADMIN",
                 "command": "LOGIN",
                 "requestid": 0,
                 "account": firstAccount.accountID,
                 "source": streamerInfo.appID,
                 "parameters": [
-                    "credential": firstAccountCredentials.queryString,
+                    "credential": qstring,
                     "token": streamerInfo.token,
                     "version": "1.0"
                 ]
-            ]
+            ]]
         ]
     }
     
+    var loginRequestString: String {
+        loginRequestDictionary.stringified ?? "Login request failed to stringify"
+    }
+    
+    var loginURLRequest: URLRequest? {
+        guard let url = URL.tdSocket(principals: self) else {
+            print("The url failed. ")
+            return nil
+        }
+        return URLRequest(url: url)
+    }
+    
     var firstAccountCredentials: [String: String] {
-        print(accounts?.first ?? "first account was nil", streamerInfo.tokenTimeStamp?.timeIntervalSince1970 ?? "Token was nil")
         guard let firstAccount = accounts?.first else {
             assertionFailure("Couldn't get an account from user principals")
             return [:]
@@ -102,7 +114,8 @@ struct UserPrincipals: Codable {
             assertionFailure("Couldn't get an account from user principals")
             return [:]
         }
-        return [
+       
+        let creds =  [
             "userid":firstAccount.accountID,
             "token": streamerInfo.token,
             "company": firstAccount.company,
@@ -110,11 +123,13 @@ struct UserPrincipals: Codable {
             "cddomain": firstAccount.accountCDDomainID,
             "usergroup": streamerInfo.userGroup,
             "accesslevel": streamerInfo.accessLevel,
-            "authorized": "y",
-            "timestamp": String(Int(tokenTimeStamp)),
+            "authorized": "Y",
+            "timestamp": String(Int(tokenTimeStamp) * 1000 ),
             "appid": streamerInfo.appID,
             "acl": streamerInfo.acl,
         ]
+        print("Credentials are ---->\n\n", creds, "\n\n<--------")
+        return creds
     }
 
     

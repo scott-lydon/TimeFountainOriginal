@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		753BAEDF24897DA600F64519 /* Socket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753BAEDE24897DA600F64519 /* Socket.swift */; };
+		753BAEE124897DD900F64519 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753BAEE024897DD900F64519 /* Message.swift */; };
+		753BAEE324897E0D00F64519 /* InputStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753BAEE224897E0D00F64519 /* InputStream.swift */; };
+		753BAEE524897E2B00F64519 /* Stream+Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753BAEE424897E2B00F64519 /* Stream+Event.swift */; };
+		753BAEE724897E4E00F64519 /* SocketStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753BAEE624897E4E00F64519 /* SocketStream.swift */; };
+		753BAEE924897E6700F64519 /* OutputStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753BAEE824897E6700F64519 /* OutputStream.swift */; };
+		753BAEEB2489806C00F64519 /* MessageSender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753BAEEA2489806C00F64519 /* MessageSender.swift */; };
 		754C03B8247E066800A12CF7 /* InputOutputs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754C03B6247E066800A12CF7 /* InputOutputs.swift */; };
 		754C03B9247E066800A12CF7 /* SimpleMovingAverageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754C03B7247E066800A12CF7 /* SimpleMovingAverageTests.swift */; };
 		754C03BD247E06B200A12CF7 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754C03BC247E06B100A12CF7 /* Token.swift */; };
@@ -133,6 +140,8 @@
 		754C056D2487405400A12CF7 /* StreamRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754C056C2487405300A12CF7 /* StreamRequest.swift */; };
 		754C056F248746FD00A12CF7 /* Encodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754C056E248746FD00A12CF7 /* Encodable.swift */; };
 		754C05732487509700A12CF7 /* TDSocketURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754C05722487509700A12CF7 /* TDSocketURL.swift */; };
+		7565787E248ACE630037490D /* Credentials.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7565787D248ACE630037490D /* Credentials.strings */; };
+		756B233F248823D200EB31C2 /* Stream.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756B233E248823D200EB31C2 /* Stream.swift */; };
 		75A4FC4B247E049C00E4DC0B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A4FC4A247E049C00E4DC0B /* AppDelegate.swift */; };
 		75A4FC4D247E049C00E4DC0B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A4FC4C247E049C00E4DC0B /* ViewController.swift */; };
 		75A4FC50247E049C00E4DC0B /* TimeFountain.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 75A4FC4E247E049C00E4DC0B /* TimeFountain.xcdatamodeld */; };
@@ -160,6 +169,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		753BAEDE24897DA600F64519 /* Socket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Socket.swift; sourceTree = "<group>"; };
+		753BAEE024897DD900F64519 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		753BAEE224897E0D00F64519 /* InputStream.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputStream.swift; sourceTree = "<group>"; };
+		753BAEE424897E2B00F64519 /* Stream+Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Stream+Event.swift"; sourceTree = "<group>"; };
+		753BAEE624897E4E00F64519 /* SocketStream.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketStream.swift; sourceTree = "<group>"; };
+		753BAEE824897E6700F64519 /* OutputStream.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutputStream.swift; sourceTree = "<group>"; };
+		753BAEEA2489806C00F64519 /* MessageSender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageSender.swift; sourceTree = "<group>"; };
 		754C03B6247E066800A12CF7 /* InputOutputs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputOutputs.swift; sourceTree = "<group>"; };
 		754C03B7247E066800A12CF7 /* SimpleMovingAverageTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleMovingAverageTests.swift; sourceTree = "<group>"; };
 		754C03BC247E06B100A12CF7 /* Token.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
@@ -286,6 +302,8 @@
 		754C056C2487405300A12CF7 /* StreamRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamRequest.swift; sourceTree = "<group>"; };
 		754C056E248746FD00A12CF7 /* Encodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Encodable.swift; sourceTree = "<group>"; };
 		754C05722487509700A12CF7 /* TDSocketURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TDSocketURL.swift; sourceTree = "<group>"; };
+		7565787D248ACE630037490D /* Credentials.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Credentials.strings; sourceTree = "<group>"; };
+		756B233E248823D200EB31C2 /* Stream.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stream.swift; sourceTree = "<group>"; };
 		75A4FC47247E049C00E4DC0B /* TimeFountain.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeFountain.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		75A4FC4A247E049C00E4DC0B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		75A4FC4C247E049C00E4DC0B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -326,6 +344,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		753BAEDD24897CE400F64519 /* SocketHelpers */ = {
+			isa = PBXGroup;
+			children = (
+				753BAEDE24897DA600F64519 /* Socket.swift */,
+				753BAEE024897DD900F64519 /* Message.swift */,
+				753BAEE224897E0D00F64519 /* InputStream.swift */,
+				753BAEE424897E2B00F64519 /* Stream+Event.swift */,
+				753BAEE624897E4E00F64519 /* SocketStream.swift */,
+				753BAEE824897E6700F64519 /* OutputStream.swift */,
+				753BAEEA2489806C00F64519 /* MessageSender.swift */,
+			);
+			path = SocketHelpers;
+			sourceTree = "<group>";
+		};
 		754C03BA247E068400A12CF7 /* API */ = {
 			isa = PBXGroup;
 			children = (
@@ -606,6 +638,7 @@
 				75A4FC5F247E049F00E4DC0B /* TimeFountainTests */,
 				75A4FC6A247E049F00E4DC0B /* TimeFountainUITests */,
 				75A4FC48247E049C00E4DC0B /* Products */,
+				76498586BE80AA00FA3E2E3E /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -625,6 +658,9 @@
 				754C0552247F98C900A12CF7 /* TSLA.mlmodel */,
 				75A4FC4A247E049C00E4DC0B /* AppDelegate.swift */,
 				75A4FC4C247E049C00E4DC0B /* ViewController.swift */,
+				756B233E248823D200EB31C2 /* Stream.swift */,
+				7565787D248ACE630037490D /* Credentials.strings */,
+				753BAEDD24897CE400F64519 /* SocketHelpers */,
 				754C0476247E151F00A12CF7 /* Interview */,
 				754C045B247E0DCC00A12CF7 /* TOSIndicators */,
 				754C0446247E0DAC00A12CF7 /* Extensions */,
@@ -661,6 +697,13 @@
 				75A4FC6D247E049F00E4DC0B /* Info.plist */,
 			);
 			path = TimeFountainUITests;
+			sourceTree = "<group>";
+		};
+		76498586BE80AA00FA3E2E3E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -767,6 +810,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7565787E248ACE630037490D /* Credentials.strings in Resources */,
 				75A4FC52247E049F00E4DC0B /* Assets.xcassets in Resources */,
 				75A4FC55247E049F00E4DC0B /* Main.storyboard in Resources */,
 				754C0551247F4CF900A12CF7 /* Info.plist in Resources */,
@@ -825,6 +869,7 @@
 				754C051F247E17DD00A12CF7 /* TimeInterval.swift in Sources */,
 				754C03BF247E06B800A12CF7 /* CancelTime.swift in Sources */,
 				754C0410247E0CDC00A12CF7 /* QuoteEquity.swift in Sources */,
+				753BAEE524897E2B00F64519 /* Stream+Event.swift in Sources */,
 				754C0461247E0E4000A12CF7 /* Point.swift in Sources */,
 				754C0445247E0D9A00A12CF7 /* DataFrame.swift in Sources */,
 				754C03E4247E0C6800A12CF7 /* Execution.swift in Sources */,
@@ -834,14 +879,18 @@
 				754C0425247E0D3300A12CF7 /* URL+Key.swift in Sources */,
 				754C03DC247E0C5000A12CF7 /* CandleList.swift in Sources */,
 				754C03C9247E06CE00A12CF7 /* OrderGet.swift in Sources */,
+				753BAEDF24897DA600F64519 /* Socket.swift in Sources */,
 				754C03E5247E0C6800A12CF7 /* FixedIncome.swift in Sources */,
 				754C056F248746FD00A12CF7 /* Encodable.swift in Sources */,
 				754C043F247E0D5D00A12CF7 /* Watchlist.swift in Sources */,
 				754C053C247E17DD00A12CF7 /* String.swift in Sources */,
+				753BAEE924897E6700F64519 /* OutputStream.swift in Sources */,
 				754C046F247E0E5D00A12CF7 /* Array+Resistance.swift in Sources */,
 				754C0475247E0E6E00A12CF7 /* SimpleMovingAvg.swift in Sources */,
+				756B233F248823D200EB31C2 /* Stream.swift in Sources */,
 				754C05732487509700A12CF7 /* TDSocketURL.swift in Sources */,
 				754C052F247E17DD00A12CF7 /* sockaddr_in.swift in Sources */,
+				753BAEEB2489806C00F64519 /* MessageSender.swift in Sources */,
 				754C0553247F98C900A12CF7 /* TSLA.mlmodel in Sources */,
 				754C03D4247E06F900A12CF7 /* MarginAccount.swift in Sources */,
 				754C03D3247E06F900A12CF7 /* InitialBalances.swift in Sources */,
@@ -850,6 +899,7 @@
 				754C0438247E0D4A00A12CF7 /* StreamerInfo.swift in Sources */,
 				754C03FF247E0C9900A12CF7 /* Underlying.swift in Sources */,
 				754C041C247E0D1500A12CF7 /* TransactionItem.swift in Sources */,
+				753BAEE324897E0D00F64519 /* InputStream.swift in Sources */,
 				754C0411247E0CDC00A12CF7 /* QuoteFutureOption.swift in Sources */,
 				754C0436247E0D4A00A12CF7 /* UpdatePrincipalData.swift in Sources */,
 				754C0505247E17DD00A12CF7 /* NSPersistentContainer.swift in Sources */,
@@ -873,7 +923,9 @@
 				754C041D247E0D1500A12CF7 /* TransactionInstrument.swift in Sources */,
 				754C03F4247E0C8000A12CF7 /* FundamentalData.swift in Sources */,
 				754C0458247E0DBD00A12CF7 /* Plist.swift in Sources */,
+				753BAEE724897E4E00F64519 /* SocketStream.swift in Sources */,
 				754C0444247E0D9A00A12CF7 /* CSVRepresentable.swift in Sources */,
+				753BAEE124897DD900F64519 /* Message.swift in Sources */,
 				754C0440247E0D5D00A12CF7 /* WatchlistItem.swift in Sources */,
 				754C0434247E0D4A00A12CF7 /* UserPrincipals.swift in Sources */,
 				754C0404247E0CBF00A12CF7 /* Preferences.swift in Sources */,

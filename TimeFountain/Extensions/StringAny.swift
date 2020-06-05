@@ -18,6 +18,35 @@ extension Dictionary where Key == String, Value == Any {
     }
 }
 
+extension String {
+    
+    var withoutWhitespace: String {
+        replacingOccurrences(of: "\n", with: "")
+        .replacingOccurrences(of: "\r", with: "")
+        .replacingOccurrences(of: "\0", with: "")
+    }
+    
+    var localized: String {
+        NSLocalizedString(
+            self,
+            tableName: nil,
+            bundle: .main,
+            value: "",
+            comment: ""
+        )
+    }
+
+    func localized(withComment:String = "", fileName: String?) -> String {
+        NSLocalizedString(
+            self,
+            tableName: fileName,
+            bundle: Bundle.main,
+            value: "",
+            comment: withComment
+        )
+    }
+}
+
 /*
  
  let dictionary = ["aKey": "aValue", "anotherKey": "anotherValue"]
