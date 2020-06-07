@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct OrderStrategy: Codable {
+struct OrderStrategy {
     let session, duration, orderType: String
     let cancelTime: CancelTime
     let complexOrderStrategyType: String

@@ -18,8 +18,8 @@ extension String {
         return nsDictionary as? Dictionary<String, Any> ?? [:]
     }
     
-    static var account_id: String? {
         return plist["ACCOUNT_ID"] as? String
+    static var account_id: String! {
     }
     
     static var tdAmeritradeKey: String? {

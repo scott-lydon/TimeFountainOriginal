@@ -22,23 +22,23 @@ extension URL {
 //    }
     
     static var cancelOrder: URL? {
-        return URL(string: .baseURL + "accounts/{accountId}/orders/{orderId}")
+        URL(string: .baseURL + "accounts/{accountId}/orders/{orderId}")
     }
     
     static var getOrdersByPath: URL? {
-        return URL(string: .baseURL + "accounts/{accountId}/orders/{orderId}")
+        URL(string: .baseURL + "accounts/{accountId}/orders/{orderId}")
     }
     
     static var getOrdersByQuery: URL? {
-        return URL(string: .baseURL + "orders")
+        URL(string: .baseURL + "orders")
     }
     
     static var placeOrder: URL? {
-        return URL(string: .baseURL + "accounts/{accountId}/orders")
+        URL(string: .baseURL + "accounts/{accountId}/orders")
     }
     
     static var replaceOrder: URL? {
-        return URL(string: .baseURL + "accounts/{accountId}/orders/{orderId}")
+        URL(string: .baseURL + "accounts/{accountId}/orders/{orderId}")
     }
     
     static var priceHistory: URL? {
@@ -51,43 +51,43 @@ extension URL {
     }
     
     static var instruments: URL? {
-        return URL(string: .baseURL + "instruments")
+        URL(string: .baseURL + "instruments")
     }
     
     static var instrumentsByCussip: URL? {
-        return URL(string: .baseURL + "instruments/{cusip}")
+        URL(string: .baseURL + "instruments/{cusip}")
     }
     
     static var movers: URL? {
-        return URL(string: .baseURL + "marketdata/{index}/movers")
+        URL(string: .baseURL + "marketdata/{index}/movers")
     }
     
     static var optionChains: URL? {
-        return URL(string: .baseURL + "marketdata/chains")
+        URL(string: .baseURL + "marketdata/chains")
     }
     
     static var account: URL? {
-        return URL(string: .baseURL + "accounts/{number}")
+        URL(string: .baseURL + "accounts/{number}")
     }
 
     static var hours: URL? {
-        return URL(string: .baseURL + "marketdata/{market}/hours")
+        URL(string: .baseURL + "marketdata/{market}/hours")
     }
     
     static var token: URL? {
-        return URL(string: .baseURL + "oauth2/token")
+        URL(string: .baseURL + "oauth2/token")
     }
     
     static var quotes: URL? {
-        return URL(string: .baseURL + "marketdata/{STOCK}/quotes")
+        URL(string: .baseURL + "marketdata/{STOCK}/quotes")
     }
     
     static var transactions: URL? {
-        return URL(string: .baseURL + "accounts/494547284/transactions")
+        URL(string: .baseURL + "accounts/" + .account_id + "/transactions")
     }
     
     static var preferences: URL? {
-        return URL(string: .baseURL + "accounts/494547284/preferences")
+        URL(string: .baseURL + "accounts/" + .account_id + "/preferences")
     }
     
     static var subscriptionKey: URL? {
@@ -99,11 +99,11 @@ extension URL {
     }
         
     static var watchlist: URL? {
-        return URL(string: .baseURL + "accounts/494547284/watchlists/{watchlistid}")
+        return URL(string: .baseURL + "accounts/" + .account_id + "/watchlists/{watchlistid}")
     }
     
     static var watchlists: URL? {
-        return URL(string: .baseURL + "accounts/494547284/watchlists")
+        return URL(string: .baseURL + "accounts/" + .account_id + "/watchlists")
     }
     
     

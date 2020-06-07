@@ -8,10 +8,18 @@
 
 import Foundation
 
+extension URL {
+    
+    enum Path {
+        case accounts, orders, marketdata, instruments, ticker(String), oauth2, userprincipals, watchlists, pricehistory, movers, chains, hours, token, quotes, transactions, preferences, streamersubscriptionkeys
+    }
+}
+
+
 extension TDAmeritradeURL {
     
     enum Path: String {
-        case marketdata, pricehistory, oauth2, userprincipals, token, auth, streamersubscriptionkeys
+        case marketdata, pricehistory, oauth2, userprincipals, token, auth, streamersubscriptionkeys, accounts, orders
     }
     
     enum Key: String {
@@ -31,6 +39,8 @@ extension TDAmeritradeURL {
         case client_id
         case response_type, redirect_uri
         case accountIds
+        case accounts
+        
 //        case access_token
 //        case allowsCourtesyCalls
 //        case alwaysInUse

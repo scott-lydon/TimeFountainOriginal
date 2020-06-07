@@ -26,16 +26,20 @@ public extension Bundle {
         Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String
     }
     
-    static var tdAccount_id: String? {
         plist?[accountidKey] as? String
+    static var tdAccount_id: String! {
     }
     
     static var td_api_key: String? {
         return plist?[apikeyKey] as? String
     }
     
-    static var td_AccessToken: String {
-        String.accessTokenLiteral.localized(fileName: "Credentials")
+    static var td_AccessToken: String! {
+        Keychain.loadFrom(key: "accessToken")
+    }
+    
+    static var td_refreshToken: String! {
+        Keychain.loadFrom(key: "refreshToken")
     }
     
     static var plist: [String: Any]? {

@@ -12,9 +12,9 @@ import XCTest
 
 fileprivate var stringMatrices: [DataFrameInputOutput.StringMatrix] = [
     DataFrameInputOutput.StringMatrix(
-        dataFrame: DataFrame([
+        dataFrame: DataFrame(
             DataFrame.Column(header: "Header", cells: ["cow", "cat", "dog"])
-        ])!,
+            )!,
         matrix: [
             ["Header"],
             ["cow"],
@@ -23,10 +23,10 @@ fileprivate var stringMatrices: [DataFrameInputOutput.StringMatrix] = [
         ]
     ),
     DataFrameInputOutput.StringMatrix(
-        dataFrame: DataFrame([
+        dataFrame: DataFrame(
             DataFrame.Column(header: "Column1", cells: ["cow", "cat", "dog"]),
-            DataFrame.Column(header: "Column2", cells: ["row1", "row2", "row3"]),
-        ])!,
+            DataFrame.Column(header: "Column2", cells: ["row1", "row2", "row3"])
+            )!,
         matrix: [
             ["Column1", "Column2"],
             ["cow", "row1"],

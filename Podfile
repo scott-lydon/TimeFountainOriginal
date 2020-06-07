@@ -6,10 +6,8 @@ target 'TimeFountain' do
   use_frameworks!
 
   # Pods for TimeFountain
-# pod 'Starscream'
-pod 'Socket.IO-Client-Swift'
- pod 'SwiftSocket'
 pod 'SwiftWebSocket'
+pod 'Alamofire' ,'4.9.1'
 
   target 'TimeFountainTests' do
     inherit! :search_paths

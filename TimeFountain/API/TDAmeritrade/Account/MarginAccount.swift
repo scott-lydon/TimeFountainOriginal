@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct MarginAccount: Codable {
+struct MarginAccount {
     let type, accountID: String
     let roundTrips: Int
     let isDayTrader, isClosingOnlyRestricted: Bool

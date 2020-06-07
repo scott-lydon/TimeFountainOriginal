@@ -24,9 +24,13 @@ struct DataFrame: Equatable {
     
     var columns: [Column]
     
-    init?(_ columns: Column...) {
+    init?(_ columns: [Column]) {
         guard columns.map({ $0.cells.count }).allEqual, columns.count > 0 else { return nil }
         self.columns = columns
+    }
+    
+    init?(_ columns: Column...) {
+        self.init(columns)
     }
     
     @discardableResult

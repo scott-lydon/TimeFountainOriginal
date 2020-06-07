@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -18,7 +18,6 @@
 		754C03B9247E066800A12CF7 /* SimpleMovingAverageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754C03B7247E066800A12CF7 /* SimpleMovingAverageTests.swift */; };
 		754C03BD247E06B200A12CF7 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754C03BC247E06B100A12CF7 /* Token.swift */; };
 		754C03BF247E06B800A12CF7 /* CancelTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754C03BE247E06B800A12CF7 /* CancelTime.swift */; };
-		754C03C2247E06BF00A12CF7 /* ChildOrderStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754C03C0247E06BF00A12CF7 /* ChildOrderStrategy.swift */; };
 		754C03C3247E06BF00A12CF7 /* Hours.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754C03C1247E06BF00A12CF7 /* Hours.swift */; };
 		754C03C5247E06C600A12CF7 /* Mover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754C03C4247E06C600A12CF7 /* Mover.swift */; };
 		754C03C8247E06CE00A12CF7 /* OrderLegCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754C03C6247E06CE00A12CF7 /* OrderLegCollection.swift */; };
@@ -61,7 +60,6 @@
 		754C041C247E0D1500A12CF7 /* TransactionItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754C041A247E0D1400A12CF7 /* TransactionItem.swift */; };
 		754C041D247E0D1500A12CF7 /* TransactionInstrument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754C041B247E0D1400A12CF7 /* TransactionInstrument.swift */; };
 		754C0425247E0D3300A12CF7 /* URL+Key.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754C041F247E0D3200A12CF7 /* URL+Key.swift */; };
-		754C0426247E0D3300A12CF7 /* URL+Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754C0420247E0D3200A12CF7 /* URL+Factory.swift */; };
 		754C0427247E0D3300A12CF7 /* URLComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754C0421247E0D3200A12CF7 /* URLComponents.swift */; };
 		754C0428247E0D3300A12CF7 /* URL+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754C0422247E0D3200A12CF7 /* URL+String.swift */; };
 		754C0429247E0D3300A12CF7 /* PeriodFrequencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754C0423247E0D3200A12CF7 /* PeriodFrequencies.swift */; };
@@ -137,10 +135,12 @@
 		754C05652482EB8A00A12CF7 /* StreamerSubscriptionKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754C05642482EB8900A12CF7 /* StreamerSubscriptionKeys.swift */; };
 		754C0567248572BB00A12CF7 /* URLRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754C0566248572BB00A12CF7 /* URLRequest.swift */; };
 		754C05692485D8A400A12CF7 /* StringAny.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754C05682485D8A300A12CF7 /* StringAny.swift */; };
-		754C056D2487405400A12CF7 /* StreamRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754C056C2487405300A12CF7 /* StreamRequest.swift */; };
 		754C056F248746FD00A12CF7 /* Encodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754C056E248746FD00A12CF7 /* Encodable.swift */; };
 		754C05732487509700A12CF7 /* TDSocketURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754C05722487509700A12CF7 /* TDSocketURL.swift */; };
 		7565787E248ACE630037490D /* Credentials.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7565787D248ACE630037490D /* Credentials.strings */; };
+		75657882248AEF2B0037490D /* AuthTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75657881248AEF2B0037490D /* AuthTests.swift */; };
+		75657885248B1F510037490D /* PlaceOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75657884248B1F510037490D /* PlaceOrder.swift */; };
+		75657887248B35A80037490D /* BuyMarketStock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75657886248B35A80037490D /* BuyMarketStock.swift */; };
 		756B233F248823D200EB31C2 /* Stream.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756B233E248823D200EB31C2 /* Stream.swift */; };
 		75A4FC4B247E049C00E4DC0B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A4FC4A247E049C00E4DC0B /* AppDelegate.swift */; };
 		75A4FC4D247E049C00E4DC0B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A4FC4C247E049C00E4DC0B /* ViewController.swift */; };
@@ -149,6 +149,7 @@
 		75A4FC55247E049F00E4DC0B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75A4FC53247E049F00E4DC0B /* Main.storyboard */; };
 		75A4FC61247E049F00E4DC0B /* TimeFountainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A4FC60247E049F00E4DC0B /* TimeFountainTests.swift */; };
 		75A4FC6C247E049F00E4DC0B /* TimeFountainUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A4FC6B247E049F00E4DC0B /* TimeFountainUITests.swift */; };
+		75E9714C248C11DE00FED161 /* SWSWebSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E9714B248C11DE00FED161 /* SWSWebSocket.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -180,7 +181,6 @@
 		754C03B7247E066800A12CF7 /* SimpleMovingAverageTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleMovingAverageTests.swift; sourceTree = "<group>"; };
 		754C03BC247E06B100A12CF7 /* Token.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
 		754C03BE247E06B800A12CF7 /* CancelTime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CancelTime.swift; sourceTree = "<group>"; };
-		754C03C0247E06BF00A12CF7 /* ChildOrderStrategy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChildOrderStrategy.swift; sourceTree = "<group>"; };
 		754C03C1247E06BF00A12CF7 /* Hours.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hours.swift; sourceTree = "<group>"; };
 		754C03C4247E06C600A12CF7 /* Mover.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mover.swift; sourceTree = "<group>"; };
 		754C03C6247E06CE00A12CF7 /* OrderLegCollection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderLegCollection.swift; sourceTree = "<group>"; };
@@ -223,7 +223,6 @@
 		754C041A247E0D1400A12CF7 /* TransactionItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionItem.swift; sourceTree = "<group>"; };
 		754C041B247E0D1400A12CF7 /* TransactionInstrument.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionInstrument.swift; sourceTree = "<group>"; };
 		754C041F247E0D3200A12CF7 /* URL+Key.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URL+Key.swift"; sourceTree = "<group>"; };
-		754C0420247E0D3200A12CF7 /* URL+Factory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URL+Factory.swift"; sourceTree = "<group>"; };
 		754C0421247E0D3200A12CF7 /* URLComponents.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLComponents.swift; sourceTree = "<group>"; };
 		754C0422247E0D3200A12CF7 /* URL+String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URL+String.swift"; sourceTree = "<group>"; };
 		754C0423247E0D3200A12CF7 /* PeriodFrequencies.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeriodFrequencies.swift; sourceTree = "<group>"; };
@@ -299,10 +298,12 @@
 		754C05642482EB8900A12CF7 /* StreamerSubscriptionKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamerSubscriptionKeys.swift; sourceTree = "<group>"; };
 		754C0566248572BB00A12CF7 /* URLRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLRequest.swift; sourceTree = "<group>"; };
 		754C05682485D8A300A12CF7 /* StringAny.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringAny.swift; sourceTree = "<group>"; };
-		754C056C2487405300A12CF7 /* StreamRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamRequest.swift; sourceTree = "<group>"; };
 		754C056E248746FD00A12CF7 /* Encodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Encodable.swift; sourceTree = "<group>"; };
 		754C05722487509700A12CF7 /* TDSocketURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TDSocketURL.swift; sourceTree = "<group>"; };
 		7565787D248ACE630037490D /* Credentials.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Credentials.strings; sourceTree = "<group>"; };
+		75657881248AEF2B0037490D /* AuthTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthTests.swift; sourceTree = "<group>"; };
+		75657884248B1F510037490D /* PlaceOrder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceOrder.swift; sourceTree = "<group>"; };
+		75657886248B35A80037490D /* BuyMarketStock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyMarketStock.swift; sourceTree = "<group>"; };
 		756B233E248823D200EB31C2 /* Stream.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stream.swift; sourceTree = "<group>"; };
 		75A4FC47247E049C00E4DC0B /* TimeFountain.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeFountain.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		75A4FC4A247E049C00E4DC0B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -317,6 +318,7 @@
 		75A4FC67247E049F00E4DC0B /* TimeFountainUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TimeFountainUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		75A4FC6B247E049F00E4DC0B /* TimeFountainUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeFountainUITests.swift; sourceTree = "<group>"; };
 		75A4FC6D247E049F00E4DC0B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		75E9714B248C11DE00FED161 /* SWSWebSocket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWSWebSocket.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -372,10 +374,12 @@
 				754C03C7247E06CE00A12CF7 /* OrderGet.swift */,
 				754C03C6247E06CE00A12CF7 /* OrderLegCollection.swift */,
 				754C03C4247E06C600A12CF7 /* Mover.swift */,
-				754C03C0247E06BF00A12CF7 /* ChildOrderStrategy.swift */,
 				754C03C1247E06BF00A12CF7 /* Hours.swift */,
 				754C03BE247E06B800A12CF7 /* CancelTime.swift */,
 				754C03BC247E06B100A12CF7 /* Token.swift */,
+				75657883248B1F0A0037490D /* Transact */,
+				75657880248AECED0037490D /* Auth */,
+				7565787F248AECC60037490D /* PriceHistory */,
 				754C043A247E0D5400A12CF7 /* Watchlist */,
 				754C042B247E0D3A00A12CF7 /* UserPrincipleData */,
 				754C041E247E0D2800A12CF7 /* URL */,
@@ -478,7 +482,9 @@
 		754C0416247E0CF000A12CF7 /* StreamerSubscriptionKeys */ = {
 			isa = PBXGroup;
 			children = (
+				754C05642482EB8900A12CF7 /* StreamerSubscriptionKeys.swift */,
 				754C0417247E0CFC00A12CF7 /* StreamerSubscriptionKey.swift */,
+				754C05722487509700A12CF7 /* TDSocketURL.swift */,
 			);
 			path = StreamerSubscriptionKeys;
 			sourceTree = "<group>";
@@ -496,13 +502,6 @@
 			isa = PBXGroup;
 			children = (
 				754C0424247E0D3300A12CF7 /* EndPoints.swift */,
-				754C05722487509700A12CF7 /* TDSocketURL.swift */,
-				754C0423247E0D3200A12CF7 /* PeriodFrequencies.swift */,
-				754C0420247E0D3200A12CF7 /* URL+Factory.swift */,
-				754C055C2480520200A12CF7 /* UserPrincipalsURL.swift */,
-				754C055E2480552100A12CF7 /* oauth2.swift */,
-				754C05642482EB8900A12CF7 /* StreamerSubscriptionKeys.swift */,
-				754C0562248067DF00A12CF7 /* authURL.swift */,
 				754C041F247E0D3200A12CF7 /* URL+Key.swift */,
 				754C0422247E0D3200A12CF7 /* URL+String.swift */,
 				754C0421247E0D3200A12CF7 /* URLComponents.swift */,
@@ -513,13 +512,13 @@
 		754C042B247E0D3A00A12CF7 /* UserPrincipleData */ = {
 			isa = PBXGroup;
 			children = (
+				754C055C2480520200A12CF7 /* UserPrincipalsURL.swift */,
 				754C0432247E0D4A00A12CF7 /* AccountPrincipal.swift */,
 				754C042C247E0D4900A12CF7 /* Authorizations.swift */,
 				754C042E247E0D4A00A12CF7 /* PrincipalQuotes.swift */,
 				754C0431247E0D4A00A12CF7 /* StreamerInfo.swift */,
 				754C042F247E0D4A00A12CF7 /* UpdatePrincipalData.swift */,
 				754C042D247E0D4A00A12CF7 /* UserPrincipals.swift */,
-				754C056C2487405300A12CF7 /* StreamRequest.swift */,
 			);
 			path = UserPrincipleData;
 			sourceTree = "<group>";
@@ -631,6 +630,32 @@
 			path = Interview;
 			sourceTree = "<group>";
 		};
+		7565787F248AECC60037490D /* PriceHistory */ = {
+			isa = PBXGroup;
+			children = (
+				754C0423247E0D3200A12CF7 /* PeriodFrequencies.swift */,
+			);
+			path = PriceHistory;
+			sourceTree = "<group>";
+		};
+		75657880248AECED0037490D /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				754C055E2480552100A12CF7 /* oauth2.swift */,
+				754C0562248067DF00A12CF7 /* authURL.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		75657883248B1F0A0037490D /* Transact */ = {
+			isa = PBXGroup;
+			children = (
+				75657884248B1F510037490D /* PlaceOrder.swift */,
+				75657886248B35A80037490D /* BuyMarketStock.swift */,
+			);
+			path = Transact;
+			sourceTree = "<group>";
+		};
 		75A4FC3E247E049C00E4DC0B = {
 			isa = PBXGroup;
 			children = (
@@ -660,6 +685,7 @@
 				75A4FC4C247E049C00E4DC0B /* ViewController.swift */,
 				756B233E248823D200EB31C2 /* Stream.swift */,
 				7565787D248ACE630037490D /* Credentials.strings */,
+				75E9714A248C11BE00FED161 /* SwiftWebSocket */,
 				753BAEDD24897CE400F64519 /* SocketHelpers */,
 				754C0476247E151F00A12CF7 /* Interview */,
 				754C045B247E0DCC00A12CF7 /* TOSIndicators */,
@@ -685,6 +711,7 @@
 				754C054A247ED8BF00A12CF7 /* StringMatrixTests.swift */,
 				754C054C247ED8ED00A12CF7 /* CSVTests.swift */,
 				754C054E247EF57300A12CF7 /* CommaSeparatedArraytests.swift */,
+				75657881248AEF2B0037490D /* AuthTests.swift */,
 				75A4FC62247E049F00E4DC0B /* Info.plist */,
 			);
 			path = TimeFountainTests;
@@ -697,6 +724,22 @@
 				75A4FC6D247E049F00E4DC0B /* Info.plist */,
 			);
 			path = TimeFountainUITests;
+			sourceTree = "<group>";
+		};
+		75E9714A248C11BE00FED161 /* SwiftWebSocket */ = {
+			isa = PBXGroup;
+			children = (
+				75E9714B248C11DE00FED161 /* SWSWebSocket.swift */,
+				75E9714D248C120200FED161 /* SWSSupportFiles */,
+			);
+			path = SwiftWebSocket;
+			sourceTree = "<group>";
+		};
+		75E9714D248C120200FED161 /* SWSSupportFiles */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SWSSupportFiles;
 			sourceTree = "<group>";
 		};
 		76498586BE80AA00FA3E2E3E /* Pods */ = {
@@ -865,7 +908,6 @@
 				754C0400247E0C9900A12CF7 /* ExpirationDate.swift in Sources */,
 				754C0456247E0DBD00A12CF7 /* Array+Int.swift in Sources */,
 				754C03FE247E0C9900A12CF7 /* OptionChain.swift in Sources */,
-				754C03C2247E06BF00A12CF7 /* ChildOrderStrategy.swift in Sources */,
 				754C051F247E17DD00A12CF7 /* TimeInterval.swift in Sources */,
 				754C03BF247E06B800A12CF7 /* CancelTime.swift in Sources */,
 				754C0410247E0CDC00A12CF7 /* QuoteEquity.swift in Sources */,
@@ -882,6 +924,7 @@
 				753BAEDF24897DA600F64519 /* Socket.swift in Sources */,
 				754C03E5247E0C6800A12CF7 /* FixedIncome.swift in Sources */,
 				754C056F248746FD00A12CF7 /* Encodable.swift in Sources */,
+				75657885248B1F510037490D /* PlaceOrder.swift in Sources */,
 				754C043F247E0D5D00A12CF7 /* Watchlist.swift in Sources */,
 				754C053C247E17DD00A12CF7 /* String.swift in Sources */,
 				753BAEE924897E6700F64519 /* OutputStream.swift in Sources */,
@@ -894,6 +937,7 @@
 				754C0553247F98C900A12CF7 /* TSLA.mlmodel in Sources */,
 				754C03D4247E06F900A12CF7 /* MarginAccount.swift in Sources */,
 				754C03D3247E06F900A12CF7 /* InitialBalances.swift in Sources */,
+				75657887248B35A80037490D /* BuyMarketStock.swift in Sources */,
 				754C043E247E0D5D00A12CF7 /* Instrument.swift in Sources */,
 				754C051C247E17DD00A12CF7 /* CLLocation.swift in Sources */,
 				754C0438247E0D4A00A12CF7 /* StreamerInfo.swift in Sources */,
@@ -942,7 +986,6 @@
 				754C040F247E0CDC00A12CF7 /* ETF.swift in Sources */,
 				754C055D2480520200A12CF7 /* UserPrincipalsURL.swift in Sources */,
 				754C0513247E17DD00A12CF7 /* Data.swift in Sources */,
-				754C056D2487405400A12CF7 /* StreamRequest.swift in Sources */,
 				754C046D247E0E5D00A12CF7 /* ManualLineEntry.swift in Sources */,
 				754C0428247E0D3300A12CF7 /* URL+String.swift in Sources */,
 				754C0462247E0E4000A12CF7 /* MovAvgExponential.swift in Sources */,
@@ -955,11 +998,11 @@
 				754C03F3247E0C8000A12CF7 /* Bond.swift in Sources */,
 				754C051D247E17DD00A12CF7 /* CLLocationManager.swift in Sources */,
 				754C05692485D8A400A12CF7 /* StringAny.swift in Sources */,
+				75E9714C248C11DE00FED161 /* SWSWebSocket.swift in Sources */,
 				754C0543247E17DD00A12CF7 /* Keychain.swift in Sources */,
 				754C040E247E0CDC00A12CF7 /* QuoteOption.swift in Sources */,
 				754C0500247E17DD00A12CF7 /* Dictionary.swift in Sources */,
 				754C03FD247E0C9900A12CF7 /* OptionDeliverables.swift in Sources */,
-				754C0426247E0D3300A12CF7 /* URL+Factory.swift in Sources */,
 				754C03F0247E0C8000A12CF7 /* Fundamental.swift in Sources */,
 				754C0439247E0D4A00A12CF7 /* AccountPrincipal.swift in Sources */,
 				754C0415247E0CDC00A12CF7 /* QuoteForex.swift in Sources */,
@@ -982,6 +1025,7 @@
 				754C03B8247E066800A12CF7 /* InputOutputs.swift in Sources */,
 				754C054D247ED8ED00A12CF7 /* CSVTests.swift in Sources */,
 				754C0547247EC11A00A12CF7 /* DataFrameTests.swift in Sources */,
+				75657882248AEF2B0037490D /* AuthTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

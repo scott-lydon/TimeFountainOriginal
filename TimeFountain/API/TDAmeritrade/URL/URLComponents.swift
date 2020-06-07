@@ -37,28 +37,28 @@ class TDAmeritradeURL {
     }
     
     func period(_ period: URL.Period) -> TDAmeritradeURL {
-        return kv(period.dictionary)
+        kv(period.dictionary)
     }
     
     func endDate(_ endDate: Date?) -> TDAmeritradeURL {
-        return kv(.endDate, endDate?.timeIntervalSince1970.string)
+        kv(.endDate, endDate?.timeIntervalSince1970.string)
     }
     
     func startDate(_ startDate: Date?) -> TDAmeritradeURL {
-        return kv(.startDate, startDate?.timeIntervalSince1970.string)
+        kv(.startDate, startDate?.timeIntervalSince1970.string)
     }
     
     func needsExtendedHoursData(_ needsExtendedHoursData: Bool?) -> TDAmeritradeURL {
-        return kv(.needsExtendedHoursData, needsExtendedHoursData?.string)
+        kv(.needsExtendedHoursData, needsExtendedHoursData?.string)
     }
     
    
 //    func row(_ value: Int) -> TDAmeritradeURL {
-//        return kv(.row, String(value))
+//        kv(.row, String(value))
 //    }
 //
 //    func submit(_ value: Bool) -> TDAmeritradeURL {
-//        return kv(.submit, String(value))
+//        kv(.submit, String(value))
 //    }
     
     var str = ""
@@ -84,6 +84,14 @@ class TDAmeritradeURL {
     
     convenience init(paths: Path...) {
         self.init(path: .slashes(paths.map({ $0.rawValue})))
+    }
+    
+    convenience init(paths: [String]) {
+        self.init(path: .slashes(paths.map({ $0 })))
+    }
+    
+    convenience init(paths: String...) {
+        self.init(path: .slashes(paths.map({ $0 })))
     }
     
     var build: URL {

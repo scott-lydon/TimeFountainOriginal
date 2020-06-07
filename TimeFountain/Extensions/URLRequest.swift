@@ -41,9 +41,15 @@ extension URLRequest {
 
 }
 
+extension Dictionary where Key == String, Value == Any {
+    static func forAccess(_ token: String = Bundle.td_AccessToken) -> Self {
+        ["Authorization": "Bearer " + token]
+    }
+}
+
 
 extension Dictionary where Key == String, Value == String {
-    static func forAccess(_ token: String) -> Self {
+    static func forAccess(_ token: String = Bundle.td_AccessToken) -> Self {
         ["Authorization": "Bearer " + token]
     }
     

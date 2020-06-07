@@ -88,7 +88,7 @@ refreshToken = decoded_content["refresh_token"]
 browser.quit()
 credentialsPath = "/Users/scottlydon/Desktop/iOS/TimeFountain/TimeFountain/Credentials.strings"
 
-writeText = '"accessToken" = "' + access_token + '";\n"refreshToken" = "' + refreshToken + '";'
+writeText = '"accessToken" = "' + access_token + '";\n"refreshToken" = "' + refreshToken + '";\n"path" = "' + credentialsPath + '";'
 
 f = open(credentialsPath, "w")
 f.write(writeText)

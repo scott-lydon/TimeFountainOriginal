@@ -9,8 +9,8 @@
 import Foundation
 
 struct Instrument: Codable {
-    let symbol, instrumentDescription, assetType: String
-
+    let symbol, assetType: String
+    var instrumentDescription: String?
     enum CodingKeys: String, CodingKey {
         case symbol
         case instrumentDescription = "description"
