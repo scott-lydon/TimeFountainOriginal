@@ -20,81 +20,125 @@ class ViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         AppDelegate.refreshTokenAction = { [weak self] in
+            print(#line)
             self?.viewDidLoadAndRefreshtokenIsReady()
         }
         if AppDelegate.refreshedToken {
+            print(#line)
             viewDidLoadAndRefreshtokenIsReady()
         }
     }
     
     func viewDidLoadAndRefreshtokenIsReady() {
-        URL.stream(
-            [.quotes(
-                QuoteParams([.CBLI], fields: .Symbol, .Close_Price)
-                )
-            ]
-        ) { message in
-            guard let data = message.data(using: .utf8) else { return }
-            if let error = ErrorResponses(data),
-                let response = error.response.first {
-                
-                print(response.content.code != 21, "Login failed, Check that types are correct, for example, 30 should maybe be a string instead.")
-                print(false, response.content.msg)
-            }
-        }
+//        URL.finviz { tickers in
+//            tickers.forEach {_ in
+//
+//            }
+//        }
+        
+//        streamMagic()
+        // 1.
+        
 //        URL.stream(
-//            .quotes(QuoteParams([.CBLI], fields: .Symbol, .Close_Price))
+//            []
 //        ) { message in
-//            print(message)
+//            guard let data = message.data(using: .utf8) else { return }
+//            if let heartBeat = HeartBeat(data) {
+//                print("Yay, we are winning, we have a heartbeat: \(heartBeat)")
+//            }
+//            print("STREAMING -->/n ", message, "/n/n")
 ////            guard let data = message.data(using: .utf8) else { return }
-////            if let error = ErrorResponses(data) {
-////                print("we got the error: \(error)")
-////                if let response = error.response.first {
-////                    print(response.content)
-////                }
+////            if let error = ErrorResponses(data),
+////                let response = error.response.first {
+////
+////                print(response.content.code != 21, "Login failed, Check that types are correct, for example, 30 should maybe be a string instead.")
+////                print(false, response.content.msg)
 ////            }
-////            print("we have a quote.", message)
 //        }
     }
     
+    func streamMagic() {
+        URL.userPrincipals { principals in
+            print(principals?.dictionary.ashishJSON ?? "nil")
+            
+            
+            guard let principals = principals else { return }
+//            guard let url = URL(string: "wss://" + principals.streamerInfo.streamerSocketURL + "/ws") else { return }
+            //self.socketIO(principals: principals, urlStr: url)
+            //self.swiftSocket(principals: principals, urlStr: url)
+            
+            
+            let req: [String: Any] = [
+                "service": "QUOTE",
+                "requestid": "2",
+                "command": "SUBS",
+                "account": principals.accounts!.first!.accountID,
+                "source": principals.streamerInfo.appID,
+                "parameters": [
+                    "keys": "GOOG",
+                    "fields": "0,1,2,3,4,5"
+                ]
+            ]
+            
+            print(#line)
+            print(req.ashishJSON)
+            print(#line)
+            var requests = principals.loginRequestDictionary
+            if var rs = requests["requests"] as? [[String: Any]] {
+                rs.append(req)
+                requests["requests"] = rs as Any
+            }
+            print("requests: \n\n", requests, "\n\n<---")
+            guard let requestQuerystr = requests.stringified else { return }
+            print("request Stringified: \n\n", requestQuerystr, "\n\n<----")
+            self.echoTest(request: requestQuerystr)
+            print(requests)
+            
+            //            guard let news = requests.stringified else { return }
+            //            print("news: -->\n\n", news, "\n\n<----")
+            //            self.echoTest(login: requestStr, strings: [news])
+            //            sleep(5)
+            
+            
+        }
+    }
     
-    
-    //---  var ws: WebSocket!
+    var ws: WebSocket!
     // WORKS
     func echoTest(request: String){
         
         // --->>>>
-        //        var messageNum = 0
-        //        ws = WebSocket("wss://streamer-ws.tdameritrade.com/ws")
-        //        let send : Action = {
-        //            messageNum += 1
-        //            let msg = "\(messageNum): \(NSDate().description)"
-        //            print("send: \(msg)")
-        //            self.ws.send(request)
-        //        }
-        //        ws.event.open = {
-        //            print("opened")
-        //            send()
-        //        }
-        //        ws.event.close = { code, reason, clean in
-        //            self.echoTest(request: request)
-        //            print("close", reason, "was clean: ", clean)
-        //        }
-        //        ws.event.error = { error in
-        //            print("error \(error)")
-        //        }
-        //        ws.event.message = { message in
-        //            print(message)
-        //
-        //            //            if let text = message as? String {
-        //            //                print("recv: \(text)")
-        //            //                if messageNum == 10 {
-        //            //                  //  ws.close()
-        //            //                } else {
-        //            //                    send()
-        //            //                }
-        //            //            }
-        //        }
+        var messageNum = 0
+        ws = WebSocket("wss://streamer-ws.tdameritrade.com/ws")
+        let send : Action = {
+            messageNum += 1
+            let msg = "\(messageNum): \(NSDate().description)"
+            print("send: \(msg)")
+            self.ws.send(request)
+        }
+        ws.event.open = {
+            print("opened")
+            send()
+        }
+        ws.event.close = { code, reason, clean in
+            self.echoTest(request: request)
+            print("close", reason, "was clean: ", clean)
+        }
+        ws.event.error = { error in
+            print("error \(error)")
+        }
+        ws.event.message = { message in
+            print(message)
+            
+            //            if let text = message as? String {
+            //                print("recv: \(text)")
+            //                if messageNum == 10 {
+            //                  //  ws.close()
+            //                } else {
+            //                    send()
+            //                }
+            //            }
+        }
     }
 }
 
@@ -105,7 +149,7 @@ extension ViewController {
     // TODO: https://github.com/ndevenish/Site-ndevenish/blob/master/_posts/2017-04-11-using-python-with-swift-3.markdown
     
     
-    fileprivate func callTeslaPriceHistory() {
+    fileprivate func callHistory(for ticker: String) {
         let ticker = "TSLA"
         let url = URL.priceHistory(
             period: .days(.ten, .oneMinute),

@@ -16,7 +16,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     static var refreshTokenAction: Action?
     static var refreshedToken: Bool = false {
         didSet {
-            refreshTokenAction?()
+            if refreshedToken {
+                refreshTokenAction?()
+            }
         }
     }
     
@@ -34,8 +36,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
     
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        URL.refreshToken { _ in
+        URL.refreshToken { token in
+            print("Tokens refreshed.")
+            print("Access token: ", token.accessToken)
             AppDelegate.refreshedToken = true
+            
         }
         let minutes = 60.0
         Timer.scheduledTimer(withTimeInterval: 29 * minutes, repeats: true) { _ in

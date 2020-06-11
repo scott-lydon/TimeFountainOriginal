@@ -36,11 +36,11 @@ public extension Bundle {
     }
     
     static var td_AccessToken: String! {
-        Keychain.loadFrom(key: "accessToken")
+        Keychain.loadFrom(key: .accessTokenKey)
     }
     
     static var td_refreshToken: String! {
-        Keychain.loadFrom(key: "refreshToken")
+        Keychain.loadFrom(key: .refreshTokenKey)
     }
     
     static var plist: [String: Any]? {

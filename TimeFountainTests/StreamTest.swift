@@ -27,11 +27,26 @@ extension TimeFountainTests {
                 let response = error.response.first {
                 
                 XCTAssert(response.content.code != 21, "Login failed, Check that types are correct, for example, 30 should maybe be a string instead.")
-                XCTAssert(false, response.content.msg)
+                XCTAssert(false, response.content.msg + "Troubleshooting, 1. double check that types match (number string, bool), \n2. Double check the refresh token is refreshed prior.  Make sure it works with other calls. \n3. Make sure the JSON is serialized correctly.  \n4 make sure parameter names match.")
             }
             streamed.fulfill()
         }
         waitForExpectations(timeout: 5, handler: nil)
+    }
+    
+    func testGeneralLogin() {
+        let heartBeatExpectation = expectation(description: "heartBeat")
+        URL.stream(
+            []
+        ) { message in
+            print(message)
+            guard let data = message.data(using: .utf8) else { return }
+            if let heartBeat = HeartBeat(data) {
+                print("Yay, we are winning, we have a heartbeat: \(heartBeat)")
+                heartBeatExpectation.fulfill()
+            }
+        }
+        waitForExpectations(timeout: 20, handler: nil)
     }
 }
 

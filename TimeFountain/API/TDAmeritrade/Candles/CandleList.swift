@@ -9,15 +9,21 @@
 import Foundation
 
 struct CandleList: Codable {
-    let candles: [Candle]
+    var candles: [Candle]
     let empty: Bool
     let symbol: String
     
     var closes: [Double] {
-        return candles.map {$0.close}
+        candles.map {$0.close}
     }
     
     var dates: [Double] {
-        return candles.map { $0.datetime }
+        candles.map { $0.datetime }
+    }
+    
+    init(candles: [Candle] = [], empty: Bool = true, symbol: String) {
+        self.candles = candles
+        self.empty = empty
+        self.symbol = symbol
     }
 }

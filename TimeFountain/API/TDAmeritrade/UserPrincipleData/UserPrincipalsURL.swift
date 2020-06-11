@@ -29,19 +29,14 @@ extension URLRequest {
         ],
         action: @escaping PrincipalAction
     ) {
-        let key = "userPrincipals"
-        if let data = UserDefaults.standard.data(forKey: key) {
-            let principals = UserPrincipals(dataWithDate: data)
-            action(principals)
-        } else {
-            let prinicpalsReq = URLRequest.userprincipals(fields: fields)
-            prinicpalsReq.getData { data in
-                UserDefaults.standard.set(data, forKey: key)
-                action(UserPrincipals(dataWithDate: data))
-            }
-            prinicpalsReq.get { json in
-                print("Fetched UserPrincipals, they were:\n", json?.asJSON ?? "json was nil! :(")
-            }
+        print(fields, fields.count)
+        let prinicpalsReq = URLRequest.userprincipals(fields: fields)
+        print(prinicpalsReq.url?.absoluteString)
+        prinicpalsReq.getData { data in
+            action(UserPrincipals(dataWithDate: data))
+        }
+        prinicpalsReq.get { json in
+            print("Fetched UserPrincipals, they were:\n", json?.asJSON ?? "json was nil! :(")
         }
     }
     

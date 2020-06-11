@@ -155,6 +155,7 @@
 		75A4FC55247E049F00E4DC0B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75A4FC53247E049F00E4DC0B /* Main.storyboard */; };
 		75A4FC61247E049F00E4DC0B /* TimeFountainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A4FC60247E049F00E4DC0B /* TimeFountainTests.swift */; };
 		75A4FC6C247E049F00E4DC0B /* TimeFountainUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A4FC6B247E049F00E4DC0B /* TimeFountainUITests.swift */; };
+		75A6C38C2492ACE80070779E /* HeartBeat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A6C38B2492ACE80070779E /* HeartBeat.swift */; };
 		75B3F1B5248E077700C5BF87 /* TickerEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B3F1B4248E077700C5BF87 /* TickerEnum.swift */; };
 		75B3F1B8248E0B2C00C5BF87 /* PlaceOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B3F1B7248E0B2C00C5BF87 /* PlaceOrder.swift */; };
 		75B3F1BB248EADA900C5BF87 /* GetOrderTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B3F1BA248EADA900C5BF87 /* GetOrderTest.swift */; };
@@ -164,6 +165,8 @@
 		75B3F1C3248F228400C5BF87 /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B3F1C2248F228400C5BF87 /* Timer.swift */; };
 		75B3F1C724917D4500C5BF87 /* StreamTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B3F1C624917D4500C5BF87 /* StreamTest.swift */; };
 		75B3F1C924917F5500C5BF87 /* Stream+ErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B3F1C824917F5500C5BF87 /* Stream+ErrorResponse.swift */; };
+		75B3F1CB24927DE300C5BF87 /* SaveHistoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B3F1CA24927DE300C5BF87 /* SaveHistoryTests.swift */; };
+		75B3F1CD249280AA00C5BF87 /* TDIteration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B3F1CC249280AA00C5BF87 /* TDIteration.swift */; };
 		75E9714C248C11DE00FED161 /* SWSWebSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E9714B248C11DE00FED161 /* SWSWebSocket.swift */; };
 /* End PBXBuildFile section */
 
@@ -339,6 +342,7 @@
 		75A4FC67247E049F00E4DC0B /* TimeFountainUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TimeFountainUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		75A4FC6B247E049F00E4DC0B /* TimeFountainUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeFountainUITests.swift; sourceTree = "<group>"; };
 		75A4FC6D247E049F00E4DC0B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		75A6C38B2492ACE80070779E /* HeartBeat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartBeat.swift; sourceTree = "<group>"; };
 		75B3F1B4248E077700C5BF87 /* TickerEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickerEnum.swift; sourceTree = "<group>"; };
 		75B3F1B7248E0B2C00C5BF87 /* PlaceOrder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceOrder.swift; sourceTree = "<group>"; };
 		75B3F1BA248EADA900C5BF87 /* GetOrderTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetOrderTest.swift; sourceTree = "<group>"; };
@@ -348,6 +352,8 @@
 		75B3F1C2248F228400C5BF87 /* Timer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Timer.swift; sourceTree = "<group>"; };
 		75B3F1C624917D4500C5BF87 /* StreamTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamTest.swift; sourceTree = "<group>"; };
 		75B3F1C824917F5500C5BF87 /* Stream+ErrorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Stream+ErrorResponse.swift"; sourceTree = "<group>"; };
+		75B3F1CA24927DE300C5BF87 /* SaveHistoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveHistoryTests.swift; sourceTree = "<group>"; };
+		75B3F1CC249280AA00C5BF87 /* TDIteration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TDIteration.swift; sourceTree = "<group>"; };
 		75E9714B248C11DE00FED161 /* SWSWebSocket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWSWebSocket.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -403,6 +409,7 @@
 			isa = PBXGroup;
 			children = (
 				754C03C6247E06CE00A12CF7 /* OrderLegCollection.swift */,
+				75B3F1CC249280AA00C5BF87 /* TDIteration.swift */,
 				754C03C4247E06C600A12CF7 /* Mover.swift */,
 				754C03C1247E06BF00A12CF7 /* Hours.swift */,
 				754C03BE247E06B800A12CF7 /* CancelTime.swift */,
@@ -517,6 +524,7 @@
 				754C05722487509700A12CF7 /* TDSocketURL.swift */,
 				75B3F1C824917F5500C5BF87 /* Stream+ErrorResponse.swift */,
 				756B233E248823D200EB31C2 /* Stream.swift */,
+				75A6C38B2492ACE80070779E /* HeartBeat.swift */,
 			);
 			path = StreamerSubscriptionKeys;
 			sourceTree = "<group>";
@@ -772,6 +780,7 @@
 				75B3F1BA248EADA900C5BF87 /* GetOrderTest.swift */,
 				75B3F1BE248EBB1600C5BF87 /* placeOrderTest.swift */,
 				75B3F1C624917D4500C5BF87 /* StreamTest.swift */,
+				75B3F1CA24927DE300C5BF87 /* SaveHistoryTests.swift */,
 				75A4FC62247E049F00E4DC0B /* Info.plist */,
 			);
 			path = TimeFountainTests;
@@ -1051,6 +1060,7 @@
 				754C0458247E0DBD00A12CF7 /* Plist.swift in Sources */,
 				753BAEE724897E4E00F64519 /* SocketStream.swift in Sources */,
 				754C0444247E0D9A00A12CF7 /* CSVRepresentable.swift in Sources */,
+				75B3F1CD249280AA00C5BF87 /* TDIteration.swift in Sources */,
 				753BAEE124897DD900F64519 /* Message.swift in Sources */,
 				754C0440247E0D5D00A12CF7 /* WatchlistItem.swift in Sources */,
 				754C0434247E0D4A00A12CF7 /* UserPrincipals.swift in Sources */,
@@ -1079,6 +1089,7 @@
 				754C045D247E0E3700A12CF7 /* MACD.swift in Sources */,
 				754C0472247E0E5D00A12CF7 /* Array+Point.swift in Sources */,
 				754C03BD247E06B200A12CF7 /* Token.swift in Sources */,
+				75A6C38C2492ACE80070779E /* HeartBeat.swift in Sources */,
 				754C03D6247E06F900A12CF7 /* OrderStrategy.swift in Sources */,
 				755D039F248D6D3C00FFABC8 /* Dictionary+PercentEncoded.swift in Sources */,
 				75B3F1B5248E077700C5BF87 /* TickerEnum.swift in Sources */,
@@ -1108,6 +1119,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				75A4FC61247E049F00E4DC0B /* TimeFountainTests.swift in Sources */,
+				75B3F1CB24927DE300C5BF87 /* SaveHistoryTests.swift in Sources */,
 				754C054F247EF57300A12CF7 /* CommaSeparatedArraytests.swift in Sources */,
 				754C054B247ED8BF00A12CF7 /* StringMatrixTests.swift in Sources */,
 				754C03B9247E066800A12CF7 /* SimpleMovingAverageTests.swift in Sources */,

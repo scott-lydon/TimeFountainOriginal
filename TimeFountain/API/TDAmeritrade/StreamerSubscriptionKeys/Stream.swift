@@ -77,7 +77,13 @@ struct Request: Codable {
     }
     
     enum CodingKeys: String, CodingKey, CaseIterable {
-       case LoginParamsKey, QuoteParamsKey, service, requestid, command, account, source
+       case LoginParamsKey = "parameters",
+        QuoteParamsKey = "parameters1",
+        service,
+        requestid,
+        command,
+        account,
+        source
     }
     
     init(
