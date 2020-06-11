@@ -18,24 +18,25 @@ extension String {
         return nsDictionary as? Dictionary<String, Any> ?? [:]
     }
     
-        return plist["ACCOUNT_ID"] as? String
     static var account_id: String! {
+        return "494547284"
+        // return plist["ACCOUNT_ID"] as? String ?? "" // Handle empty
     }
     
     static var tdAmeritradeKey: String? {
-        return plist["TDAMERITRADE_API_KEY"] as? String
+        plist["TDAMERITRADE_API_KEY"] as? String
     }
     
     static var marketData: String {
-        return "marketdata"
+        "marketdata"
     }
     
     static var priceHistory: String {
-        return "pricehistory"
+        "pricehistory"
     }
     
     static func slashes(_ folders: String...) -> String {
-        return folders.joined(separator: "/")
+        folders.joined(separator: "/")
     }
     
     static func slashes(_ folders: [String]) -> String {

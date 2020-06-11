@@ -9,7 +9,8 @@
 import Foundation
 
 struct Instrument: Codable {
-    let symbol, assetType: String
+    let symbol: String
+    let assetType: AssetType
     var instrumentDescription: String?
     enum CodingKeys: String, CodingKey {
         case symbol

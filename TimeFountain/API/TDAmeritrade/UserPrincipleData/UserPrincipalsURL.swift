@@ -15,7 +15,35 @@ enum UserPrincipalOption: String {
     surrogateIds
 }
 
+typealias PrincipalAction = (UserPrincipals?)->Void
+
 extension URLRequest {
+    
+    /// Main interface.  Robust, ensures that if a new device is used, then a new call to get principals is made.
+    static func userPrincipals(
+        fields: [UserPrincipalOption] = [
+            .preferences,
+            .streamerConnectionInfo,
+            .streamerSubscriptionKeys,
+            .surrogateIds,
+        ],
+        action: @escaping PrincipalAction
+    ) {
+        let key = "userPrincipals"
+        if let data = UserDefaults.standard.data(forKey: key) {
+            let principals = UserPrincipals(dataWithDate: data)
+            action(principals)
+        } else {
+            let prinicpalsReq = URLRequest.userprincipals(fields: fields)
+            prinicpalsReq.getData { data in
+                UserDefaults.standard.set(data, forKey: key)
+                action(UserPrincipals(dataWithDate: data))
+            }
+            prinicpalsReq.get { json in
+                print("Fetched UserPrincipals, they were:\n", json?.asJSON ?? "json was nil! :(")
+            }
+        }
+    }
     
     static func userprincipals(
         apiKey: String? = Bundle.td_api_key,
@@ -32,6 +60,20 @@ extension URLRequest {
 
 extension URL {
     
+    /// Alternative interface for URLRequest
+    ///  Robust, ensures that if a new device is used, then a new call to get principals is made.
+    static func userPrincipals(
+        fields: [UserPrincipalOption] = [
+            .preferences,
+            .streamerConnectionInfo,
+            .streamerSubscriptionKeys,
+            .surrogateIds,
+        ],
+        action: @escaping PrincipalAction
+    ) {
+        URLRequest.userPrincipals(fields: fields, action: action)
+    }
+    
     static func userprincipals(
         fields: [UserPrincipalOption] = []
     ) -> URL {
@@ -44,7 +86,7 @@ extension URL {
 
 extension TDAmeritradeURL {
     
-    func fields(_ fields: [UserPrincipalOption]) -> TDAmeritradeURL {
+    fileprivate func fields(_ fields: [UserPrincipalOption]) -> TDAmeritradeURL {
         guard !fields.isEmpty else { return self }
         return kv(.fields, fields.map { $0.rawValue }.joined(separator: ",") )
     }

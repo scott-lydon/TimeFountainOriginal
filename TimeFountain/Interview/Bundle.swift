@@ -26,12 +26,13 @@ public extension Bundle {
         Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String
     }
     
-        plist?[accountidKey] as? String
     static var tdAccount_id: String! {
+        "494547284"
+        //plist?[accountidKey] as? String
     }
     
     static var td_api_key: String? {
-        return plist?[apikeyKey] as? String
+        "FMUIJZGTI7IV08OAEIMTXGA6Y9TNRYEJ"
     }
     
     static var td_AccessToken: String! {

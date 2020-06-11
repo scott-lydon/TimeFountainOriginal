@@ -59,3 +59,11 @@ struct Token: Codable {
         )
     }
 }
+
+
+extension Keychain {
+    static func save(_ token: Token) {
+        Keychain.save(key: .accessTokenKey, value: token.accessToken)
+        Keychain.save(key: .refreshTokenKey, value: token.refreshToken)
+    }
+}

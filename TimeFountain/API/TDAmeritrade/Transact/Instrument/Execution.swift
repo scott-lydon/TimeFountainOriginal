@@ -9,13 +9,18 @@
 import Foundation
 
 struct Execution: Codable {
-    let activityType, executionType: String
-    let quantity, orderRemainingQuantity: Int
+    let activityType: ActivityType
+    let executionType: ExecutionType
+    let quantity: Int
+    let orderRemainingQuantity: Int
     let executionLegs: [ExecutionLeg]
 }
 
 struct ExecutionLeg: Codable {
-    let legID, quantity, mismarkedQuantity, price: Int
+    let legID: Int
+    let quantity: Int
+    let mismarkedQuantity: Int
+    let price: Double
     let time: String
 
     enum CodingKeys: String, CodingKey {

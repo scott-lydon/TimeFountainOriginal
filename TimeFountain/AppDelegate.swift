@@ -13,6 +13,13 @@ let OAuth2AppDidReceiveCallbackNotification = NSNotification.Name(rawValue: "OAu
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
     
+    static var refreshTokenAction: Action?
+    static var refreshedToken: Bool = false {
+        didSet {
+            refreshTokenAction?()
+        }
+    }
+    
     func application(_ application: NSApplication, open urls: [URL]) {
         print("Got a response")
     }
@@ -27,7 +34,15 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
     
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        // Insert code here to initialize your application
+        URL.refreshToken { _ in
+            AppDelegate.refreshedToken = true
+        }
+        let minutes = 60.0
+        Timer.scheduledTimer(withTimeInterval: 29 * minutes, repeats: true) { _ in
+            URL.refreshToken { _ in
+                print("Tokens refreshed.")
+            }
+        }
     }
     
     @objc

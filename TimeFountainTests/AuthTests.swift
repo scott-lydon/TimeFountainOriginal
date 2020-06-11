@@ -15,10 +15,25 @@ extension TimeFountainTests {
     func testRefreshToken() {
         let expectation = self.expectation(description: "token object")
         var toke: Token?
-        URL.tokenRefresh { token in
-            token.write()
+        URL.refreshToken { token in
             toke = token
-            XCTAssert(false, "we got a response from the tokens.")
+            expectation.fulfill()
+        }
+        waitForExpectations(timeout: 5, handler: nil)
+        XCTAssertNotNil(toke)
+    }
+    
+    func testRefreshTokenReplaceKeychain() {
+        let expectation = self.expectation(description: "token object")
+        var toke: Token?
+        let initialRefresh = Keychain.loadFrom(key: .refreshTokenKey)
+        let initialAccess = Keychain.loadFrom(key: .accessTokenKey)
+        URL.refreshToken { token in
+            toke = token
+            let resultRefresh = Keychain.loadFrom(key: .refreshTokenKey)
+            let resultAccess = Keychain.loadFrom(key: .accessTokenKey)
+            XCTAssert(initialRefresh != resultRefresh, "Failed to replace refresh")
+            XCTAssert(initialAccess != resultAccess, "Failed to replace access")
             expectation.fulfill()
         }
         waitForExpectations(timeout: 5, handler: nil)

@@ -137,10 +137,16 @@
 		754C05692485D8A400A12CF7 /* StringAny.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754C05682485D8A300A12CF7 /* StringAny.swift */; };
 		754C056F248746FD00A12CF7 /* Encodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754C056E248746FD00A12CF7 /* Encodable.swift */; };
 		754C05732487509700A12CF7 /* TDSocketURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754C05722487509700A12CF7 /* TDSocketURL.swift */; };
+		755D039B248CA0ED00FFABC8 /* FinvizURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755D039A248CA0ED00FFABC8 /* FinvizURL.swift */; };
+		755D039D248D6D1E00FFABC8 /* CharacterSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755D039C248D6D1E00FFABC8 /* CharacterSet.swift */; };
+		755D039F248D6D3C00FFABC8 /* Dictionary+PercentEncoded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755D039E248D6D3C00FFABC8 /* Dictionary+PercentEncoded.swift */; };
+		755D03A1248DA01800FFABC8 /* RefreshToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755D03A0248DA01800FFABC8 /* RefreshToken.swift */; };
+		755D03A3248DED1100FFABC8 /* Collection+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755D03A2248DED1100FFABC8 /* Collection+JSON.swift */; };
+		755D03A5248DF6AC00FFABC8 /* Orders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755D03A4248DF6AC00FFABC8 /* Orders.swift */; };
+		755D03A7248DF7EC00FFABC8 /* Order+Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755D03A6248DF7EC00FFABC8 /* Order+Enums.swift */; };
 		7565787E248ACE630037490D /* Credentials.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7565787D248ACE630037490D /* Credentials.strings */; };
 		75657882248AEF2B0037490D /* AuthTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75657881248AEF2B0037490D /* AuthTests.swift */; };
-		75657885248B1F510037490D /* PlaceOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75657884248B1F510037490D /* PlaceOrder.swift */; };
-		75657887248B35A80037490D /* BuyMarketStock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75657886248B35A80037490D /* BuyMarketStock.swift */; };
+		75657887248B35A80037490D /* DocOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75657886248B35A80037490D /* DocOrder.swift */; };
 		756B233F248823D200EB31C2 /* Stream.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756B233E248823D200EB31C2 /* Stream.swift */; };
 		75A4FC4B247E049C00E4DC0B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A4FC4A247E049C00E4DC0B /* AppDelegate.swift */; };
 		75A4FC4D247E049C00E4DC0B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A4FC4C247E049C00E4DC0B /* ViewController.swift */; };
@@ -149,6 +155,15 @@
 		75A4FC55247E049F00E4DC0B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75A4FC53247E049F00E4DC0B /* Main.storyboard */; };
 		75A4FC61247E049F00E4DC0B /* TimeFountainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A4FC60247E049F00E4DC0B /* TimeFountainTests.swift */; };
 		75A4FC6C247E049F00E4DC0B /* TimeFountainUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A4FC6B247E049F00E4DC0B /* TimeFountainUITests.swift */; };
+		75B3F1B5248E077700C5BF87 /* TickerEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B3F1B4248E077700C5BF87 /* TickerEnum.swift */; };
+		75B3F1B8248E0B2C00C5BF87 /* PlaceOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B3F1B7248E0B2C00C5BF87 /* PlaceOrder.swift */; };
+		75B3F1BB248EADA900C5BF87 /* GetOrderTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B3F1BA248EADA900C5BF87 /* GetOrderTest.swift */; };
+		75B3F1BD248EAE2700C5BF87 /* GetOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B3F1BC248EAE2700C5BF87 /* GetOrder.swift */; };
+		75B3F1BF248EBB1600C5BF87 /* placeOrderTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B3F1BE248EBB1600C5BF87 /* placeOrderTest.swift */; };
+		75B3F1C1248EDBCD00C5BF87 /* GeneralOrderURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B3F1C0248EDBCD00C5BF87 /* GeneralOrderURL.swift */; };
+		75B3F1C3248F228400C5BF87 /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B3F1C2248F228400C5BF87 /* Timer.swift */; };
+		75B3F1C724917D4500C5BF87 /* StreamTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B3F1C624917D4500C5BF87 /* StreamTest.swift */; };
+		75B3F1C924917F5500C5BF87 /* Stream+ErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B3F1C824917F5500C5BF87 /* Stream+ErrorResponse.swift */; };
 		75E9714C248C11DE00FED161 /* SWSWebSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E9714B248C11DE00FED161 /* SWSWebSocket.swift */; };
 /* End PBXBuildFile section */
 
@@ -300,10 +315,16 @@
 		754C05682485D8A300A12CF7 /* StringAny.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringAny.swift; sourceTree = "<group>"; };
 		754C056E248746FD00A12CF7 /* Encodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Encodable.swift; sourceTree = "<group>"; };
 		754C05722487509700A12CF7 /* TDSocketURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TDSocketURL.swift; sourceTree = "<group>"; };
+		755D039A248CA0ED00FFABC8 /* FinvizURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinvizURL.swift; sourceTree = "<group>"; };
+		755D039C248D6D1E00FFABC8 /* CharacterSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterSet.swift; sourceTree = "<group>"; };
+		755D039E248D6D3C00FFABC8 /* Dictionary+PercentEncoded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+PercentEncoded.swift"; sourceTree = "<group>"; };
+		755D03A0248DA01800FFABC8 /* RefreshToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshToken.swift; sourceTree = "<group>"; };
+		755D03A2248DED1100FFABC8 /* Collection+JSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+JSON.swift"; sourceTree = "<group>"; };
+		755D03A4248DF6AC00FFABC8 /* Orders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Orders.swift; sourceTree = "<group>"; };
+		755D03A6248DF7EC00FFABC8 /* Order+Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Order+Enums.swift"; sourceTree = "<group>"; };
 		7565787D248ACE630037490D /* Credentials.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Credentials.strings; sourceTree = "<group>"; };
 		75657881248AEF2B0037490D /* AuthTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthTests.swift; sourceTree = "<group>"; };
-		75657884248B1F510037490D /* PlaceOrder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceOrder.swift; sourceTree = "<group>"; };
-		75657886248B35A80037490D /* BuyMarketStock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyMarketStock.swift; sourceTree = "<group>"; };
+		75657886248B35A80037490D /* DocOrder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocOrder.swift; sourceTree = "<group>"; };
 		756B233E248823D200EB31C2 /* Stream.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stream.swift; sourceTree = "<group>"; };
 		75A4FC47247E049C00E4DC0B /* TimeFountain.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeFountain.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		75A4FC4A247E049C00E4DC0B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -318,6 +339,15 @@
 		75A4FC67247E049F00E4DC0B /* TimeFountainUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TimeFountainUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		75A4FC6B247E049F00E4DC0B /* TimeFountainUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeFountainUITests.swift; sourceTree = "<group>"; };
 		75A4FC6D247E049F00E4DC0B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		75B3F1B4248E077700C5BF87 /* TickerEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickerEnum.swift; sourceTree = "<group>"; };
+		75B3F1B7248E0B2C00C5BF87 /* PlaceOrder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceOrder.swift; sourceTree = "<group>"; };
+		75B3F1BA248EADA900C5BF87 /* GetOrderTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetOrderTest.swift; sourceTree = "<group>"; };
+		75B3F1BC248EAE2700C5BF87 /* GetOrder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetOrder.swift; sourceTree = "<group>"; };
+		75B3F1BE248EBB1600C5BF87 /* placeOrderTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = placeOrderTest.swift; sourceTree = "<group>"; };
+		75B3F1C0248EDBCD00C5BF87 /* GeneralOrderURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralOrderURL.swift; sourceTree = "<group>"; };
+		75B3F1C2248F228400C5BF87 /* Timer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Timer.swift; sourceTree = "<group>"; };
+		75B3F1C624917D4500C5BF87 /* StreamTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamTest.swift; sourceTree = "<group>"; };
+		75B3F1C824917F5500C5BF87 /* Stream+ErrorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Stream+ErrorResponse.swift"; sourceTree = "<group>"; };
 		75E9714B248C11DE00FED161 /* SWSWebSocket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWSWebSocket.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -363,6 +393,7 @@
 		754C03BA247E068400A12CF7 /* API */ = {
 			isa = PBXGroup;
 			children = (
+				755D0399248CA0CC00FFABC8 /* Finviz */,
 				754C03BB247E068E00A12CF7 /* TDAmeritrade */,
 			);
 			path = API;
@@ -371,12 +402,12 @@
 		754C03BB247E068E00A12CF7 /* TDAmeritrade */ = {
 			isa = PBXGroup;
 			children = (
-				754C03C7247E06CE00A12CF7 /* OrderGet.swift */,
 				754C03C6247E06CE00A12CF7 /* OrderLegCollection.swift */,
 				754C03C4247E06C600A12CF7 /* Mover.swift */,
 				754C03C1247E06BF00A12CF7 /* Hours.swift */,
 				754C03BE247E06B800A12CF7 /* CancelTime.swift */,
 				754C03BC247E06B100A12CF7 /* Token.swift */,
+				75B3F1B9248EACD400C5BF87 /* GetOrder */,
 				75657883248B1F0A0037490D /* Transact */,
 				75657880248AECED0037490D /* Auth */,
 				7565787F248AECC60037490D /* PriceHistory */,
@@ -389,7 +420,6 @@
 				754C0402247E0CB500A12CF7 /* Preferences */,
 				754C03F5247E0C8C00A12CF7 /* OptionChains */,
 				754C03EA247E0C7400A12CF7 /* Instruments */,
-				754C03DD247E0C6000A12CF7 /* Instrument */,
 				754C03D8247E070E00A12CF7 /* Candles */,
 				754C03CA247E06ED00A12CF7 /* Account */,
 			);
@@ -485,6 +515,8 @@
 				754C05642482EB8900A12CF7 /* StreamerSubscriptionKeys.swift */,
 				754C0417247E0CFC00A12CF7 /* StreamerSubscriptionKey.swift */,
 				754C05722487509700A12CF7 /* TDSocketURL.swift */,
+				75B3F1C824917F5500C5BF87 /* Stream+ErrorResponse.swift */,
+				756B233E248823D200EB31C2 /* Stream.swift */,
 			);
 			path = StreamerSubscriptionKeys;
 			sourceTree = "<group>";
@@ -554,6 +586,9 @@
 				754C044A247E0DBD00A12CF7 /* URL.swift */,
 				754C0566248572BB00A12CF7 /* URLRequest.swift */,
 				754C056E248746FD00A12CF7 /* Encodable.swift */,
+				755D039C248D6D1E00FFABC8 /* CharacterSet.swift */,
+				755D039E248D6D3C00FFABC8 /* Dictionary+PercentEncoded.swift */,
+				755D03A2248DED1100FFABC8 /* Collection+JSON.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -621,6 +656,7 @@
 				754C04E8247E17DA00A12CF7 /* sockaddr_in.swift */,
 				754C04F5247E17DC00A12CF7 /* String.swift */,
 				754C04D8247E17D900A12CF7 /* TimeInterval.swift */,
+				75B3F1C2248F228400C5BF87 /* Timer.swift */,
 				754C04F2247E17DB00A12CF7 /* TravelMethod.swift */,
 				754C04BB247E17D600A12CF7 /* UNNotificationCategory.swift */,
 				754C04F1247E17DB00A12CF7 /* UNUserNotificationCenter.swift */,
@@ -628,6 +664,22 @@
 				754C0544247E1C7D00A12CF7 /* UserDefaults.swift */,
 			);
 			path = Interview;
+			sourceTree = "<group>";
+		};
+		755D0399248CA0CC00FFABC8 /* Finviz */ = {
+			isa = PBXGroup;
+			children = (
+				755D039A248CA0ED00FFABC8 /* FinvizURL.swift */,
+			);
+			path = Finviz;
+			sourceTree = "<group>";
+		};
+		755D03A8248DF88200FFABC8 /* doc1Unused */ = {
+			isa = PBXGroup;
+			children = (
+				75657886248B35A80037490D /* DocOrder.swift */,
+			);
+			path = doc1Unused;
 			sourceTree = "<group>";
 		};
 		7565787F248AECC60037490D /* PriceHistory */ = {
@@ -643,6 +695,7 @@
 			children = (
 				754C055E2480552100A12CF7 /* oauth2.swift */,
 				754C0562248067DF00A12CF7 /* authURL.swift */,
+				755D03A0248DA01800FFABC8 /* RefreshToken.swift */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -650,8 +703,12 @@
 		75657883248B1F0A0037490D /* Transact */ = {
 			isa = PBXGroup;
 			children = (
-				75657884248B1F510037490D /* PlaceOrder.swift */,
-				75657886248B35A80037490D /* BuyMarketStock.swift */,
+				75B3F1B7248E0B2C00C5BF87 /* PlaceOrder.swift */,
+				75B3F1C0248EDBCD00C5BF87 /* GeneralOrderURL.swift */,
+				755D03A4248DF6AC00FFABC8 /* Orders.swift */,
+				755D03A6248DF7EC00FFABC8 /* Order+Enums.swift */,
+				754C03DD247E0C6000A12CF7 /* Instrument */,
+				755D03A8248DF88200FFABC8 /* doc1Unused */,
 			);
 			path = Transact;
 			sourceTree = "<group>";
@@ -683,8 +740,8 @@
 				754C0552247F98C900A12CF7 /* TSLA.mlmodel */,
 				75A4FC4A247E049C00E4DC0B /* AppDelegate.swift */,
 				75A4FC4C247E049C00E4DC0B /* ViewController.swift */,
-				756B233E248823D200EB31C2 /* Stream.swift */,
 				7565787D248ACE630037490D /* Credentials.strings */,
+				75B3F1B6248E096300C5BF87 /* TickerEnum */,
 				75E9714A248C11BE00FED161 /* SwiftWebSocket */,
 				753BAEDD24897CE400F64519 /* SocketHelpers */,
 				754C0476247E151F00A12CF7 /* Interview */,
@@ -712,6 +769,9 @@
 				754C054C247ED8ED00A12CF7 /* CSVTests.swift */,
 				754C054E247EF57300A12CF7 /* CommaSeparatedArraytests.swift */,
 				75657881248AEF2B0037490D /* AuthTests.swift */,
+				75B3F1BA248EADA900C5BF87 /* GetOrderTest.swift */,
+				75B3F1BE248EBB1600C5BF87 /* placeOrderTest.swift */,
+				75B3F1C624917D4500C5BF87 /* StreamTest.swift */,
 				75A4FC62247E049F00E4DC0B /* Info.plist */,
 			);
 			path = TimeFountainTests;
@@ -724,6 +784,23 @@
 				75A4FC6D247E049F00E4DC0B /* Info.plist */,
 			);
 			path = TimeFountainUITests;
+			sourceTree = "<group>";
+		};
+		75B3F1B6248E096300C5BF87 /* TickerEnum */ = {
+			isa = PBXGroup;
+			children = (
+				75B3F1B4248E077700C5BF87 /* TickerEnum.swift */,
+			);
+			path = TickerEnum;
+			sourceTree = "<group>";
+		};
+		75B3F1B9248EACD400C5BF87 /* GetOrder */ = {
+			isa = PBXGroup;
+			children = (
+				754C03C7247E06CE00A12CF7 /* OrderGet.swift */,
+				75B3F1BC248EAE2700C5BF87 /* GetOrder.swift */,
+			);
+			path = GetOrder;
 			sourceTree = "<group>";
 		};
 		75E9714A248C11BE00FED161 /* SwiftWebSocket */ = {
@@ -921,11 +998,12 @@
 				754C0425247E0D3300A12CF7 /* URL+Key.swift in Sources */,
 				754C03DC247E0C5000A12CF7 /* CandleList.swift in Sources */,
 				754C03C9247E06CE00A12CF7 /* OrderGet.swift in Sources */,
+				755D039B248CA0ED00FFABC8 /* FinvizURL.swift in Sources */,
 				753BAEDF24897DA600F64519 /* Socket.swift in Sources */,
 				754C03E5247E0C6800A12CF7 /* FixedIncome.swift in Sources */,
 				754C056F248746FD00A12CF7 /* Encodable.swift in Sources */,
-				75657885248B1F510037490D /* PlaceOrder.swift in Sources */,
 				754C043F247E0D5D00A12CF7 /* Watchlist.swift in Sources */,
+				75B3F1C924917F5500C5BF87 /* Stream+ErrorResponse.swift in Sources */,
 				754C053C247E17DD00A12CF7 /* String.swift in Sources */,
 				753BAEE924897E6700F64519 /* OutputStream.swift in Sources */,
 				754C046F247E0E5D00A12CF7 /* Array+Resistance.swift in Sources */,
@@ -937,14 +1015,16 @@
 				754C0553247F98C900A12CF7 /* TSLA.mlmodel in Sources */,
 				754C03D4247E06F900A12CF7 /* MarginAccount.swift in Sources */,
 				754C03D3247E06F900A12CF7 /* InitialBalances.swift in Sources */,
-				75657887248B35A80037490D /* BuyMarketStock.swift in Sources */,
+				75657887248B35A80037490D /* DocOrder.swift in Sources */,
 				754C043E247E0D5D00A12CF7 /* Instrument.swift in Sources */,
 				754C051C247E17DD00A12CF7 /* CLLocation.swift in Sources */,
+				755D03A7248DF7EC00FFABC8 /* Order+Enums.swift in Sources */,
 				754C0438247E0D4A00A12CF7 /* StreamerInfo.swift in Sources */,
 				754C03FF247E0C9900A12CF7 /* Underlying.swift in Sources */,
 				754C041C247E0D1500A12CF7 /* TransactionItem.swift in Sources */,
 				753BAEE324897E0D00F64519 /* InputStream.swift in Sources */,
 				754C0411247E0CDC00A12CF7 /* QuoteFutureOption.swift in Sources */,
+				75B3F1BD248EAE2700C5BF87 /* GetOrder.swift in Sources */,
 				754C0436247E0D4A00A12CF7 /* UpdatePrincipalData.swift in Sources */,
 				754C0505247E17DD00A12CF7 /* NSPersistentContainer.swift in Sources */,
 				754C03E9247E0C6800A12CF7 /* Option.swift in Sources */,
@@ -955,6 +1035,7 @@
 				754C03F1247E0C8000A12CF7 /* InstrumentDetails.swift in Sources */,
 				754C03FC247E0C9900A12CF7 /* OptionDeliverableList.swift in Sources */,
 				754C0532247E17DD00A12CF7 /* Observable.swift in Sources */,
+				755D03A1248DA01800FFABC8 /* RefreshToken.swift in Sources */,
 				754C0526247E17DD00A12CF7 /* Action.swift in Sources */,
 				754C051E247E17DD00A12CF7 /* Int.swift in Sources */,
 				754C0527247E17DD00A12CF7 /* Collection.swift in Sources */,
@@ -964,6 +1045,7 @@
 				754C053E247E17DD00A12CF7 /* NotificationCenter.swift in Sources */,
 				754C03F2247E0C8000A12CF7 /* FundamentalClass.swift in Sources */,
 				754C0414247E0CDC00A12CF7 /* QuoteFuture.swift in Sources */,
+				75B3F1B8248E0B2C00C5BF87 /* PlaceOrder.swift in Sources */,
 				754C041D247E0D1500A12CF7 /* TransactionInstrument.swift in Sources */,
 				754C03F4247E0C8000A12CF7 /* FundamentalData.swift in Sources */,
 				754C0458247E0DBD00A12CF7 /* Plist.swift in Sources */,
@@ -973,11 +1055,13 @@
 				754C0440247E0D5D00A12CF7 /* WatchlistItem.swift in Sources */,
 				754C0434247E0D4A00A12CF7 /* UserPrincipals.swift in Sources */,
 				754C0404247E0CBF00A12CF7 /* Preferences.swift in Sources */,
+				75B3F1C3248F228400C5BF87 /* Timer.swift in Sources */,
 				754C0401247E0C9900A12CF7 /* ChainOption.swift in Sources */,
 				754C03E6247E0C6800A12CF7 /* GeneralInstrument.swift in Sources */,
 				754C0427247E0D3300A12CF7 /* URLComponents.swift in Sources */,
 				754C0511247E17DD00A12CF7 /* Bundle.swift in Sources */,
 				754C0463247E0E4000A12CF7 /* RSI.swift in Sources */,
+				755D039D248D6D1E00FFABC8 /* CharacterSet.swift in Sources */,
 				754C053F247E17DD00A12CF7 /* Date.swift in Sources */,
 				754C0412247E0CDC00A12CF7 /* QuoteIndex.swift in Sources */,
 				754C0435247E0D4A00A12CF7 /* PrincipalQuotes.swift in Sources */,
@@ -991,10 +1075,13 @@
 				754C0462247E0E4000A12CF7 /* MovAvgExponential.swift in Sources */,
 				754C0451247E0DBD00A12CF7 /* String+Plist.swift in Sources */,
 				754C0454247E0DBD00A12CF7 /* URL.swift in Sources */,
+				755D03A3248DED1100FFABC8 /* Collection+JSON.swift in Sources */,
 				754C045D247E0E3700A12CF7 /* MACD.swift in Sources */,
 				754C0472247E0E5D00A12CF7 /* Array+Point.swift in Sources */,
 				754C03BD247E06B200A12CF7 /* Token.swift in Sources */,
 				754C03D6247E06F900A12CF7 /* OrderStrategy.swift in Sources */,
+				755D039F248D6D3C00FFABC8 /* Dictionary+PercentEncoded.swift in Sources */,
+				75B3F1B5248E077700C5BF87 /* TickerEnum.swift in Sources */,
 				754C03F3247E0C8000A12CF7 /* Bond.swift in Sources */,
 				754C051D247E17DD00A12CF7 /* CLLocationManager.swift in Sources */,
 				754C05692485D8A400A12CF7 /* StringAny.swift in Sources */,
@@ -1002,6 +1089,7 @@
 				754C0543247E17DD00A12CF7 /* Keychain.swift in Sources */,
 				754C040E247E0CDC00A12CF7 /* QuoteOption.swift in Sources */,
 				754C0500247E17DD00A12CF7 /* Dictionary.swift in Sources */,
+				755D03A5248DF6AC00FFABC8 /* Orders.swift in Sources */,
 				754C03FD247E0C9900A12CF7 /* OptionDeliverables.swift in Sources */,
 				754C03F0247E0C8000A12CF7 /* Fundamental.swift in Sources */,
 				754C0439247E0D4A00A12CF7 /* AccountPrincipal.swift in Sources */,
@@ -1009,6 +1097,7 @@
 				754C03C5247E06C600A12CF7 /* Mover.swift in Sources */,
 				754C0539247E17DD00A12CF7 /* TravelMethod.swift in Sources */,
 				754C0515247E17DD00A12CF7 /* URL+HELPERS.swift in Sources */,
+				75B3F1C1248EDBCD00C5BF87 /* GeneralOrderURL.swift in Sources */,
 				754C03D1247E06F900A12CF7 /* GeneralAccount.swift in Sources */,
 				754C0502247E17DD00A12CF7 /* UNNotificationCategory.swift in Sources */,
 			);
@@ -1022,10 +1111,13 @@
 				754C054F247EF57300A12CF7 /* CommaSeparatedArraytests.swift in Sources */,
 				754C054B247ED8BF00A12CF7 /* StringMatrixTests.swift in Sources */,
 				754C03B9247E066800A12CF7 /* SimpleMovingAverageTests.swift in Sources */,
+				75B3F1BB248EADA900C5BF87 /* GetOrderTest.swift in Sources */,
 				754C03B8247E066800A12CF7 /* InputOutputs.swift in Sources */,
 				754C054D247ED8ED00A12CF7 /* CSVTests.swift in Sources */,
 				754C0547247EC11A00A12CF7 /* DataFrameTests.swift in Sources */,
+				75B3F1BF248EBB1600C5BF87 /* placeOrderTest.swift in Sources */,
 				75657882248AEF2B0037490D /* AuthTests.swift in Sources */,
+				75B3F1C724917D4500C5BF87 /* StreamTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
