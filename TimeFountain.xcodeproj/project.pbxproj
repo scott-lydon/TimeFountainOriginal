@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		75164CC82492CC0300A18EC9 /* UserPrincipalsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75164CC72492CC0300A18EC9 /* UserPrincipalsTest.swift */; };
+		75164CCA2492D3ED00A18EC9 /* StreamedQuote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75164CC92492D3ED00A18EC9 /* StreamedQuote.swift */; };
 		753BAEDF24897DA600F64519 /* Socket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753BAEDE24897DA600F64519 /* Socket.swift */; };
 		753BAEE124897DD900F64519 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753BAEE024897DD900F64519 /* Message.swift */; };
 		753BAEE324897E0D00F64519 /* InputStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753BAEE224897E0D00F64519 /* InputStream.swift */; };
@@ -144,6 +146,7 @@
 		755D03A3248DED1100FFABC8 /* Collection+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755D03A2248DED1100FFABC8 /* Collection+JSON.swift */; };
 		755D03A5248DF6AC00FFABC8 /* Orders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755D03A4248DF6AC00FFABC8 /* Orders.swift */; };
 		755D03A7248DF7EC00FFABC8 /* Order+Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755D03A6248DF7EC00FFABC8 /* Order+Enums.swift */; };
+		755E144124988AC600AD3F5B /* DispatchGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755E144024988AC600AD3F5B /* DispatchGroup.swift */; };
 		7565787E248ACE630037490D /* Credentials.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7565787D248ACE630037490D /* Credentials.strings */; };
 		75657882248AEF2B0037490D /* AuthTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75657881248AEF2B0037490D /* AuthTests.swift */; };
 		75657887248B35A80037490D /* DocOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75657886248B35A80037490D /* DocOrder.swift */; };
@@ -188,6 +191,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		75164CC72492CC0300A18EC9 /* UserPrincipalsTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPrincipalsTest.swift; sourceTree = "<group>"; };
+		75164CC92492D3ED00A18EC9 /* StreamedQuote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamedQuote.swift; sourceTree = "<group>"; };
 		753BAEDE24897DA600F64519 /* Socket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Socket.swift; sourceTree = "<group>"; };
 		753BAEE024897DD900F64519 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		753BAEE224897E0D00F64519 /* InputStream.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputStream.swift; sourceTree = "<group>"; };
@@ -325,6 +330,7 @@
 		755D03A2248DED1100FFABC8 /* Collection+JSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+JSON.swift"; sourceTree = "<group>"; };
 		755D03A4248DF6AC00FFABC8 /* Orders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Orders.swift; sourceTree = "<group>"; };
 		755D03A6248DF7EC00FFABC8 /* Order+Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Order+Enums.swift"; sourceTree = "<group>"; };
+		755E144024988AC600AD3F5B /* DispatchGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DispatchGroup.swift; sourceTree = "<group>"; };
 		7565787D248ACE630037490D /* Credentials.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Credentials.strings; sourceTree = "<group>"; };
 		75657881248AEF2B0037490D /* AuthTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthTests.swift; sourceTree = "<group>"; };
 		75657886248B35A80037490D /* DocOrder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocOrder.swift; sourceTree = "<group>"; };
@@ -525,6 +531,7 @@
 				75B3F1C824917F5500C5BF87 /* Stream+ErrorResponse.swift */,
 				756B233E248823D200EB31C2 /* Stream.swift */,
 				75A6C38B2492ACE80070779E /* HeartBeat.swift */,
+				75164CC92492D3ED00A18EC9 /* StreamedQuote.swift */,
 			);
 			path = StreamerSubscriptionKeys;
 			sourceTree = "<group>";
@@ -597,6 +604,7 @@
 				755D039C248D6D1E00FFABC8 /* CharacterSet.swift */,
 				755D039E248D6D3C00FFABC8 /* Dictionary+PercentEncoded.swift */,
 				755D03A2248DED1100FFABC8 /* Collection+JSON.swift */,
+				755E144024988AC600AD3F5B /* DispatchGroup.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -781,6 +789,7 @@
 				75B3F1BE248EBB1600C5BF87 /* placeOrderTest.swift */,
 				75B3F1C624917D4500C5BF87 /* StreamTest.swift */,
 				75B3F1CA24927DE300C5BF87 /* SaveHistoryTests.swift */,
+				75164CC72492CC0300A18EC9 /* UserPrincipalsTest.swift */,
 				75A4FC62247E049F00E4DC0B /* Info.plist */,
 			);
 			path = TimeFountainTests;
@@ -969,6 +978,7 @@
 			files = (
 				754C042A247E0D3300A12CF7 /* EndPoints.swift in Sources */,
 				754C0433247E0D4A00A12CF7 /* Authorizations.swift in Sources */,
+				75164CCA2492D3ED00A18EC9 /* StreamedQuote.swift in Sources */,
 				754C0542247E17DD00A12CF7 /* Double.swift in Sources */,
 				754C03DB247E0C5000A12CF7 /* Candle.swift in Sources */,
 				754C0465247E0E4A00A12CF7 /* VWAP.swift in Sources */,
@@ -1111,6 +1121,7 @@
 				75B3F1C1248EDBCD00C5BF87 /* GeneralOrderURL.swift in Sources */,
 				754C03D1247E06F900A12CF7 /* GeneralAccount.swift in Sources */,
 				754C0502247E17DD00A12CF7 /* UNNotificationCategory.swift in Sources */,
+				755E144124988AC600AD3F5B /* DispatchGroup.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1130,6 +1141,7 @@
 				75B3F1BF248EBB1600C5BF87 /* placeOrderTest.swift in Sources */,
 				75657882248AEF2B0037490D /* AuthTests.swift in Sources */,
 				75B3F1C724917D4500C5BF87 /* StreamTest.swift in Sources */,
+				75164CC82492CC0300A18EC9 /* UserPrincipalsTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

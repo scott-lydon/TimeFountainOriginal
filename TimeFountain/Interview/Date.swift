@@ -13,7 +13,11 @@ public extension Date {
     typealias Minutes = Int
     
     init?(timeFromNow: Minutes) {
-        guard let date = Calendar.current.date(byAdding: .minute, value: timeFromNow, to: Date()) else { return nil}
+        guard let date = Calendar.current.date(
+            byAdding: .minute,
+            value: timeFromNow,
+            to: Date()
+            ) else { return nil}
         self = date
     }
     

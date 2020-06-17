@@ -11,51 +11,59 @@ import Foundation
 extension URL {
     
     /// back represents the number of 10 day units back we are getting the data for.
-    func saveHistory(for tickers: [String], back: Int) {
+    /// TD Ameritrade allows 120 calls a minute
+    static func saveHistory(for tickers: [String], back: Int, completion: @escaping Action) {
+        let tickersFinish = DispatchGroup()
         tickers.forEach { ticker in
+            tickersFinish.enter(tickers.count)
             var allCandles = CandleList(symbol: ticker)
             (0...back).forEach { int in
-                // TD Ameritrade allows 120 calls a minute
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                     let mins = 10 * 24 * 60
-                    URL.priceHistory(
+                    let url = URL.priceHistory(
                         period: .days(.ten, .oneMinute),
                         endDate: Date(timeFromNow: int * mins),
                         startDate: Date(timeFromNow: (int + 1) * mins),
                         ticker: ticker
-                    ).getData { data in
+                    )
+                    print("--->", url.absoluteString)
+                    url.getData { data in
+                        tickersFinish.leave()
                         guard let candles = CandleList(data) else { return }
                         allCandles.candles.append(contentsOf: candles.candles)
                     }
                 }
             }
-            allCandles.candles.sort { $0.datetime > $1.datetime }
-            guard let dataframe = DataFrame(
-                    DataFrame.Column(
-                        header: "date",
-                        cells: allCandles.dates.asStrings
-                    ),
-                    DataFrame.Column(
-                        header: "close",
-                        cells: allCandles.closes.asStrings
-                    ),
-                    DataFrame.Column(
-                        header: "SMA",
-                        cells: allCandles.closes.sma(for: 180).asStrings
-                    )
-                ) else { return }
-            let csv = dataframe.convertToCSV(
-                root: .desktopDirectory,
-                named: ticker + "_" + Date().timeIntervalSince1970.string
-            )
-            print(csv?.absoluteString ?? "nil")
+            tickersFinish.notify(queue: DispatchQueue.main) {
+                allCandles.candles.sort { $0.datetime > $1.datetime }
+                guard let dataframe = DataFrame(allCandles) else { return }
+                let csv = dataframe.convertToCSV(
+                    named: ticker + "_" + Date().timeIntervalSince1970.string
+                )
+                print(csv?.absoluteString ?? "nil")
+                completion()
+            }
         }
+    }
+    
+    typealias DataFrameAction = (DataFrame) -> Void
+    
+    static func priceHistories(
+        apiKey: String? = Bundle.td_api_key,
+        period: Period = .days(.ten, .oneMinute),
+        endDate: Date? = nil,
+        startDate: Date? = nil,
+        needExtendedHoursData: Bool? = false, // true for swing trades, false for day trades.
+        ticker: String,
+        dataFrameAction: @escaping DataFrameAction
+    ) -> [URL] {
+        return []
     }
     
     /// Header: Authorization: Bearer <access token>
     static func priceHistory(
         apiKey: String? = Bundle.td_api_key,
-        period: Period,
+        period: Period = .days(.ten, .oneMinute),
         endDate: Date? = nil,
         startDate: Date? = nil,
         needExtendedHoursData: Bool? = false, // true for swing trades, false for day trades.
@@ -63,8 +71,7 @@ extension URL {
     ) -> URL {
         return TDAmeritradeURL(
             path: .slashes(.marketData, ticker, .priceHistory)
-        )
-            .apiKey(apiKey)
+        ).apiKey(apiKey)
             .period(period)
             .endDate(endDate)
             .startDate(startDate)
@@ -78,6 +85,20 @@ extension URL {
         case months(MonthCount, DailyWeekly)
         case years(YearCount, DailyWeeklyMonthly)
         case ytd(DailyWeekly)
+    
+        
+        var dateIncrement: Date.Increment {
+            switch self {
+            case .days(let dayCount, _):
+                return dayCount.dateIncrement
+            case .months(let monthCount, _):
+                return monthCount.dateIncrement
+            case .years(let yearCount, _):
+                return yearCount.dateIncrement
+            case .ytd(let yearAssociated):
+                return yearAssociated.dateIncrement
+            }
+        }
         
         var dictionary: [TDAmeritradeURL.Key: String] {
             var dict: [TDAmeritradeURL.Key: String] = [:]
@@ -114,6 +135,11 @@ extension URL {
         
         enum DailyWeekly: String {
             case daily, weekly
+            
+            var dateIncrement: Date.Increment {
+                // Ignored for year to date
+                Date.Increment(component: .year, value: 1)
+            }
         }
         
         enum DailyWeeklyMonthly: String {
@@ -139,6 +165,10 @@ extension URL {
             case four = 4
             case five = 5
             case ten = 10
+
+            var dateIncrement: Date.Increment {
+                Date.Increment(component: .day, value: rawValue)
+            }
             
             init() {
                 self = .ten
@@ -150,6 +180,11 @@ extension URL {
             case two = 2
             case three = 3
             case six = 6
+            
+            var dateIncrement: Date.Increment {
+                Date.Increment(component: .month, value: rawValue)
+            }
+            
             init() {
                 self = .one
             }
@@ -163,9 +198,22 @@ extension URL {
             case ten = 10
             case fifteen = 15
             case twenty = 20
+            
+            var dateIncrement: Date.Increment {
+                Date.Increment(component: .year, value: rawValue)
+            }
+            
             init() {
                 self = .one
             }
         }
+    }
+}
+
+
+extension Date {
+    struct Increment {
+        var component: Calendar.Component
+        var value: Int
     }
 }

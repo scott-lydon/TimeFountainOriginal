@@ -75,24 +75,22 @@ extension URL {
     
     /// /// Good for debugging response handling.  Pure response is returned.
     static func stream(
-        _ postLoginRequestsParts: [Request.Parts],
+        _ postLoginRequestsParts: [Request.Parts] = [],
         action: @escaping StringAction
     ) {
         URL.userPrincipals { principals in
-            print(action)
             guard let principals = principals,
                 let stream = TDStream(
                     principals: principals,
                     requests: postLoginRequestsParts
                 ) else { return }
-           // print("stream url: ", stream.)
             URL.stream(stream, action: action)
         }
     }
     
     private static func stream(_ stream: TDStream, action: @escaping StringAction) {
         guard let stream = stream.dictionary.asJSON else { return }
-        print(stream)
+        print("Stream json: ", stream)
         URL.stream(stream, action: action)
     }
     

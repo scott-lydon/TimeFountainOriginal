@@ -38,22 +38,23 @@ struct Request: Codable {
     let command: Command
     let account: String
     let source: String
-    let parameters: Parameters
+    let parameters: [String: String]
     
     struct Parts {
         let service: StreamService
         let requestid: Int
         let command: Command
-        let parameters: Parameters
+        let parameters: [String: String]
 
         static func quotes(_ parameters: QuoteParams) -> Parts {
             Parts(
                 service: .QUOTE,
                 requestid: 1,
                 command: .SUBS,
-                parameters: parameters
+                parameters: parameters.stringString
             )
         }
+    
     }
     
     /// DOCS: https://developer.tdameritrade.com/content/streaming-data
@@ -75,16 +76,7 @@ struct Request: Codable {
             )
         )
     }
-    
-    enum CodingKeys: String, CodingKey, CaseIterable {
-       case LoginParamsKey = "parameters",
-        QuoteParamsKey = "parameters1",
-        service,
-        requestid,
-        command,
-        account,
-        source
-    }
+
     
     init(
         account: String,
@@ -112,41 +104,9 @@ struct Request: Codable {
         self.command = command
         self.account = account
         self.source = source
-        self.parameters = parameters
+        self.parameters = parameters.stringString
     }
-    
-    init(from decoder: Decoder) throws {
-        
-        let values = try decoder.container(keyedBy: CodingKeys.self)
-        if let requestParam = try? values.decode(QuoteParams.self, forKey: .QuoteParamsKey) {
-            self.parameters = requestParam
-        } else if let loginParam = try? values.decode(UserPrincipals.LoginParams.self, forKey: .LoginParamsKey) {
-            self.parameters = loginParam
-        } else {
-            throw DecodingError.valueNotFound(Parameters.Type.self, DecodingError.Context(codingPath: CodingKeys.allCases, debugDescription: "could not decode parameters for any of the keys listed values"))
-        }
-        self.service = try values.decode(StreamService.self, forKey: .service)
-        self.requestid = try values.decode(String.self, forKey: .requestid)
-        self.command = try values.decode(Command.self, forKey: .command)
-        self.account = try values.decode(String.self, forKey: .account)
-        self.source = try values.decode(String.self, forKey: .source)
-    }
-    
-    func encode(to encoder: Encoder) throws {
-        var container = encoder.container(keyedBy: CodingKeys.self)
-        if let params = parameters as? UserPrincipals.LoginParams {
-            try container.encode(params, forKey: .LoginParamsKey)
-        } else if let params = parameters as? QuoteParams {
-            try container.encode(params, forKey: .QuoteParamsKey)
-        } else {
-            throw EncodingError.invalidValue(Parameters.self, EncodingError.Context(codingPath: CodingKeys.allCases, debugDescription: "Unrecognized type conforming to Parameters, not included in the keys."))
-        }
-        try container.encode(service, forKey: .service)
-        try container.encode(requestid, forKey: .requestid)
-        try container.encode(command, forKey: .command)
-        try container.encode(account, forKey: .account)
-        try container.encode(source, forKey: .source)
-    }
+
 }
 
 protocol Parameters: Codable {}

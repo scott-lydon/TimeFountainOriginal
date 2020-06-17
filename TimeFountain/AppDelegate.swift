@@ -40,7 +40,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             print("Tokens refreshed.")
             print("Access token: ", token.accessToken)
             AppDelegate.refreshedToken = true
-            
         }
         let minutes = 60.0
         Timer.scheduledTimer(withTimeInterval: 29 * minutes, repeats: true) { _ in

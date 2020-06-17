@@ -39,7 +39,60 @@ extension TimeFountainTests {
        /// XCTAssert(<#T##expression: Bool##Bool#>)
     }
     
+    func testURLS() {
+        let recentDate = Date()
+        let hour = 60
+        let day = 24
+        guard let fromDate = Calendar.current.date(
+            byAdding: .day,
+            value: -10,
+            to: recentDate
+            ) else { return }
+//        let second = Calendar.current.date(
+//            byAdding: .day,
+//            value: -10,
+//            to: fromDate.
+//        )
+        let formerDate = Date(timeFromNow: hour * day * 25)
+        
+        let ticker = "TSLA"
+        XCTAssertEqual(
+            [
+                URL.priceHistory(
+                    period: .days(.ten, .oneMinute),
+                    endDate: <#T##Date?#>,
+                    startDate: <#T##Date?#>,
+                    ticker: ticker
+                )
+            ],
+            URL.priceHistories(ticker: ticker, dataFrameAction: { _ in})
+        )
+    }
+    
 }
+/*
+ enum Period {
+     case days(DayCount, Minute)
+     case months(MonthCount, DailyWeekly)
+     case years(YearCount, DailyWeeklyMonthly)
+     case ytd(DailyWeekly)
+     
+     func dates(from: Date, to: Date) -> [Date] {
+         
+         switch self {
+         case .days(let dayCount, _):
+             do {}
+         case .months(let monthCount, _):
+             do {}
+         case .years(let yearCount, _):
+             do {}
+         case .ytd(_):
+             do {}
+         }
+         return []
+     }
+ 
+ */
 
 /*
  /// back represents the number of 10 day units back we are getting the data for.

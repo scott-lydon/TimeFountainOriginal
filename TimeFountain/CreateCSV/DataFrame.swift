@@ -10,6 +10,14 @@ import Foundation
 
 struct DataFrame: Equatable {
     
+    init?(_ candles: CandleList) {
+        self.init(
+            .dates(candles.dates.asStrings),
+            .closes(candles.closes.asStrings),
+            .smas(candles.closes.sma(for: 180).asStrings)
+        )
+    }
+    
     static func == (lhs: DataFrame, rhs: DataFrame) -> Bool {
         return lhs.columns == rhs.columns
     }
@@ -20,6 +28,18 @@ struct DataFrame: Equatable {
         }
         var header: String
         var cells: [String]
+        
+        static func dates(_ dates: [String]) -> Column {
+            Column(header: "date", cells: dates)
+        }
+        
+        static func closes(_ closes: [String]) -> Column {
+            Column(header: "close", cells: closes)
+        }
+        
+        static func smas(_ smas: [String]) -> Column {
+            Column(header: "SMA", cells: smas)
+        }
     }
     
     var columns: [Column]

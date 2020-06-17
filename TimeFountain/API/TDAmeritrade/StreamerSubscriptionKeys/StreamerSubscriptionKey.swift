@@ -15,5 +15,3 @@ struct StreamerSubscriptionKeys: Codable {
 struct Key: Codable {
     let key: String
 }
-
-

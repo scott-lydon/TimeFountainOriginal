@@ -40,18 +40,18 @@ extension TimeFountainTests {
         XCTAssertNotNil(toke)
     }
     
-    func testAuthToken() {
-        let expectation = self.expectation(description: "token object")
-        var toke: Token?
-        URL.accessToken().getData { data in
-            let token = Token(data)
-            token?.write()
-            toke = token
-            XCTAssert(token != nil, "we got a response from the tokens.")
-            expectation.fulfill()
-        }
-        waitForExpectations(timeout: 5, handler: nil)
-        XCTAssertNotNil(toke)
-    }
+    /// Does not seem to need implementation.  It is better to use the refresh token call and update the access token which is provvided from that.
+//    func testAuthToken() {
+//        let expectation = self.expectation(description: "token object")
+//        var toke: Token?
+//        URL.accessToken().getData { data in
+//            let token = Token(data)
+//            token?.write()
+//            toke = token
+//            XCTAssert(token != nil, "we got a response from the tokens.")
+//            expectation.fulfill()
+//        }
+//        waitForExpectations(timeout: 5, handler: nil)
+//    }
     
 }

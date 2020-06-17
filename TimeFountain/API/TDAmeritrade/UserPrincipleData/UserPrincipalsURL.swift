@@ -22,10 +22,10 @@ extension URLRequest {
     /// Main interface.  Robust, ensures that if a new device is used, then a new call to get principals is made.
     static func userPrincipals(
         fields: [UserPrincipalOption] = [
-            .preferences,
-            .streamerConnectionInfo,
-            .streamerSubscriptionKeys,
-            .surrogateIds,
+        .preferences,
+        .streamerConnectionInfo,
+        .streamerSubscriptionKeys,
+        .surrogateIds,
         ],
         action: @escaping PrincipalAction
     ) {
@@ -72,9 +72,11 @@ extension URL {
     static func userprincipals(
         fields: [UserPrincipalOption] = []
     ) -> URL {
-        return TDAmeritradeURL(paths: .userprincipals)
+        let url = TDAmeritradeURL(paths: .userprincipals)
             .fields(fields)
             .build
+        print(url.absoluteString)
+        return url
     }
 }
 
