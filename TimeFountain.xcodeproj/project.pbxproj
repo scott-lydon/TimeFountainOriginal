@@ -147,6 +147,7 @@
 		755D03A5248DF6AC00FFABC8 /* Orders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755D03A4248DF6AC00FFABC8 /* Orders.swift */; };
 		755D03A7248DF7EC00FFABC8 /* Order+Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755D03A6248DF7EC00FFABC8 /* Order+Enums.swift */; };
 		755E144124988AC600AD3F5B /* DispatchGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755E144024988AC600AD3F5B /* DispatchGroup.swift */; };
+		755E145D2499B93900AD3F5B /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 755E145C2499B93900AD3F5B /* libz.tbd */; };
 		7565787E248ACE630037490D /* Credentials.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7565787D248ACE630037490D /* Credentials.strings */; };
 		75657882248AEF2B0037490D /* AuthTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75657881248AEF2B0037490D /* AuthTests.swift */; };
 		75657887248B35A80037490D /* DocOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75657886248B35A80037490D /* DocOrder.swift */; };
@@ -331,6 +332,7 @@
 		755D03A4248DF6AC00FFABC8 /* Orders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Orders.swift; sourceTree = "<group>"; };
 		755D03A6248DF7EC00FFABC8 /* Order+Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Order+Enums.swift"; sourceTree = "<group>"; };
 		755E144024988AC600AD3F5B /* DispatchGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DispatchGroup.swift; sourceTree = "<group>"; };
+		755E145C2499B93900AD3F5B /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		7565787D248ACE630037490D /* Credentials.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Credentials.strings; sourceTree = "<group>"; };
 		75657881248AEF2B0037490D /* AuthTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthTests.swift; sourceTree = "<group>"; };
 		75657886248B35A80037490D /* DocOrder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocOrder.swift; sourceTree = "<group>"; };
@@ -368,6 +370,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				755E145D2499B93900AD3F5B /* libz.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -737,6 +740,7 @@
 				75A4FC6A247E049F00E4DC0B /* TimeFountainUITests */,
 				75A4FC48247E049C00E4DC0B /* Products */,
 				76498586BE80AA00FA3E2E3E /* Pods */,
+				8C4185EDAB2AF23D452B83C0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -825,16 +829,8 @@
 			isa = PBXGroup;
 			children = (
 				75E9714B248C11DE00FED161 /* SWSWebSocket.swift */,
-				75E9714D248C120200FED161 /* SWSSupportFiles */,
 			);
 			path = SwiftWebSocket;
-			sourceTree = "<group>";
-		};
-		75E9714D248C120200FED161 /* SWSSupportFiles */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = SWSSupportFiles;
 			sourceTree = "<group>";
 		};
 		76498586BE80AA00FA3E2E3E /* Pods */ = {
@@ -842,6 +838,14 @@
 			children = (
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		8C4185EDAB2AF23D452B83C0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				755E145C2499B93900AD3F5B /* libz.tbd */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
