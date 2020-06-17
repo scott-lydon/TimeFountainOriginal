@@ -129,7 +129,6 @@
 		754C054B247ED8BF00A12CF7 /* StringMatrixTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754C054A247ED8BF00A12CF7 /* StringMatrixTests.swift */; };
 		754C054D247ED8ED00A12CF7 /* CSVTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754C054C247ED8ED00A12CF7 /* CSVTests.swift */; };
 		754C054F247EF57300A12CF7 /* CommaSeparatedArraytests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754C054E247EF57300A12CF7 /* CommaSeparatedArraytests.swift */; };
-		754C0551247F4CF900A12CF7 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 754C0550247F4CF900A12CF7 /* Info.plist */; };
 		754C0553247F98C900A12CF7 /* TSLA.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 754C0552247F98C900A12CF7 /* TSLA.mlmodel */; };
 		754C055D2480520200A12CF7 /* UserPrincipalsURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754C055C2480520200A12CF7 /* UserPrincipalsURL.swift */; };
 		754C055F2480552100A12CF7 /* oauth2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754C055E2480552100A12CF7 /* oauth2.swift */; };
@@ -955,7 +954,6 @@
 				7565787E248ACE630037490D /* Credentials.strings in Resources */,
 				75A4FC52247E049F00E4DC0B /* Assets.xcassets in Resources */,
 				75A4FC55247E049F00E4DC0B /* Main.storyboard in Resources */,
-				754C0551247F4CF900A12CF7 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

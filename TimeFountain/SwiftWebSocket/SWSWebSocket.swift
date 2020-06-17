@@ -599,8 +599,10 @@ private class InnerWebSocket: Hashable {
         ws.binaryType = binaryType
         return ws
     }
-
-    var hashValue: Int { return id }
+    
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
+    }
 
     init(request: URLRequest, subProtocols : [String] = [], stub : Bool = false){
         pthread_mutex_init(&mutex, nil)
@@ -1144,8 +1146,8 @@ private class InnerWebSocket: Hashable {
                 } else {
                     key = ""
                     if let r = line.range(of: ":") {
-                        key = trim(line.substring(to: r.lowerBound))
-                        value = trim(line.substring(from: r.upperBound))
+                        key = trim(String(line[..<r.lowerBound]))
+                        value = trim(String(line[r.upperBound...]))
                     }
                 }
                 
@@ -1462,7 +1464,7 @@ private class InnerWebSocket: Hashable {
             }
         }
         let r = arc4random()
-        var maskBytes : [UInt8] = [UInt8(r >> 0 & 0xFF), UInt8(r >> 8 & 0xFF), UInt8(r >> 16 & 0xFF), UInt8(r >> 24 & 0xFF)]
+        let maskBytes : [UInt8] = [UInt8(r >> 0 & 0xFF), UInt8(r >> 8 & 0xFF), UInt8(r >> 16 & 0xFF), UInt8(r >> 24 & 0xFF)]
         for i in 0 ..< 4 {
             head[hlen] = maskBytes[i]
             hlen += 1
