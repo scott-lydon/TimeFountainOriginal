@@ -6,7 +6,7 @@ target 'TimeFountain' do
   use_frameworks!
 
   # Pods for TimeFountain
-pod 'SwiftWebSocket'
+# pod 'SwiftWebSocket'
 pod 'Alamofire' ,'4.9.1'
 
   target 'TimeFountainTests' do

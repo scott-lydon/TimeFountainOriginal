@@ -31,7 +31,7 @@ extension URLRequest {
     ) {
         print(fields, fields.count)
         let prinicpalsReq = URLRequest.userprincipals(fields: fields)
-        print(prinicpalsReq.url?.absoluteString)
+        print(prinicpalsReq.url?.absoluteString ?? "nil")
         prinicpalsReq.getData { data in
             action(UserPrincipals(dataWithDate: data))
         }

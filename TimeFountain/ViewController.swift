@@ -9,8 +9,6 @@
 import Cocoa
 import CoreML
 import Alamofire
-import SwiftWebSocket
-
 
 class ViewController: NSViewController {
     
