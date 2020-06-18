@@ -13,6 +13,21 @@ protocol Order: Codable {}
 // MARK: - These are used VV
 // MARK: - ORDERS in USE
 struct BuyMarketStock: Order {
+    
+    struct Prediction {
+        var direction: Direction
+        var percentile: Percentile
+        
+        enum Direction {
+            case goingUp, goingDown, level
+        }
+            
+        /// Magnitude
+        enum Percentile {
+            case lowerTen, lowerTwenty, lowerThirty, lowerForty, lowerFifty, upperFifty, upperSixty, upperSeventy, upperEighty, upperNinety
+        }
+    }
+    
     let orderType: OrderType
     let session: Session
     let duration: Duration
@@ -37,7 +52,7 @@ struct BuyMarketStock: Order {
                 OrderLegCollection(
                     instruction: .BUY,
                     quantity: quantity,
-                    instrument: Instrument(
+                    instrument: PurchaseInstrument(
                         symbol: ticker,
                         assetType: .EQUITY,
                         instrumentDescription: nil
@@ -52,7 +67,7 @@ struct BuyMarketStock: Order {
 struct OrderLegCollection: Order {
     let instruction: Instruction
     let quantity: Int
-    let instrument: Instrument
+    let instrument: PurchaseInstrument
 }
 
 // MARK: - BuyLimitSingleOption

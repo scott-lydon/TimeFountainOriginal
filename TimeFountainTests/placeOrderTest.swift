@@ -26,7 +26,7 @@ extension TimeFountainTests {
             print(confirmation)
             placeOrder.fulfill()
             URL.cancel(orderid: String(confirmation.orderID)) { status in
-                print(status)
+                print(status ?? "nil")
                 cancelOrder.fulfill()
             }
         }

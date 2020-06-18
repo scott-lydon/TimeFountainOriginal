@@ -8,13 +8,20 @@
 
 import Foundation
 
-struct MutualFund: Codable {
-    let assetType, cusip, symbol, mutualFundDescription: String
-    let type: String
+class MutualFund: Instrument {
+    let mutualFundDescription: String
+    let type: MutualFundType
 
     enum CodingKeys: String, CodingKey {
         case assetType, cusip, symbol
         case mutualFundDescription = "description"
         case type
+    }
+    
+    required init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        self.mutualFundDescription = try container.decode(String.self, forKey: .mutualFundDescription)
+        self.type = try container.decode(MutualFundType.self, forKey: .type)
+        try super.init(from: decoder)
     }
 }

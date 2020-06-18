@@ -189,13 +189,6 @@ struct GeneralInstrument: Codable {
     var optionDeliverables: [OptionDeliverabley]?
 }
 
-struct Equity: InstrumentCodable {
-    var assetType: AssetType
-    var cusip: String
-    var symbol: Symbol
-    var description: String
-}
-
 struct FixedIncomeInstrument: InstrumentCodable {
     var assetType: AssetType
     var cusip: String

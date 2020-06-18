@@ -8,18 +8,25 @@
 
 import Foundation
 
-struct MarginAccount {
-    let type, accountID: String
-    let roundTrips: Int
-    let isDayTrader, isClosingOnlyRestricted: Bool
-    let positions: [Position]
-    let orderStrategies: [OrderStrategy]
-    let initialBalances: InitialBalances
-    let currentBalances, projectedBalances: Balances
-
-    enum CodingKeys: String, CodingKey {
-        case type
-        case accountID = "accountId"
-        case roundTrips, isDayTrader, isClosingOnlyRestricted, positions, orderStrategies, initialBalances, currentBalances, projectedBalances
-    }
-}
+//// MARK: - MarginAccount
+//struct MarginAccount: Accountable {
+//    
+//    enum AccountType: String, Codable {
+//        case CASH, MARGIN
+//    }
+//    
+//    let type: AccountType
+//    let accountID: String
+//    let roundTrips: Int
+//    let isDayTrader, isClosingOnlyRestricted: Bool
+//    let positions: [Position]
+//    let orderStrategies: [OrderStrategy]
+//    let initialBalances: InitialBalances
+//    let currentBalances, projectedBalances: Balances
+//
+//    enum CodingKeys: String, CodingKey {
+//        case type
+//        case accountID = "accountId"
+//        case roundTrips, isDayTrader, isClosingOnlyRestricted, positions, orderStrategies, initialBalances, currentBalances, projectedBalances
+//    }
+//}

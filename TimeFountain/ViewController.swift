@@ -12,8 +12,9 @@ import Alamofire
 
 class ViewController: NSViewController {
     
-    //    let model = TSLA()
+    let model = TSLA()
     //    var manager: SocketManager!
+    @IBOutlet weak var optionsTable: NSTableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,25 +28,83 @@ class ViewController: NSViewController {
         }
     }
     
-    func viewDidLoadAndRefreshtokenIsReady() {
+    func setDataFrames() {
         URL.finviz { symbols in
-            
+            symbols.forEach { ticker in
+                URL.priceHistories(ticker: ticker) { dataFrame in
+                    dataFrame?.convertToCSV(ticker: ticker)
+                }
+            }
         }
-//        URL.finviz { symbols in
-//            let group = DispatchGroup()
-//            group.enter(symbols.count)
-//            group.notify(queue: DispatchQueue.main) {
-//                print("We reached it")
-//            }
-//            symbols.forEach {_ in
-//                URL.saveHistory(for: symbols, back: 36) {
-//                    group.leave()
-//                }
-//            }
-//        }
+    }
+        
+    func runBot() {
+        let model = TSLA()
+        let ticker = String(describing: model.self)
+        URL.runBot(ticker: ticker, quotes: { dataframe, quote in
+          model.prediction(from: dataframe)
+        }, accountUpdate: { account in
+            print("Output account on screen:", account.currentBalances.availableFunds)
+            return account.currentBalances.availableFunds - 25_000.00 // cashBalance, availableFunds savings
+        }, transaction: { confirmation in
+            print(confirmation)
+        })
+    }
+    
+    @IBAction func dataFramesTapped(_ sender: NSButtonCell) {
+        setDataFrames()
+    }
+        
+    func viewDidLoadAndRefreshtokenIsReady() {
+        optionsTable.delegate = self
+        optionsTable.dataSource = self
+        setDataFrames()
     }
 }
 
+extension URL {
+    
+    static func runBot(
+        ticker: String,
+        quotes: @escaping (DataFrame, StreamedQuote) -> BuyMarketStock.Prediction,
+        accountUpdate: @escaping (Account) -> Double,
+        transaction: @escaping ConfirmAction
+    ) {
+        //1
+        URL.priceHistories(ticker: ticker) { dataFrame in
+            guard let dataFrame = dataFrame else { return }
+            //2
+            URL.streamQuotes(for: ticker) { quote in
+                //3
+                dataFrame.append(quote)
+                //4
+                let prediction = quotes(dataFrame, quote)
+                
+                // 5
+                URLRequest.account() { account in
+                    let allowance = accountUpdate(account)
+                    // 6
+                    URL.transactBased(
+                        on: prediction,
+                        with: allowance,
+                        for: ticker,
+                        marketValue: 99.0 // TODO get the estimated buy value from the quote
+                    ) { confirmation in
+                        transaction(confirmation)
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+extension ViewController: NSTableViewDelegate, NSTableViewDataSource {
+    
+    
+}
 
 
 

@@ -71,8 +71,8 @@
 		754C0435247E0D4A00A12CF7 /* PrincipalQuotes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754C042E247E0D4A00A12CF7 /* PrincipalQuotes.swift */; };
 		754C0436247E0D4A00A12CF7 /* UpdatePrincipalData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754C042F247E0D4A00A12CF7 /* UpdatePrincipalData.swift */; };
 		754C0438247E0D4A00A12CF7 /* StreamerInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754C0431247E0D4A00A12CF7 /* StreamerInfo.swift */; };
-		754C0439247E0D4A00A12CF7 /* AccountPrincipal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754C0432247E0D4A00A12CF7 /* AccountPrincipal.swift */; };
-		754C043E247E0D5D00A12CF7 /* Instrument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754C043B247E0D5D00A12CF7 /* Instrument.swift */; };
+		754C0439247E0D4A00A12CF7 /* UserPrincipals+Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754C0432247E0D4A00A12CF7 /* UserPrincipals+Account.swift */; };
+		754C043E247E0D5D00A12CF7 /* PurchaseInstrument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754C043B247E0D5D00A12CF7 /* PurchaseInstrument.swift */; };
 		754C043F247E0D5D00A12CF7 /* Watchlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754C043C247E0D5D00A12CF7 /* Watchlist.swift */; };
 		754C0440247E0D5D00A12CF7 /* WatchlistItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754C043D247E0D5D00A12CF7 /* WatchlistItem.swift */; };
 		754C0444247E0D9A00A12CF7 /* CSVRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754C0442247E0D9A00A12CF7 /* CSVRepresentable.swift */; };
@@ -147,6 +147,13 @@
 		755D03A7248DF7EC00FFABC8 /* Order+Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755D03A6248DF7EC00FFABC8 /* Order+Enums.swift */; };
 		755E144124988AC600AD3F5B /* DispatchGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755E144024988AC600AD3F5B /* DispatchGroup.swift */; };
 		755E145D2499B93900AD3F5B /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 755E145C2499B93900AD3F5B /* libz.tbd */; };
+		755E1462249AC97000AD3F5B /* Equity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755E1461249AC97000AD3F5B /* Equity.swift */; };
+		755E1464249AC98E00AD3F5B /* Instrument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755E1463249AC98E00AD3F5B /* Instrument.swift */; };
+		755E1466249ACCA100AD3F5B /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755E1465249ACCA100AD3F5B /* Account.swift */; };
+		755E1468249B5ADB00AD3F5B /* URL+streamQuotes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755E1467249B5ADB00AD3F5B /* URL+streamQuotes.swift */; };
+		755E146A249B608400AD3F5B /* URL+Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755E1469249B608400AD3F5B /* URL+Account.swift */; };
+		755E146C249B676C00AD3F5B /* URL+transact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755E146B249B676C00AD3F5B /* URL+transact.swift */; };
+		755E146F249B745500AD3F5B /* Predictable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755E146E249B745500AD3F5B /* Predictable.swift */; };
 		7565787E248ACE630037490D /* Credentials.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7565787D248ACE630037490D /* Credentials.strings */; };
 		75657882248AEF2B0037490D /* AuthTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75657881248AEF2B0037490D /* AuthTests.swift */; };
 		75657887248B35A80037490D /* DocOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75657886248B35A80037490D /* DocOrder.swift */; };
@@ -255,8 +262,8 @@
 		754C042E247E0D4A00A12CF7 /* PrincipalQuotes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrincipalQuotes.swift; sourceTree = "<group>"; };
 		754C042F247E0D4A00A12CF7 /* UpdatePrincipalData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdatePrincipalData.swift; sourceTree = "<group>"; };
 		754C0431247E0D4A00A12CF7 /* StreamerInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamerInfo.swift; sourceTree = "<group>"; };
-		754C0432247E0D4A00A12CF7 /* AccountPrincipal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountPrincipal.swift; sourceTree = "<group>"; };
-		754C043B247E0D5D00A12CF7 /* Instrument.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Instrument.swift; sourceTree = "<group>"; };
+		754C0432247E0D4A00A12CF7 /* UserPrincipals+Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UserPrincipals+Account.swift"; sourceTree = "<group>"; };
+		754C043B247E0D5D00A12CF7 /* PurchaseInstrument.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PurchaseInstrument.swift; sourceTree = "<group>"; };
 		754C043C247E0D5D00A12CF7 /* Watchlist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Watchlist.swift; sourceTree = "<group>"; };
 		754C043D247E0D5D00A12CF7 /* WatchlistItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatchlistItem.swift; sourceTree = "<group>"; };
 		754C0442247E0D9A00A12CF7 /* CSVRepresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSVRepresentable.swift; sourceTree = "<group>"; };
@@ -332,6 +339,13 @@
 		755D03A6248DF7EC00FFABC8 /* Order+Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Order+Enums.swift"; sourceTree = "<group>"; };
 		755E144024988AC600AD3F5B /* DispatchGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DispatchGroup.swift; sourceTree = "<group>"; };
 		755E145C2499B93900AD3F5B /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		755E1461249AC97000AD3F5B /* Equity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Equity.swift; sourceTree = "<group>"; };
+		755E1463249AC98E00AD3F5B /* Instrument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Instrument.swift; sourceTree = "<group>"; };
+		755E1465249ACCA100AD3F5B /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
+		755E1467249B5ADB00AD3F5B /* URL+streamQuotes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+streamQuotes.swift"; sourceTree = "<group>"; };
+		755E1469249B608400AD3F5B /* URL+Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Account.swift"; sourceTree = "<group>"; };
+		755E146B249B676C00AD3F5B /* URL+transact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+transact.swift"; sourceTree = "<group>"; };
+		755E146E249B745500AD3F5B /* Predictable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Predictable.swift; sourceTree = "<group>"; };
 		7565787D248ACE630037490D /* Credentials.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Credentials.strings; sourceTree = "<group>"; };
 		75657881248AEF2B0037490D /* AuthTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthTests.swift; sourceTree = "<group>"; };
 		75657886248B35A80037490D /* DocOrder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocOrder.swift; sourceTree = "<group>"; };
@@ -450,6 +464,7 @@
 				754C03CE247E06F900A12CF7 /* MarginAccount.swift */,
 				754C03D0247E06F900A12CF7 /* OrderStrategy.swift */,
 				754C03CC247E06F800A12CF7 /* Position.swift */,
+				755E1469249B608400AD3F5B /* URL+Account.swift */,
 			);
 			path = Account;
 			sourceTree = "<group>";
@@ -469,9 +484,12 @@
 				754C03E1247E0C6800A12CF7 /* CashEquivalent.swift */,
 				754C03DE247E0C6800A12CF7 /* Execution.swift */,
 				754C03DF247E0C6800A12CF7 /* FixedIncome.swift */,
+				755E1461249AC97000AD3F5B /* Equity.swift */,
 				754C03E0247E0C6800A12CF7 /* GeneralInstrument.swift */,
 				754C03E2247E0C6800A12CF7 /* MutualFund.swift */,
 				754C03E3247E0C6800A12CF7 /* Option.swift */,
+				755E1463249AC98E00AD3F5B /* Instrument.swift */,
+				755E1465249ACCA100AD3F5B /* Account.swift */,
 			);
 			path = Instrument;
 			sourceTree = "<group>";
@@ -543,6 +561,7 @@
 			children = (
 				754C041B247E0D1400A12CF7 /* TransactionInstrument.swift */,
 				754C041A247E0D1400A12CF7 /* TransactionItem.swift */,
+				755E146B249B676C00AD3F5B /* URL+transact.swift */,
 			);
 			path = Transaction;
 			sourceTree = "<group>";
@@ -562,12 +581,13 @@
 			isa = PBXGroup;
 			children = (
 				754C055C2480520200A12CF7 /* UserPrincipalsURL.swift */,
-				754C0432247E0D4A00A12CF7 /* AccountPrincipal.swift */,
+				754C0432247E0D4A00A12CF7 /* UserPrincipals+Account.swift */,
 				754C042C247E0D4900A12CF7 /* Authorizations.swift */,
 				754C042E247E0D4A00A12CF7 /* PrincipalQuotes.swift */,
 				754C0431247E0D4A00A12CF7 /* StreamerInfo.swift */,
 				754C042F247E0D4A00A12CF7 /* UpdatePrincipalData.swift */,
 				754C042D247E0D4A00A12CF7 /* UserPrincipals.swift */,
+				755E1467249B5ADB00AD3F5B /* URL+streamQuotes.swift */,
 			);
 			path = UserPrincipleData;
 			sourceTree = "<group>";
@@ -575,7 +595,7 @@
 		754C043A247E0D5400A12CF7 /* Watchlist */ = {
 			isa = PBXGroup;
 			children = (
-				754C043B247E0D5D00A12CF7 /* Instrument.swift */,
+				754C043B247E0D5D00A12CF7 /* PurchaseInstrument.swift */,
 				754C043C247E0D5D00A12CF7 /* Watchlist.swift */,
 				754C043D247E0D5D00A12CF7 /* WatchlistItem.swift */,
 			);
@@ -700,6 +720,14 @@
 			path = doc1Unused;
 			sourceTree = "<group>";
 		};
+		755E146D249B743800AD3F5B /* Models+Predictable */ = {
+			isa = PBXGroup;
+			children = (
+				755E146E249B745500AD3F5B /* Predictable.swift */,
+			);
+			path = "Models+Predictable";
+			sourceTree = "<group>";
+		};
 		7565787F248AECC60037490D /* PriceHistory */ = {
 			isa = PBXGroup;
 			children = (
@@ -760,6 +788,7 @@
 				75A4FC4A247E049C00E4DC0B /* AppDelegate.swift */,
 				75A4FC4C247E049C00E4DC0B /* ViewController.swift */,
 				7565787D248ACE630037490D /* Credentials.strings */,
+				755E146D249B743800AD3F5B /* Models+Predictable */,
 				75B3F1B6248E096300C5BF87 /* TickerEnum */,
 				75E9714A248C11BE00FED161 /* SwiftWebSocket */,
 				753BAEDD24897CE400F64519 /* SocketHelpers */,
@@ -1026,18 +1055,21 @@
 				754C043F247E0D5D00A12CF7 /* Watchlist.swift in Sources */,
 				75B3F1C924917F5500C5BF87 /* Stream+ErrorResponse.swift in Sources */,
 				754C053C247E17DD00A12CF7 /* String.swift in Sources */,
+				755E1464249AC98E00AD3F5B /* Instrument.swift in Sources */,
 				753BAEE924897E6700F64519 /* OutputStream.swift in Sources */,
 				754C046F247E0E5D00A12CF7 /* Array+Resistance.swift in Sources */,
 				754C0475247E0E6E00A12CF7 /* SimpleMovingAvg.swift in Sources */,
 				756B233F248823D200EB31C2 /* Stream.swift in Sources */,
 				754C05732487509700A12CF7 /* TDSocketURL.swift in Sources */,
+				755E146A249B608400AD3F5B /* URL+Account.swift in Sources */,
 				754C052F247E17DD00A12CF7 /* sockaddr_in.swift in Sources */,
 				753BAEEB2489806C00F64519 /* MessageSender.swift in Sources */,
 				754C0553247F98C900A12CF7 /* TSLA.mlmodel in Sources */,
 				754C03D4247E06F900A12CF7 /* MarginAccount.swift in Sources */,
+				755E146C249B676C00AD3F5B /* URL+transact.swift in Sources */,
 				754C03D3247E06F900A12CF7 /* InitialBalances.swift in Sources */,
 				75657887248B35A80037490D /* DocOrder.swift in Sources */,
-				754C043E247E0D5D00A12CF7 /* Instrument.swift in Sources */,
+				754C043E247E0D5D00A12CF7 /* PurchaseInstrument.swift in Sources */,
 				754C051C247E17DD00A12CF7 /* CLLocation.swift in Sources */,
 				755D03A7248DF7EC00FFABC8 /* Order+Enums.swift in Sources */,
 				754C0438247E0D4A00A12CF7 /* StreamerInfo.swift in Sources */,
@@ -1083,6 +1115,7 @@
 				754C0427247E0D3300A12CF7 /* URLComponents.swift in Sources */,
 				754C0511247E17DD00A12CF7 /* Bundle.swift in Sources */,
 				754C0463247E0E4000A12CF7 /* RSI.swift in Sources */,
+				755E1468249B5ADB00AD3F5B /* URL+streamQuotes.swift in Sources */,
 				755D039D248D6D1E00FFABC8 /* CharacterSet.swift in Sources */,
 				754C053F247E17DD00A12CF7 /* Date.swift in Sources */,
 				754C0412247E0CDC00A12CF7 /* QuoteIndex.swift in Sources */,
@@ -1096,6 +1129,7 @@
 				754C0428247E0D3300A12CF7 /* URL+String.swift in Sources */,
 				754C0462247E0E4000A12CF7 /* MovAvgExponential.swift in Sources */,
 				754C0451247E0DBD00A12CF7 /* String+Plist.swift in Sources */,
+				755E1462249AC97000AD3F5B /* Equity.swift in Sources */,
 				754C0454247E0DBD00A12CF7 /* URL.swift in Sources */,
 				755D03A3248DED1100FFABC8 /* Collection+JSON.swift in Sources */,
 				754C045D247E0E3700A12CF7 /* MACD.swift in Sources */,
@@ -1106,6 +1140,7 @@
 				755D039F248D6D3C00FFABC8 /* Dictionary+PercentEncoded.swift in Sources */,
 				75B3F1B5248E077700C5BF87 /* TickerEnum.swift in Sources */,
 				754C03F3247E0C8000A12CF7 /* Bond.swift in Sources */,
+				755E1466249ACCA100AD3F5B /* Account.swift in Sources */,
 				754C051D247E17DD00A12CF7 /* CLLocationManager.swift in Sources */,
 				754C05692485D8A400A12CF7 /* StringAny.swift in Sources */,
 				75E9714C248C11DE00FED161 /* SWSWebSocket.swift in Sources */,
@@ -1115,8 +1150,9 @@
 				755D03A5248DF6AC00FFABC8 /* Orders.swift in Sources */,
 				754C03FD247E0C9900A12CF7 /* OptionDeliverables.swift in Sources */,
 				754C03F0247E0C8000A12CF7 /* Fundamental.swift in Sources */,
-				754C0439247E0D4A00A12CF7 /* AccountPrincipal.swift in Sources */,
+				754C0439247E0D4A00A12CF7 /* UserPrincipals+Account.swift in Sources */,
 				754C0415247E0CDC00A12CF7 /* QuoteForex.swift in Sources */,
+				755E146F249B745500AD3F5B /* Predictable.swift in Sources */,
 				754C03C5247E06C600A12CF7 /* Mover.swift in Sources */,
 				754C0539247E17DD00A12CF7 /* TravelMethod.swift in Sources */,
 				754C0515247E17DD00A12CF7 /* URL+HELPERS.swift in Sources */,

@@ -58,12 +58,12 @@ extension TimeFountainTests {
         let ticker = "TSLA"
         XCTAssertEqual(
             [
-                URL.priceHistory(
-                    period: .days(.ten, .oneMinute),
-                    endDate: <#T##Date?#>,
-                    startDate: <#T##Date?#>,
-                    ticker: ticker
-                )
+//                URL.priceHistory(
+//                    period: .days(.ten, .oneMinute),
+//                    endDate: <#T##Date?#>,
+//                    startDate: <#T##Date?#>,
+//                    ticker: ticker
+//                )
             ],
             URL.priceHistories(ticker: ticker, dataFrameAction: { _ in})
         )

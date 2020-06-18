@@ -30,6 +30,17 @@ enum OrderStrategyType: String, Codable {
 
 enum Instruction: String, Codable {
     case Buy, BUY_TO_OPEN, SELL_TO_OPEN, BUY, SELL, BUY_TO_COVER, BUY_TO_CLOSE, SELL_SHORT, SELL_TO_CLOSE, EXCHANGE
+    
+    init?(_ direction: BuyMarketStock.Prediction.Direction) {
+        switch direction {
+        case .goingUp:
+            self = .BUY
+        case .goingDown:
+            self = .SELL
+        case .level:
+            return nil
+        }
+    }
 }
 
 enum AssetType: String, Codable {

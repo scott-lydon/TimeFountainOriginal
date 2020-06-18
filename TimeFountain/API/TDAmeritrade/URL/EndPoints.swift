@@ -65,10 +65,6 @@ extension URL {
     static var optionChains: URL? {
         URL(string: .baseURL + "marketdata/chains")
     }
-    
-    static var account: URL? {
-        URL(string: .baseURL + "accounts/{number}")
-    }
 
     static var hours: URL? {
         URL(string: .baseURL + "marketdata/{market}/hours")

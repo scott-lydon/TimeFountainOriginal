@@ -18,6 +18,10 @@ struct DataFrame: Equatable {
         )
     }
     
+    func append(_ quote: StreamedQuote) {
+        // TODO
+    }
+    
     static func == (lhs: DataFrame, rhs: DataFrame) -> Bool {
         return lhs.columns == rhs.columns
     }
@@ -61,6 +65,11 @@ struct DataFrame: Equatable {
         named csvname: String = Int(Date().timeIntervalSince1970).description
     ) -> URL? {
         stringMatrix.asCSV.save(root: root, pathStr: generalPath + /*subPathSlashesBetween +*/ csvname + ".csv")
+    }
+    
+    @discardableResult
+    func convertToCSV(ticker: String) -> URL? {
+        convertToCSV(named: ticker + "_" + Date().timeIntervalSince1970.string)
     }
     
     var stringMatrix: [[String]] {

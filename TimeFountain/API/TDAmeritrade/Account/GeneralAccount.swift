@@ -8,6 +8,12 @@
 
 import Foundation
 
-struct GeneralAccount: Codable {
-    let securitiesAccount: String
+// MARK: - GeneralAccountCall
+struct GeneralAccount<T: Accountable>: Codable {
+    let securitiesAccount: T
 }
+
+protocol Accountable: Codable {}
+
+///OrderActivity see:  Execution, ExecutionLeg done.
+

@@ -8,6 +8,8 @@
 
 import Foundation
 
+//typeAlias OrderActivity = Execution
+
 struct Execution: Codable {
     let activityType: ActivityType
     let executionType: ExecutionType

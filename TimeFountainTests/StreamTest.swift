@@ -14,7 +14,7 @@ import Alamofire
 extension TimeFountainTests {
 
     /// You need to comment out the other streams in hte project..Callbacks don't seem to work here if there is a parallel stream going in the project for some reason.
-    func testOther() {
+    func testQuotes() {
         let streamed = expectation(description: "streamed a response")
         URL.stream(
             [.quotes(

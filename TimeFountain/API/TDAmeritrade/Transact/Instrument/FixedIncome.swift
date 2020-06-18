@@ -8,14 +8,22 @@
 
 import Foundation
 
-struct FixedIncome: Codable {
-    let assetType, cusip, symbol, fixedIncomeDescription: String
+class FixedIncome: Instrument {
+    let fixedIncomeDescription: String
     let maturityDate: String
-    let variableRate, factor: Int
+    let variableRate, factor: Double
 
-    enum CodingKeys: String, CodingKey {
-        case assetType, cusip, symbol
+    private enum CodingKeys: String, CodingKey {
         case fixedIncomeDescription = "description"
         case maturityDate, variableRate, factor
+    }
+    
+    required init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        self.fixedIncomeDescription = try container.decode(String.self, forKey: .fixedIncomeDescription)
+        self.maturityDate = try container.decode(String.self, forKey: .maturityDate)
+        self.variableRate = try container.decode(Double.self, forKey: .variableRate)
+        self.factor = try container.decode(Double.self, forKey: .factor)
+        try super.init(from: decoder)
     }
 }

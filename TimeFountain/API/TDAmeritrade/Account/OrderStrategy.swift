@@ -5,29 +5,41 @@
 //  Created by Scott Lydon on 5/21/20.
 //  Copyright © 2020 Scott Lydon. All rights reserved.
 //
-
+//
 import Foundation
 
-struct OrderStrategy {
-    let session, duration, orderType: String
+struct OrderStrategy: Codable {
+    enum RequestedDestination: String, Codable {
+        case INET, ECN_ARCA, CBOE, AMEX, PHLX, ISE, BOX, NYSE, NASDAQ, BATS, C2, AUTO
+    }
+    
+    let session: Session
+    let duration: Duration
+    let orderType: OrderType
     let cancelTime: CancelTime
-    let complexOrderStrategyType: String
+    let complexOrderStrategyType: ComplexOrderStrategyType
     let quantity, filledQuantity, remainingQuantity: Int
-    let requestedDestination, destinationLinkName, releaseTime: String
+    let requestedDestination: RequestedDestination
+    let destinationLinkName, releaseTime: String
     let stopPrice: Int
-    let stopPriceLinkBasis, stopPriceLinkType: String
+    let stopPriceLinkBasis: StopPriceLinkBasis
+    let stopPriceLinkType: StopPriceLinkType
     let stopPriceOffset: Int
-    let stopType, priceLinkBasis, priceLinkType: String
+    let stopType: StopType
+    let priceLinkBasis: PriceLinkBasis
+    let priceLinkType: PriceLinkType
     let price: Int
-    let taxLotMethod: String
+    let taxLotMethod: TaxLotMethod
     let orderLegCollection: [OrderLegCollection]
     let activationPrice: Int
-    let specialInstruction, orderStrategyType: String
+    let specialInstruction: SpecialInstruction
+    let orderStrategyType: OrderStrategyType
     let orderID: Int
     let cancelable, editable: Bool
-    let status, enteredTime, closeTime, tag: String
+    let status: Status
+    let enteredTime, closeTime, tag: String
     let accountID: Int
-    let orderActivityCollection: [String]
+    let orderActivityCollection: [Execution]
     let replacingOrderCollection, childOrderStrategies: [ChildOrderStrategy]
     let statusDescription: String
 

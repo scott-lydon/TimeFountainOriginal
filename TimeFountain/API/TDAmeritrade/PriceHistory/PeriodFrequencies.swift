@@ -46,8 +46,9 @@ extension URL {
         }
     }
     
-    typealias DataFrameAction = (DataFrame) -> Void
+    typealias DataFrameAction = (DataFrame?) -> Void
     
+    @discardableResult
     static func priceHistories(
         apiKey: String? = Bundle.td_api_key,
         period: Period = .days(.ten, .oneMinute),
@@ -57,6 +58,7 @@ extension URL {
         ticker: String,
         dataFrameAction: @escaping DataFrameAction
     ) -> [URL] {
+        /// TODO
         return []
     }
     

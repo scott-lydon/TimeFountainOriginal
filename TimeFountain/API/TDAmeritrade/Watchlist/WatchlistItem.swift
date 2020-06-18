@@ -11,7 +11,7 @@ import Foundation
 struct WatchlistItem: Codable {
     let sequenceID, quantity, averagePrice, commission: Int
     let purchasedDate: String
-    let instrument: Instrument
+    let instrument: PurchaseInstrument
     let status: String
 
     enum CodingKeys: String, CodingKey {
@@ -24,5 +24,5 @@ struct WatchlistItem: Codable {
 struct CreateWatchlistItem: Codable {
     let quantity, averagePrice, commission: Int
     let purchasedDate: String
-    let instrument: Instrument
+    let instrument: PurchaseInstrument
 }

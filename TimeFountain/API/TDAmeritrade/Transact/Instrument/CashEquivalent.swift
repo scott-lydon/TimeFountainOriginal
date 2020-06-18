@@ -8,13 +8,19 @@
 
 import Foundation
 
-struct CashEquivalent: Codable {
-    let assetType, cusip, symbol, cashEquivalentDescription: String
-    let type: String
+class CashEquivalent: Instrument {
+    let cashEquivalentDescription: String
+    let type: CashEquivalentType
 
-    enum CodingKeys: String, CodingKey {
-        case assetType, cusip, symbol
+    private enum CodingKeys: String, CodingKey {
         case cashEquivalentDescription = "description"
         case type
+    }
+    
+    required init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        self.cashEquivalentDescription = try container.decode(String.self, forKey: .cashEquivalentDescription)
+        self.type = try container.decode(CashEquivalentType.self, forKey: .cashEquivalentDescription)
+        try super.init(from: decoder)
     }
 }
