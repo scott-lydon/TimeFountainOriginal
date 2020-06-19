@@ -50,16 +50,18 @@ fileprivate var dfInputOutputs: [DataFrameInputOutput] = [
                 cells: ["Cat", "Dog"]
             )
         ],
-        output: DataFrame([
-            DataFrame.Column(
-                header: "Date",
-                cells: ["39434934", "340999234"]
-            ),
-            DataFrame.Column(
-                header: "TryThis",
-                cells: ["Cat", "Dog"]
-            )
-        ])
+        output: DataFrame(
+            [
+                DataFrame.Column(
+                    header: "Date",
+                    cells: ["39434934", "340999234"]
+                ),
+                DataFrame.Column(
+                    header: "TryThis",
+                    cells: ["Cat", "Dog"]
+                )
+            ]
+        )
     ),
 ]
 
@@ -73,6 +75,10 @@ extension TimeFountainTests {
             let df = DataFrame($0.columns)
             XCTAssert(df == $0.output, "Failed for input columns: \($0.columns), result was dataframe: \(String(describing: df)), should have been \(String(describing: $0.output))")
         }
+    }
+    
+    func testDdataFrame() {
+        
     }
 }
 

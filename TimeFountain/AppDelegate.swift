@@ -10,6 +10,20 @@ import Cocoa
 
 let OAuth2AppDidReceiveCallbackNotification = NSNotification.Name(rawValue: "OAuth2AppDidReceiveCallback")
 
+extension ViewController {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        AppDelegate.refreshTokenAction = { [weak self] in
+            print(#line)
+            self?.viewDidLoadAndRefreshtokenIsReady()
+        }
+        if AppDelegate.refreshedToken {
+            print(#line)
+            viewDidLoadAndRefreshtokenIsReady()
+        }
+    }
+}
+
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
     

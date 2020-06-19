@@ -9,7 +9,7 @@
 import Foundation
 
 extension Array where Element == Double {
-    /// Excludes current value in calculating the average, because it is used to determine when the current value deviates from the average, so it doesn't make sense for it to biase the average.
+    /// Excludes current value in calculating the average, because it is used to determine when the current value deviates from the average, so it doesn't make sense for it to bias the average.
     /// Default is false because I think that is what tos does.
     func sma(for range: Int, excludesCurrent: Bool = false) -> [Double?] {
         var smaSum = 0.0

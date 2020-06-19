@@ -76,6 +76,19 @@ struct Request: Codable {
             )
         )
     }
+    
+    static func logout(_ principals: UserPrincipals) -> Request {
+        Request(
+            service: .ADMIN,
+            requestid: 1,
+            command: .LOGOUT,
+            account: Bundle.tdAccount_id,
+            source: principals.streamerInfo.appID,
+            parameters: EmptyParams()
+        )
+    }
+    
+
 
     
     init(
@@ -110,6 +123,7 @@ struct Request: Codable {
 }
 
 protocol Parameters: Codable {}
+struct EmptyParams: Parameters {}
 
 extension UserPrincipals {
     

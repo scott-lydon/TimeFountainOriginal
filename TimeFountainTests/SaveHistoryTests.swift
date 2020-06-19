@@ -48,13 +48,14 @@ extension TimeFountainTests {
             value: -10,
             to: recentDate
             ) else { return }
+        print(fromDate)
 //        let second = Calendar.current.date(
 //            byAdding: .day,
 //            value: -10,
 //            to: fromDate.
 //        )
         let formerDate = Date(timeFromNow: hour * day * 25)
-        
+        print(formerDate ?? "Nil")
         let ticker = "TSLA"
         XCTAssertEqual(
             [
@@ -68,7 +69,6 @@ extension TimeFountainTests {
             URL.priceHistories(ticker: ticker, dataFrameAction: { _ in})
         )
     }
-    
 }
 /*
  enum Period {

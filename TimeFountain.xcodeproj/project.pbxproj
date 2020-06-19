@@ -154,6 +154,16 @@
 		755E146A249B608400AD3F5B /* URL+Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755E1469249B608400AD3F5B /* URL+Account.swift */; };
 		755E146C249B676C00AD3F5B /* URL+transact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755E146B249B676C00AD3F5B /* URL+transact.swift */; };
 		755E146F249B745500AD3F5B /* Predictable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755E146E249B745500AD3F5B /* Predictable.swift */; };
+		755E147B249C052000AD3F5B /* priceHistoryTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755E147A249C052000AD3F5B /* priceHistoryTest.swift */; };
+		755E147E249C08A500AD3F5B /* URL+runBot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755E147D249C08A500AD3F5B /* URL+runBot.swift */; };
+		755E1480249C0A0900AD3F5B /* StreamerKeysTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755E147F249C0A0900AD3F5B /* StreamerKeysTest.swift */; };
+		755E1482249C0FF100AD3F5B /* FinvizTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755E1481249C0FF100AD3F5B /* FinvizTest.swift */; };
+		755E1484249C124A00AD3F5B /* RunBotTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755E1483249C124A00AD3F5B /* RunBotTest.swift */; };
+		755E1486249C19A000AD3F5B /* PriceHistoriesTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755E1485249C19A000AD3F5B /* PriceHistoriesTest.swift */; };
+		755E1488249C1A7000AD3F5B /* StreamQuotesTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755E1487249C1A7000AD3F5B /* StreamQuotesTest.swift */; };
+		755E148A249C1B2D00AD3F5B /* AppendQuoteToDFTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755E1489249C1B2D00AD3F5B /* AppendQuoteToDFTest.swift */; };
+		755E148C249C1C6900AD3F5B /* AccountTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755E148B249C1C6900AD3F5B /* AccountTest.swift */; };
+		755E148E249C1CCA00AD3F5B /* TransactOnPredictionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755E148D249C1CCA00AD3F5B /* TransactOnPredictionTest.swift */; };
 		7565787E248ACE630037490D /* Credentials.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7565787D248ACE630037490D /* Credentials.strings */; };
 		75657882248AEF2B0037490D /* AuthTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75657881248AEF2B0037490D /* AuthTests.swift */; };
 		75657887248B35A80037490D /* DocOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75657886248B35A80037490D /* DocOrder.swift */; };
@@ -346,6 +356,16 @@
 		755E1469249B608400AD3F5B /* URL+Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Account.swift"; sourceTree = "<group>"; };
 		755E146B249B676C00AD3F5B /* URL+transact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+transact.swift"; sourceTree = "<group>"; };
 		755E146E249B745500AD3F5B /* Predictable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Predictable.swift; sourceTree = "<group>"; };
+		755E147A249C052000AD3F5B /* priceHistoryTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = priceHistoryTest.swift; sourceTree = "<group>"; };
+		755E147D249C08A500AD3F5B /* URL+runBot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+runBot.swift"; sourceTree = "<group>"; };
+		755E147F249C0A0900AD3F5B /* StreamerKeysTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamerKeysTest.swift; sourceTree = "<group>"; };
+		755E1481249C0FF100AD3F5B /* FinvizTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinvizTest.swift; sourceTree = "<group>"; };
+		755E1483249C124A00AD3F5B /* RunBotTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunBotTest.swift; sourceTree = "<group>"; };
+		755E1485249C19A000AD3F5B /* PriceHistoriesTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceHistoriesTest.swift; sourceTree = "<group>"; };
+		755E1487249C1A7000AD3F5B /* StreamQuotesTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamQuotesTest.swift; sourceTree = "<group>"; };
+		755E1489249C1B2D00AD3F5B /* AppendQuoteToDFTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppendQuoteToDFTest.swift; sourceTree = "<group>"; };
+		755E148B249C1C6900AD3F5B /* AccountTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountTest.swift; sourceTree = "<group>"; };
+		755E148D249C1CCA00AD3F5B /* TransactOnPredictionTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactOnPredictionTest.swift; sourceTree = "<group>"; };
 		7565787D248ACE630037490D /* Credentials.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Credentials.strings; sourceTree = "<group>"; };
 		75657881248AEF2B0037490D /* AuthTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthTests.swift; sourceTree = "<group>"; };
 		75657886248B35A80037490D /* DocOrder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocOrder.swift; sourceTree = "<group>"; };
@@ -436,6 +456,7 @@
 				754C03C1247E06BF00A12CF7 /* Hours.swift */,
 				754C03BE247E06B800A12CF7 /* CancelTime.swift */,
 				754C03BC247E06B100A12CF7 /* Token.swift */,
+				755E147C249C088100AD3F5B /* Bot */,
 				75B3F1B9248EACD400C5BF87 /* GetOrder */,
 				75657883248B1F0A0037490D /* Transact */,
 				75657880248AECED0037490D /* Auth */,
@@ -728,6 +749,14 @@
 			path = "Models+Predictable";
 			sourceTree = "<group>";
 		};
+		755E147C249C088100AD3F5B /* Bot */ = {
+			isa = PBXGroup;
+			children = (
+				755E147D249C08A500AD3F5B /* URL+runBot.swift */,
+			);
+			path = Bot;
+			sourceTree = "<group>";
+		};
 		7565787F248AECC60037490D /* PriceHistory */ = {
 			isa = PBXGroup;
 			children = (
@@ -822,6 +851,15 @@
 				75B3F1C624917D4500C5BF87 /* StreamTest.swift */,
 				75B3F1CA24927DE300C5BF87 /* SaveHistoryTests.swift */,
 				75164CC72492CC0300A18EC9 /* UserPrincipalsTest.swift */,
+				755E147A249C052000AD3F5B /* priceHistoryTest.swift */,
+				755E1485249C19A000AD3F5B /* PriceHistoriesTest.swift */,
+				755E1489249C1B2D00AD3F5B /* AppendQuoteToDFTest.swift */,
+				755E148B249C1C6900AD3F5B /* AccountTest.swift */,
+				755E147F249C0A0900AD3F5B /* StreamerKeysTest.swift */,
+				755E1481249C0FF100AD3F5B /* FinvizTest.swift */,
+				755E1483249C124A00AD3F5B /* RunBotTest.swift */,
+				755E1487249C1A7000AD3F5B /* StreamQuotesTest.swift */,
+				755E148D249C1CCA00AD3F5B /* TransactOnPredictionTest.swift */,
 				75A4FC62247E049F00E4DC0B /* Info.plist */,
 			);
 			path = TimeFountainTests;
@@ -1048,6 +1086,7 @@
 				754C0425247E0D3300A12CF7 /* URL+Key.swift in Sources */,
 				754C03DC247E0C5000A12CF7 /* CandleList.swift in Sources */,
 				754C03C9247E06CE00A12CF7 /* OrderGet.swift in Sources */,
+				755E147E249C08A500AD3F5B /* URL+runBot.swift in Sources */,
 				755D039B248CA0ED00FFABC8 /* FinvizURL.swift in Sources */,
 				753BAEDF24897DA600F64519 /* Socket.swift in Sources */,
 				754C03E5247E0C6800A12CF7 /* FixedIncome.swift in Sources */,
@@ -1168,18 +1207,27 @@
 			buildActionMask = 2147483647;
 			files = (
 				75A4FC61247E049F00E4DC0B /* TimeFountainTests.swift in Sources */,
+				755E1482249C0FF100AD3F5B /* FinvizTest.swift in Sources */,
+				755E1486249C19A000AD3F5B /* PriceHistoriesTest.swift in Sources */,
+				755E148A249C1B2D00AD3F5B /* AppendQuoteToDFTest.swift in Sources */,
 				75B3F1CB24927DE300C5BF87 /* SaveHistoryTests.swift in Sources */,
 				754C054F247EF57300A12CF7 /* CommaSeparatedArraytests.swift in Sources */,
+				755E147B249C052000AD3F5B /* priceHistoryTest.swift in Sources */,
+				755E1480249C0A0900AD3F5B /* StreamerKeysTest.swift in Sources */,
+				755E1488249C1A7000AD3F5B /* StreamQuotesTest.swift in Sources */,
 				754C054B247ED8BF00A12CF7 /* StringMatrixTests.swift in Sources */,
 				754C03B9247E066800A12CF7 /* SimpleMovingAverageTests.swift in Sources */,
 				75B3F1BB248EADA900C5BF87 /* GetOrderTest.swift in Sources */,
 				754C03B8247E066800A12CF7 /* InputOutputs.swift in Sources */,
+				755E1484249C124A00AD3F5B /* RunBotTest.swift in Sources */,
 				754C054D247ED8ED00A12CF7 /* CSVTests.swift in Sources */,
 				754C0547247EC11A00A12CF7 /* DataFrameTests.swift in Sources */,
+				755E148C249C1C6900AD3F5B /* AccountTest.swift in Sources */,
 				75B3F1BF248EBB1600C5BF87 /* placeOrderTest.swift in Sources */,
 				75657882248AEF2B0037490D /* AuthTests.swift in Sources */,
 				75B3F1C724917D4500C5BF87 /* StreamTest.swift in Sources */,
 				75164CC82492CC0300A18EC9 /* UserPrincipalsTest.swift in Sources */,
+				755E148E249C1CCA00AD3F5B /* TransactOnPredictionTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

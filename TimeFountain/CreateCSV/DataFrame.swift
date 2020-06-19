@@ -8,7 +8,24 @@
 
 import Foundation
 
+extension Array {
+    
+    typealias DictAct = (Element)->(String, String?)
+    
+    func mapToDictionary(_ dictAct: DictAct) -> [String: String?] {
+        var dict: [String:String?] = [:]
+        for element in self {
+            dict[dictAct(element).0] = dictAct(element).1
+        }
+        return dict
+    }
+}
+
 struct DataFrame: Equatable {
+    
+    var lastRow: [String: String?] {
+        columns.mapToDictionary { ($0.header, $0.cells.first ) }
+    }
     
     init?(_ candles: CandleList) {
         self.init(
@@ -44,6 +61,8 @@ struct DataFrame: Equatable {
         static func smas(_ smas: [String]) -> Column {
             Column(header: "SMA", cells: smas)
         }
+        
+        
     }
     
     var columns: [Column]

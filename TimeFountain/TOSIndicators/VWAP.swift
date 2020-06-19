@@ -58,3 +58,7 @@ import Foundation
  def price = volumeVwapSum / volumeSum;
  def deviation = Sqrt(Max(volumeVwap2Sum / volumeSum - Sqr(price), 0));
  */
+
+extension Array where Element == Double {
+
+}

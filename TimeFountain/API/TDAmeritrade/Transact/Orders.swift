@@ -42,6 +42,26 @@ struct BuyMarketStock: Order {
         self.orderLegCollection = orderLegCollection
     }
     
+    static func sell(ticker: String, quantity: Int) -> Self {
+        BuyMarketStock(
+            orderType: .MARKET,
+            session: .NORMAL,
+            duration: .DAY,
+            orderStrategyType: .SINGLE,
+            orderLegCollection: [
+                OrderLegCollection(
+                    instruction: .SELL,
+                    quantity: quantity,
+                    instrument: PurchaseInstrument(
+                        symbol: ticker,
+                        assetType: .EQUITY,
+                        instrumentDescription: nil
+                    )
+                )
+            ]
+        )
+    }
+    
     init(ticker: String, quantity: Int) {
         self = BuyMarketStock(
             orderType: .MARKET,

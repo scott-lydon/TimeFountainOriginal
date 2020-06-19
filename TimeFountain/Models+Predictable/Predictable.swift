@@ -11,7 +11,8 @@ import Foundation
 protocol Predictable {}
 extension Predictable {
     func prediction(from: DataFrame) -> BuyMarketStock.Prediction {
-        .init(direction: .goingDown, percentile: .lowerFifty)
+        ///TODO
+        BuyMarketStock.Prediction(direction: .goingDown, percentile: .lowerFifty)
     }
 }
 extension TSLA: Predictable {}

@@ -12,7 +12,11 @@ extension URL {
     
     /// back represents the number of 10 day units back we are getting the data for.
     /// TD Ameritrade allows 120 calls a minute
-    static func saveHistory(for tickers: [String], back: Int, completion: @escaping Action) {
+    static func saveHistory(
+        for tickers: [String],
+        back: Int,
+        completion: @escaping Action
+    ) {
         let tickersFinish = DispatchGroup()
         tickers.forEach { ticker in
             tickersFinish.enter(tickers.count)
@@ -52,12 +56,22 @@ extension URL {
     static func priceHistories(
         apiKey: String? = Bundle.td_api_key,
         period: Period = .days(.ten, .oneMinute),
-        endDate: Date? = nil,
-        startDate: Date? = nil,
+        endDate: Date = Date(),
+        startDate: Date? = Calendar.current.date(
+        byAdding: .year,
+        value: -1,
+        to: Date()
+        ),
         needExtendedHoursData: Bool? = false, // true for swing trades, false for day trades.
         ticker: String,
         dataFrameAction: @escaping DataFrameAction
     ) -> [URL] {
+        guard let startDate: Date = startDate ?? Calendar.current.date(
+            byAdding: .year,
+            value: -1,
+            to: endDate
+            ) else { return [] }
+        print(startDate)
         /// TODO
         return []
     }
