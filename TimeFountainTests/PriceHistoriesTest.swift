@@ -20,7 +20,6 @@ extension TimeFountainTests {
             ticker: "TSLA"
         ) { dataFrame in
             //var dataFrame = dataFrame
-            
             PriceHistoriesTestExpectation.fulfill()
         }
         XCTAssert(urls.count > 0)

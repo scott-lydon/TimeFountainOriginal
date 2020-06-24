@@ -55,6 +55,45 @@ import Foundation
  UpSignal.SetPaintingStrategy(PaintingStrategy.ARROW_UP);
  DownSignal.SetDefaultColor(Color.DOWNTICK);
  DownSignal.SetPaintingStrategy(PaintingStrategy.ARROW_DOWN);
- 
- 
  */
+
+
+extension Array where Element == Double {
+    
+    ///input fastLength = 12;
+    ///input slowLength = 26;
+    ///input MACDLength = 9;
+    ///input averageType = AverageType.EXPONENTIAL;
+    ///input showBreakoutSignals = no;
+    ///
+    ///plot Value = MovingAverage(averageType, close, fastLength) - MovingAverage(averageType, close, slowLength);
+    ///plot Avg = MovingAverage(averageType, Value, MACDLength);
+    ///
+    ///plot Diff = Value - Avg;
+    ///plot ZeroLine = 0;
+    ///
+    ///plot UpSignal = if Diff crosses above ZeroLine then ZeroLine else Double.NaN;
+    ///plot DownSignal = if Diff crosses below ZeroLine then ZeroLine else Double.NaN;
+    func macdDiffs(
+        fast: Int = 12,
+        slow: Int = 26,
+        length: Int = 9,
+        smoothing: Int = 2
+    ) -> [Double?] {
+        let fastemas = emas(for: fast, smoothing: smoothing)
+        let slowemas = emas(for: slow, smoothing: smoothing)
+        let valueMacds: [Double?] = (0..<count).map {
+            guard let fast = fastemas[$0],
+                let slow = slowemas[$0] else { return nil }
+            return fast - slow
+        }
+        let avgs: [Double?] = valueMacds.filter { $0 == nil } + valueMacds.compactMap{$0}.emas(
+            for: length,
+            smoothing: smoothing
+        )
+        return (0..<count).map {
+            guard let av = avgs[$0], let val = valueMacds[$0] else { return nil }
+            return val - av
+        }
+    }
+}

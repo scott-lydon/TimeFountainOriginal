@@ -164,6 +164,20 @@
 		755E148A249C1B2D00AD3F5B /* AppendQuoteToDFTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755E1489249C1B2D00AD3F5B /* AppendQuoteToDFTest.swift */; };
 		755E148C249C1C6900AD3F5B /* AccountTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755E148B249C1C6900AD3F5B /* AccountTest.swift */; };
 		755E148E249C1CCA00AD3F5B /* TransactOnPredictionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755E148D249C1CCA00AD3F5B /* TransactOnPredictionTest.swift */; };
+		755E1490249D472000AD3F5B /* emaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755E148F249D472000AD3F5B /* emaTests.swift */; };
+		755E1492249DADD300AD3F5B /* MACDTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755E1491249DADD300AD3F5B /* MACDTests.swift */; };
+		755E1494249E7B8F00AD3F5B /* RSITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755E1493249E7B8F00AD3F5B /* RSITests.swift */; };
+		755E1497249FECEE00AD3F5B /* SMAEMACrossed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755E1496249FECEE00AD3F5B /* SMAEMACrossed.swift */; };
+		755E1499249FED3600AD3F5B /* Array+SupportResistance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755E1498249FED3600AD3F5B /* Array+SupportResistance.swift */; };
+		755E149B249FED6400AD3F5B /* EmaSupportResistance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755E149A249FED6300AD3F5B /* EmaSupportResistance.swift */; };
+		755E149D249FFC4900AD3F5B /* Trend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755E149C249FFC4900AD3F5B /* Trend.swift */; };
+		755E149F24A0354F00AD3F5B /* EmaIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755E149E24A0354F00AD3F5B /* EmaIndicator.swift */; };
+		755E14A124A05D0700AD3F5B /* MACDIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755E14A024A05D0700AD3F5B /* MACDIndicator.swift */; };
+		755E14A324A0786600AD3F5B /* MACDReversal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755E14A224A0786600AD3F5B /* MACDReversal.swift */; };
+		755E14A524A08EF200AD3F5B /* RSIIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755E14A424A08EF200AD3F5B /* RSIIndicator.swift */; };
+		755E14A724A0960700AD3F5B /* SImpleRSIIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755E14A624A0960700AD3F5B /* SImpleRSIIndicator.swift */; };
+		755E14A924A099D400AD3F5B /* VWAPIndicators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755E14A824A099D400AD3F5B /* VWAPIndicators.swift */; };
+		755E14AB24A11D8A00AD3F5B /* CandleShapeIndicators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755E14AA24A11D8900AD3F5B /* CandleShapeIndicators.swift */; };
 		7565787E248ACE630037490D /* Credentials.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7565787D248ACE630037490D /* Credentials.strings */; };
 		75657882248AEF2B0037490D /* AuthTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75657881248AEF2B0037490D /* AuthTests.swift */; };
 		75657887248B35A80037490D /* DocOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75657886248B35A80037490D /* DocOrder.swift */; };
@@ -366,6 +380,20 @@
 		755E1489249C1B2D00AD3F5B /* AppendQuoteToDFTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppendQuoteToDFTest.swift; sourceTree = "<group>"; };
 		755E148B249C1C6900AD3F5B /* AccountTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountTest.swift; sourceTree = "<group>"; };
 		755E148D249C1CCA00AD3F5B /* TransactOnPredictionTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactOnPredictionTest.swift; sourceTree = "<group>"; };
+		755E148F249D472000AD3F5B /* emaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = emaTests.swift; sourceTree = "<group>"; };
+		755E1491249DADD300AD3F5B /* MACDTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MACDTests.swift; sourceTree = "<group>"; };
+		755E1493249E7B8F00AD3F5B /* RSITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSITests.swift; sourceTree = "<group>"; };
+		755E1496249FECEE00AD3F5B /* SMAEMACrossed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMAEMACrossed.swift; sourceTree = "<group>"; };
+		755E1498249FED3600AD3F5B /* Array+SupportResistance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+SupportResistance.swift"; sourceTree = "<group>"; };
+		755E149A249FED6300AD3F5B /* EmaSupportResistance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmaSupportResistance.swift; sourceTree = "<group>"; };
+		755E149C249FFC4900AD3F5B /* Trend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trend.swift; sourceTree = "<group>"; };
+		755E149E24A0354F00AD3F5B /* EmaIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmaIndicator.swift; sourceTree = "<group>"; };
+		755E14A024A05D0700AD3F5B /* MACDIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MACDIndicator.swift; sourceTree = "<group>"; };
+		755E14A224A0786600AD3F5B /* MACDReversal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MACDReversal.swift; sourceTree = "<group>"; };
+		755E14A424A08EF200AD3F5B /* RSIIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSIIndicator.swift; sourceTree = "<group>"; };
+		755E14A624A0960700AD3F5B /* SImpleRSIIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SImpleRSIIndicator.swift; sourceTree = "<group>"; };
+		755E14A824A099D400AD3F5B /* VWAPIndicators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VWAPIndicators.swift; sourceTree = "<group>"; };
+		755E14AA24A11D8900AD3F5B /* CandleShapeIndicators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandleShapeIndicators.swift; sourceTree = "<group>"; };
 		7565787D248ACE630037490D /* Credentials.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Credentials.strings; sourceTree = "<group>"; };
 		75657881248AEF2B0037490D /* AuthTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthTests.swift; sourceTree = "<group>"; };
 		75657886248B35A80037490D /* DocOrder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocOrder.swift; sourceTree = "<group>"; };
@@ -660,6 +688,7 @@
 				754C045E247E0E4000A12CF7 /* Point.swift */,
 				754C0460247E0E4000A12CF7 /* RSI.swift */,
 				754C0464247E0E4A00A12CF7 /* VWAP.swift */,
+				755E1495249FECB800AD3F5B /* SeanIndicators */,
 				754C0473247E0E6600A12CF7 /* SMA */,
 				754C0466247E0E5200A12CF7 /* ManualLines */,
 			);
@@ -757,6 +786,24 @@
 			path = Bot;
 			sourceTree = "<group>";
 		};
+		755E1495249FECB800AD3F5B /* SeanIndicators */ = {
+			isa = PBXGroup;
+			children = (
+				755E1496249FECEE00AD3F5B /* SMAEMACrossed.swift */,
+				755E1498249FED3600AD3F5B /* Array+SupportResistance.swift */,
+				755E149A249FED6300AD3F5B /* EmaSupportResistance.swift */,
+				755E149C249FFC4900AD3F5B /* Trend.swift */,
+				755E149E24A0354F00AD3F5B /* EmaIndicator.swift */,
+				755E14A024A05D0700AD3F5B /* MACDIndicator.swift */,
+				755E14A224A0786600AD3F5B /* MACDReversal.swift */,
+				755E14A424A08EF200AD3F5B /* RSIIndicator.swift */,
+				755E14A624A0960700AD3F5B /* SImpleRSIIndicator.swift */,
+				755E14A824A099D400AD3F5B /* VWAPIndicators.swift */,
+				755E14AA24A11D8900AD3F5B /* CandleShapeIndicators.swift */,
+			);
+			path = SeanIndicators;
+			sourceTree = "<group>";
+		};
 		7565787F248AECC60037490D /* PriceHistory */ = {
 			isa = PBXGroup;
 			children = (
@@ -840,6 +887,9 @@
 			children = (
 				754C03B6247E066800A12CF7 /* InputOutputs.swift */,
 				754C03B7247E066800A12CF7 /* SimpleMovingAverageTests.swift */,
+				755E148F249D472000AD3F5B /* emaTests.swift */,
+				755E1491249DADD300AD3F5B /* MACDTests.swift */,
+				755E1493249E7B8F00AD3F5B /* RSITests.swift */,
 				75A4FC60247E049F00E4DC0B /* TimeFountainTests.swift */,
 				754C0546247EC11A00A12CF7 /* DataFrameTests.swift */,
 				754C054A247ED8BF00A12CF7 /* StringMatrixTests.swift */,
@@ -1056,11 +1106,13 @@
 				754C0521247E17DD00A12CF7 /* CLLocationCoordinate2D.swift in Sources */,
 				754C0520247E17DD00A12CF7 /* Array+ElementType.swift in Sources */,
 				754C0470247E0E5D00A12CF7 /* Array+ManualLines.swift in Sources */,
+				755E149F24A0354F00AD3F5B /* EmaIndicator.swift in Sources */,
 				754C0471247E0E5D00A12CF7 /* Angle.swift in Sources */,
 				754C050A247E17DD00A12CF7 /* IndexPath.swift in Sources */,
 				754C0418247E0CFC00A12CF7 /* StreamerSubscriptionKey.swift in Sources */,
 				754C055F2480552100A12CF7 /* oauth2.swift in Sources */,
 				754C0563248067DF00A12CF7 /* authURL.swift in Sources */,
+				755E149B249FED6400AD3F5B /* EmaSupportResistance.swift in Sources */,
 				754C0567248572BB00A12CF7 /* URLRequest.swift in Sources */,
 				75A4FC4D247E049C00E4DC0B /* ViewController.swift in Sources */,
 				754C03E7247E0C6800A12CF7 /* CashEquivalent.swift in Sources */,
@@ -1085,11 +1137,15 @@
 				754C05652482EB8A00A12CF7 /* StreamerSubscriptionKeys.swift in Sources */,
 				754C0425247E0D3300A12CF7 /* URL+Key.swift in Sources */,
 				754C03DC247E0C5000A12CF7 /* CandleList.swift in Sources */,
+				755E1497249FECEE00AD3F5B /* SMAEMACrossed.swift in Sources */,
 				754C03C9247E06CE00A12CF7 /* OrderGet.swift in Sources */,
 				755E147E249C08A500AD3F5B /* URL+runBot.swift in Sources */,
+				755E14A324A0786600AD3F5B /* MACDReversal.swift in Sources */,
 				755D039B248CA0ED00FFABC8 /* FinvizURL.swift in Sources */,
 				753BAEDF24897DA600F64519 /* Socket.swift in Sources */,
+				755E14AB24A11D8A00AD3F5B /* CandleShapeIndicators.swift in Sources */,
 				754C03E5247E0C6800A12CF7 /* FixedIncome.swift in Sources */,
+				755E14A724A0960700AD3F5B /* SImpleRSIIndicator.swift in Sources */,
 				754C056F248746FD00A12CF7 /* Encodable.swift in Sources */,
 				754C043F247E0D5D00A12CF7 /* Watchlist.swift in Sources */,
 				75B3F1C924917F5500C5BF87 /* Stream+ErrorResponse.swift in Sources */,
@@ -1102,12 +1158,14 @@
 				754C05732487509700A12CF7 /* TDSocketURL.swift in Sources */,
 				755E146A249B608400AD3F5B /* URL+Account.swift in Sources */,
 				754C052F247E17DD00A12CF7 /* sockaddr_in.swift in Sources */,
+				755E149D249FFC4900AD3F5B /* Trend.swift in Sources */,
 				753BAEEB2489806C00F64519 /* MessageSender.swift in Sources */,
 				754C0553247F98C900A12CF7 /* TSLA.mlmodel in Sources */,
 				754C03D4247E06F900A12CF7 /* MarginAccount.swift in Sources */,
 				755E146C249B676C00AD3F5B /* URL+transact.swift in Sources */,
 				754C03D3247E06F900A12CF7 /* InitialBalances.swift in Sources */,
 				75657887248B35A80037490D /* DocOrder.swift in Sources */,
+				755E14A524A08EF200AD3F5B /* RSIIndicator.swift in Sources */,
 				754C043E247E0D5D00A12CF7 /* PurchaseInstrument.swift in Sources */,
 				754C051C247E17DD00A12CF7 /* CLLocation.swift in Sources */,
 				755D03A7248DF7EC00FFABC8 /* Order+Enums.swift in Sources */,
@@ -1136,6 +1194,8 @@
 				754C0529247E17DD00A12CF7 /* Environment.swift in Sources */,
 				754C053E247E17DD00A12CF7 /* NotificationCenter.swift in Sources */,
 				754C03F2247E0C8000A12CF7 /* FundamentalClass.swift in Sources */,
+				755E1499249FED3600AD3F5B /* Array+SupportResistance.swift in Sources */,
+				755E14A124A05D0700AD3F5B /* MACDIndicator.swift in Sources */,
 				754C0414247E0CDC00A12CF7 /* QuoteFuture.swift in Sources */,
 				75B3F1B8248E0B2C00C5BF87 /* PlaceOrder.swift in Sources */,
 				754C041D247E0D1500A12CF7 /* TransactionInstrument.swift in Sources */,
@@ -1169,6 +1229,7 @@
 				754C0462247E0E4000A12CF7 /* MovAvgExponential.swift in Sources */,
 				754C0451247E0DBD00A12CF7 /* String+Plist.swift in Sources */,
 				755E1462249AC97000AD3F5B /* Equity.swift in Sources */,
+				755E14A924A099D400AD3F5B /* VWAPIndicators.swift in Sources */,
 				754C0454247E0DBD00A12CF7 /* URL.swift in Sources */,
 				755D03A3248DED1100FFABC8 /* Collection+JSON.swift in Sources */,
 				754C045D247E0E3700A12CF7 /* MACD.swift in Sources */,
@@ -1216,17 +1277,20 @@
 				755E1480249C0A0900AD3F5B /* StreamerKeysTest.swift in Sources */,
 				755E1488249C1A7000AD3F5B /* StreamQuotesTest.swift in Sources */,
 				754C054B247ED8BF00A12CF7 /* StringMatrixTests.swift in Sources */,
+				755E1492249DADD300AD3F5B /* MACDTests.swift in Sources */,
 				754C03B9247E066800A12CF7 /* SimpleMovingAverageTests.swift in Sources */,
 				75B3F1BB248EADA900C5BF87 /* GetOrderTest.swift in Sources */,
 				754C03B8247E066800A12CF7 /* InputOutputs.swift in Sources */,
 				755E1484249C124A00AD3F5B /* RunBotTest.swift in Sources */,
 				754C054D247ED8ED00A12CF7 /* CSVTests.swift in Sources */,
 				754C0547247EC11A00A12CF7 /* DataFrameTests.swift in Sources */,
+				755E1494249E7B8F00AD3F5B /* RSITests.swift in Sources */,
 				755E148C249C1C6900AD3F5B /* AccountTest.swift in Sources */,
 				75B3F1BF248EBB1600C5BF87 /* placeOrderTest.swift in Sources */,
 				75657882248AEF2B0037490D /* AuthTests.swift in Sources */,
 				75B3F1C724917D4500C5BF87 /* StreamTest.swift in Sources */,
 				75164CC82492CC0300A18EC9 /* UserPrincipalsTest.swift in Sources */,
+				755E1490249D472000AD3F5B /* emaTests.swift in Sources */,
 				755E148E249C1CCA00AD3F5B /* TransactOnPredictionTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

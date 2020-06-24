@@ -79,6 +79,7 @@ public extension Array {
         }
     }
     
+    @discardableResult
     func enumerate<Ret>(action: (Int, Element)->Ret) -> [Ret] {
         var returnValues: [Ret] = []
         for (index, element) in enumerated() {

@@ -38,3 +38,35 @@ import Foundation
  DownSignal.SetDefaultColor(Color.DOWNTICK);
  DownSignal.SetPaintingStrategy(PaintingStrategy.BOOLEAN_ARROW_DOWN);
  */
+
+
+
+extension Array where Element == Double {
+    ///The exponential moving average (EMA) is a technical chart indicator that tracks the price of an investment (like a stock or commodity) over time. The EMA is a type of weighted moving average (WMA) that gives more weighting or importance to recent price data. Like the simple moving average, the exponential moving average is used to see price trends over time, and watching several EMAs at the same time is easy to do with moving average ribbons.
+    ///
+    ///EMA=Price(t)×k+EMA(y)×(1−k)
+    ///where:
+    ///t=today
+    ///y=yesterday
+    ///N=number of days in EMA
+    ///k=2÷(N+1)
+    ///
+    ///  Given an array of prices
+    func emas(for range: Int, smoothing: Int = 2) -> [Double?] {
+        var ema: Double?
+        let multiplier: Double = Double(smoothing) / (Double(range) + 1)
+        return (0..<count).map {
+            if let last = ema {
+                //Sean?
+                //ema = last * multiplier + self[$0] * (1 - multiplier)
+                //THEbalance
+                //ema = (self[$0] - last) * multiplier + last
+                // Investopedia
+                ema = self[$0] * multiplier + last * (1 - multiplier)
+            } else {
+                ema = sma(for: range)[$0]
+            }
+            return ema
+        }
+    }
+}

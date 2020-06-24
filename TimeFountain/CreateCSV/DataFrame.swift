@@ -27,6 +27,15 @@ struct DataFrame: Equatable {
         columns.mapToDictionary { ($0.header, $0.cells.first ) }
     }
     
+    init?(_ data: Data) {
+        guard let candles = CandleList(data) else { return nil }
+        self.init(
+            .dates(candles.dates.asStrings),
+            .closes(candles.closes.asStrings),
+            .smas(candles.closes.sma(for: 180).asStrings)
+        )
+    }
+    
     init?(_ candles: CandleList) {
         self.init(
             .dates(candles.dates.asStrings),

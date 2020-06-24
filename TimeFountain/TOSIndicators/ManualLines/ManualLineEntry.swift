@@ -8,6 +8,21 @@
 
 import Foundation
 
+/// Manual lines
+enum ResistanceSupportIndicators {
+    case FarAboveResistance
+    case justAboveResistance
+    case onResistance
+    case justUnderResistance
+    case farUnderResistance
+    case farAboveSupport
+    case justAboveSupport
+    case onSupport
+    case justUnderSupport
+    case farUnderSupport
+}
+
+
 struct ManualLinesEntry {
     let date: Date
     var confirmationPoints: [Int: [Double]]

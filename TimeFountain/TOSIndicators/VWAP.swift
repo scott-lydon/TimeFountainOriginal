@@ -57,8 +57,65 @@ import Foundation
  }
  def price = volumeVwapSum / volumeSum;
  def deviation = Sqrt(Max(volumeVwap2Sum / volumeSum - Sqr(price), 0));
+ 
+ plot VWAP = price;
+ plot UpperBand = price + numDevUp * deviation;
+ plot LowerBand = price + numDevDn * deviation;
+ 
  */
-
-extension Array where Element == Double {
-
+struct VWAP {
+    var upper: Double
+    var middle: Double
+    var lower: Double
 }
+
+extension Array where Element == Candle {
+    
+///    Find the average price the stock traded at over the first five-minute period of the day. To do this, add the high, low, and close, then divide by three. Multiply this by the volume for that period. Record the result in a spreadsheet, under column PV.
+///    Divide PV by the volume for that period. This will give the VWAP value.
+///    To maintain the VWAP value throughout the day, continue to add the PV value from each period to the prior values. Divide this total by total volume up to that point. To make this easier in a spreadsheet, create columns for cumulative PV and cumulative volume. Both these cumulative values are divided by each other to produce VWAP.
+    ///
+    /// 100 * 10, 8 * 300, 11 * 200 / 100 + 300 + 200 = 9.33
+    ///
+    func vwaps(_ range: Int) -> [Double?] {
+        var numeratorSum: Double = 0
+        var volumes: Double = 0
+        return enumerate { index, candle in
+            numeratorSum += candle.volume * candle.close
+            volumes += candle.volume
+            if let early = self[safe: index - range] {
+                numeratorSum -= early.volume * candle.close
+                volumes -= early.volume
+                return numeratorSum / volumes
+            } else {
+                return nil
+            }
+        }
+    }
+    
+//    func vwaps(_ range: Int, devup: Double = 2, devdown: Double = 2) -> [VWAP?] {
+//        var numeratorSum: Double = 0
+//        var volumes: Double = 0
+//        return enumerate { index, candle in
+//            numeratorSum += candle.volume * candle.close
+//            volumes += candle.volume
+//            if let early = self[safe: index - range] {
+//                numeratorSum -= early.volume * candle.close
+//                volumes -= early.volume
+//                let vwap: Double = numeratorSum / volumes
+//                let volumeSum = candle.volume
+//                let volumeVwapSum = candle.volume * vwap
+//                let volumeVwap2Sum = candle.volume * sqrt(vwap)
+//                let deviation: Double = sqrt(max(<#T##x: Comparable##Comparable#>, 0))
+//                return VWAP(
+//                    upper: vwap + devup * ,
+//                    middle: vwap,
+//                    lower: vwap + devdown
+//                )
+//            } else {
+//                return nil
+//            }
+//        }
+//    }
+}
+

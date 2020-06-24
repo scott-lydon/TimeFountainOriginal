@@ -18,3 +18,33 @@ extension Array where Element: Equatable {
 
 
 
+extension Array {
+    
+    func mapTwo<Generic>(_ map3Action: (Element, Element) -> Generic?) -> [Generic?] {
+        guard count > 1 else { return [] }
+        return (1..<count).map {
+            map3Action(self[$0 - 1], self[$0])
+        }
+    }
+    
+    func mapThree<Generic>(_ map3Action: (Element, Element, Element) -> Generic?) -> [Generic?] {
+        guard count > 2 else { return [] }
+        return (2..<count).map {
+            map3Action(self[$0 - 2], self[$0 - 1], self[$0])
+        }
+    }
+    
+    typealias MapTwoIndexType = (Element, Element, Int) -> Element
+    func mapTwoIndex(_ mapTwoIndex: MapTwoIndexType) -> [Element] {
+        (1..<count).map {
+            mapTwoIndex(self[$0 - 1], self[$0], $0)
+        }
+    }
+    
+    typealias MapIndexType = (Int, Element) -> Element
+    func enumerate(_ mapIndex: MapIndexType) -> [Element] {
+        (0..<count).map {
+            mapIndex($0, self[$0])
+        }
+    }
+}

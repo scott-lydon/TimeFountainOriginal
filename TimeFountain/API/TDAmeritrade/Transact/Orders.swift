@@ -10,6 +10,10 @@ import Foundation
 
 protocol Order: Codable {}
 
+enum Percentile {
+    case lowerTen, lowerTwenty, lowerThirty, lowerForty, lowerFifty, upperFifty, upperSixty, upperSeventy, upperEighty, upperNinety
+}
+
 // MARK: - These are used VV
 // MARK: - ORDERS in USE
 struct BuyMarketStock: Order {
@@ -23,9 +27,7 @@ struct BuyMarketStock: Order {
         }
             
         /// Magnitude
-        enum Percentile {
-            case lowerTen, lowerTwenty, lowerThirty, lowerForty, lowerFifty, upperFifty, upperSixty, upperSeventy, upperEighty, upperNinety
-        }
+
     }
     
     let orderType: OrderType
