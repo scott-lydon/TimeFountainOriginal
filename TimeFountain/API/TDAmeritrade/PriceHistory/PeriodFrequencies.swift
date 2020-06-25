@@ -22,6 +22,9 @@ extension Array where Element == URL {
         group.enter(count)
         enumerate { index, url in
             DispatchQueue.main.asyncAfter(deadline: .now() + waitTime) {
+                if expressive {
+                    print("Dispatch called with waitTime: \(waitTime), at: \(Date().clockTime)\n about to call: \(url.absoluteString)")
+                }
                 url.getData { data in
                     enumerateCall(index, url, data)
                     group.leave()
@@ -30,6 +33,30 @@ extension Array where Element == URL {
         }
         group.notify(queue: DispatchQueue.main) {
             finished()
+        }
+    }
+    
+    static func priceHistoryRanges(
+        startDate: Date,
+        enddate: Date,
+        apiKey: String?,
+        period: URL.Period,
+        needExtendedHoursData: Bool,
+        ticker: String
+    ) -> [URL] {
+        [ClosedRange<Date>](
+            startDate: startDate,
+            enddate: enddate,
+            dayCount: period.dateIncrement.value
+        ).map {
+            URL.priceHistory(
+                apiKey: apiKey,
+                period: period,
+                endDate: $0.upperBound,
+                startDate: $0.lowerBound,
+                needExtendedHoursData: needExtendedHoursData,
+                ticker: ticker
+            )
         }
     }
 }
@@ -89,39 +116,30 @@ extension URL {
         value: -1,
         to: Date()
         ),
-        needExtendedHoursData: Bool? = false, // true for swing trades, false for day trades.
+        needExtendedHoursData: Bool = false, // true for swing trades, false for day trades.
         ticker: String,
         dataFrameAction: @escaping DataFrameAction
     ) -> [URL] {
         guard let startDate = startDate else { return [] }
-        let urls = [ClosedRange<Date>](
+        var candles: [Candle] = []
+        let urls = [URL].priceHistoryRanges(
             startDate: startDate,
             enddate: endDate,
-            dayCount: period.dateIncrement.value
-        ).map {
-            URL.priceHistory(
-                apiKey: apiKey,
-                period: period,
-                endDate: $0.upperBound,
-                startDate: $0.lowerBound,
-                needExtendedHoursData: needExtendedHoursData,
-                ticker: ticker
-            )
-        }
-        var candles: [Candle] = []
-        let group = DispatchGroup()
-        group.enter(urls.count)
-        urls.enumerate { index, url in
-            url.getData { data in
+            apiKey: apiKey,
+            period: period,
+            needExtendedHoursData: needExtendedHoursData,
+            ticker: ticker
+        )
+        urls.callEnumerations(
+            waitTime: 0.5,
+            expressive: true,
+            enumerateCall: { index, url, data in
                 if let candleListCandles = CandleList(data)?.candles {
                     candles.append(contentsOf: candleListCandles)
                 } else {
                     print("ERROR: Should not reach.")
                 }
-                group.leave()
-            }
-        }
-        group.notify(queue: DispatchQueue.main) {
+        }, finished: {
             dataFrameAction(
                 DataFrame(
                     CandleList(
@@ -131,60 +149,11 @@ extension URL {
                     )
                 )
             )
-        }
+        })
         return urls
     }
     
-    static func priceHistoryURLS(
-        apiKey: String? = Bundle.td_api_key,
-        period: Period = .days(.ten, .oneMinute),
-        endDate: Date,
-        startDate: Date,
-        needExtendedHoursData: Bool? = false, // true for swing trades, false for day trades.
-        ticker: String,
-        dataFrameAction: @escaping DataFrameAction
-    ) -> [URL] {
-        let urls = [ClosedRange<Date>](
-            startDate: startDate,
-            enddate: endDate,
-            dayCount: period.dateIncrement.value
-        ).map {
-            URL.priceHistory(
-                apiKey: apiKey,
-                period: period,
-                endDate: $0.upperBound,
-                startDate: $0.lowerBound,
-                needExtendedHoursData: needExtendedHoursData,
-                ticker: ticker
-            )
-        }
-        var candles: [Candle] = []
-        let group = DispatchGroup()
-        group.enter(urls.count)
-        urls.enumerate { index, url in
-            url.getData { data in
-                if let candleListCandles = CandleList(data)?.candles {
-                    candles.append(contentsOf: candleListCandles)
-                } else {
-                    print("ERROR: Should not reach.")
-                }
-                group.leave()
-            }
-        }
-        group.notify(queue: DispatchQueue.main) {
-            dataFrameAction(
-                DataFrame(
-                    CandleList(
-                        candles: candles.sorted { $0.datetime > $1.datetime },
-                        empty: false,
-                        symbol: ticker
-                    )
-                )
-            )
-        }
-        return urls
-    }
-    
+
     
     
     /// Header: Authorization: Bearer <access token>
@@ -362,11 +331,11 @@ extension Array where Element == ClosedRange<Date> {
         dayCount: Int
     ) {
         self = []
-        guard var early: Date = enddate?.days(earlier: dayCount) else {
+        guard let recent: Date = enddate?.days(earlier: dayCount) else {
             return
         }
-        let late = startDate
-        self.append(early...late)
+        var early = startDate
+        self.append(early...recent)
         while early > startDate {
             if let newLate = early.oneSecondEarlier,
                 let newEarly = newLate.days(earlier: dayCount) {

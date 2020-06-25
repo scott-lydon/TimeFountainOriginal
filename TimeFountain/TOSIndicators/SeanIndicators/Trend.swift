@@ -8,10 +8,10 @@
 
 import Foundation
 
-enum Trend {
-    case up
-    case down
-    case level
+enum Trend: Int {
+    case up = 1
+    case down = -1
+    case level = 0
     
     init(_ candle1: Candle, _ candle2: Candle) {
         if candle1.average > candle2.average {

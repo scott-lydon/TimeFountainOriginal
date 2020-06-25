@@ -8,7 +8,7 @@
 
 import Foundation
 
-extension Array where Element == Resistance {
+extension Array where Element == ManualLine {
     
     mutating func addNewLines(
         from point: Point,
@@ -20,27 +20,26 @@ extension Array where Element == Resistance {
         // Check if should be added to a prior line
         for index in 0..<count {
             if abs(self[index].value(at: point.date) - point.price) < variance {
-                self[index].list.append(point)
+                self[index].confirmations.append(point)
                 return
             }
         }
-        
-        var lines: [Resistance] = []
-        var angle: Angle = Angle(from: point, to: peaks[peaks.count - 1])
+        var lines: [ManualLine] = []
+        var angle = ManualLine.Angle(from: point, to: peaks[peaks.count - 1])
         var pointer = peaks.count - 2
         
         ///TODO:  update + var as needed. 
         let requisiteHeight = angle.height(for: peaks.last?.date)
         
         while pointer >= 0 {
-            let newAngle = Angle(from: point, to: peaks[pointer])
+            let newAngle = ManualLine.Angle(from: point, to: peaks[pointer])
             guard let max = maxHeight else {
                 pointer -= 1
                 continue
             }
             if angle < newAngle && requisiteHeight < max {
                 angle = newAngle
-                lines.append(Resistance(first: peaks[pointer], last: point))
+                lines.append(ManualLine(first: peaks[pointer], last: point))
             }
             pointer -= 1
         }
@@ -49,7 +48,7 @@ extension Array where Element == Resistance {
     
     /// variance represents either a percentage of the line's value, or a percent of the current time frame's variance.
     /// Removes and returns terminated lines.
-    mutating func terminated(by point: Point, and variance: Double) -> [Resistance] {
+    mutating func terminated(by point: Point, and variance: Double) -> [ManualLine] {
         filterOut { point.price > $0.value(at: point.date) + variance }
     }
 }

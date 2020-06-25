@@ -33,6 +33,7 @@ struct DataFrame: Equatable {
             .dates(candles.dates.asStrings),
             .closes(candles.closes.asStrings),
             .smas(candles.closes.sma(for: 180).asStrings)
+            
         )
     }
     
@@ -70,6 +71,44 @@ struct DataFrame: Equatable {
         static func smas(_ smas: [String]) -> Column {
             Column(header: "SMA", cells: smas)
         }
+        
+        //crosses(emas: [Double?], smas: [Double?]) -> [SMAEMACrossed?] 
+        static func sMAEMACrossed(_ crosses: [String]) -> Column {
+            Column(header: "SMA EMA Crossed", cells: crosses)
+        }
+        
+        //supportResistancesEMASMA(emas: [Double?], smas: [Double?]) -> [EMASMASupportResistance?]
+        
+        //var trends: [Trend?] {
+        
+        //breakOuts(_ emas: [Double?])-> [EmaIndicator?]
+        
+        /*
+         func macdIndicators(
+             fast: Int = 12,
+             slow: Int = 26,
+             length: Int = 9,
+             smoothing: Int = 2
+         ) -> [MACDIntersection?] 
+         */
+        
+        
+        /*
+         func macdReversals(
+             fast: Int = 12,
+             slow: Int = 26,
+             length: Int = 9,
+             smoothing: Int = 2
+         ) -> [MACDIntersection?] {
+         */
+        
+        // risIndicators(length: Int) -> [RSIPercentile?]
+        
+        // simpleRisIndicators(length: Int) -> [SimpleRSIPercentile?]
+        
+        // func simpleVwapIndicators(vwaps: [Double?]) -> [MACDIntersection?]
+        
+        // candles.shapes
         
         
     }

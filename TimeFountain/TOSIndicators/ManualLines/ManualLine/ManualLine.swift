@@ -8,21 +8,30 @@
 
 import Foundation
 
-
-struct Resistance {
-    var list: [Point]
+struct ManualLine {
+    var confirmations: [Point]
     let first: Point
     let last: Point
+    /// How is the terminationPoint different from the last?
     var terminationPoint: Point?
 
     var count: Int {
-        list.count
+        confirmations.count
+    }
+    
+    var firstConfirmation: Point {
+        confirmations[1]
     }
 
-    init(first: Point, last: Point, pointsBetween: [Point] = [], terminationPoint: Point? = nil) {
+    init(
+        first: Point,
+        last: Point,
+        pointsBetween: [Point] = [],
+        terminationPoint: Point? = nil
+    ) {
         self.first = first
         self.last = last
-        self.list = [first] + pointsBetween + [last]
+        self.confirmations = [first] + pointsBetween + [last]
         self.terminationPoint = terminationPoint
     }
     
@@ -39,11 +48,6 @@ struct Resistance {
     }
     
     func contains(_ date: Date) -> Bool {
-        date.timeIntervalSince1970 > first.date.timeIntervalSince1970 && date.timeIntervalSince1970 < last.date.timeIntervalSince1970
-    }
-    
-    struct PointConfirmation {
-        var point: Point
-        var confirmations: Int
+        first.date...last.date ~= date
     }
 }

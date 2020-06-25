@@ -9,6 +9,11 @@
 import Foundation
 
 extension Candle {
+    
+    
+    var shape: Shape {
+        Shape(self)
+    }
 
     enum PosZero {
         case positive(Double), zero
@@ -127,6 +132,15 @@ extension Candle {
             }
         }
         
+        init(_ candle: Candle) {
+            self.init(
+                candle.candleOpen,
+                high: candle.high,
+                low: candle.low,
+                close: candle.close
+            )
+        }
+        
         init(
             _ open: Double,
             high: Double,
@@ -178,3 +192,11 @@ extension Candle {
     }
 }
 
+
+extension Array where Element == Candle {
+    
+    /// Should include 3-4 offset columns.
+    var shapes: [Candle.Shape] {
+        map { $0.shape }
+    }
+}

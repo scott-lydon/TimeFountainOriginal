@@ -87,12 +87,11 @@
 		754C0462247E0E4000A12CF7 /* MovAvgExponential.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754C045F247E0E4000A12CF7 /* MovAvgExponential.swift */; };
 		754C0463247E0E4000A12CF7 /* RSI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754C0460247E0E4000A12CF7 /* RSI.swift */; };
 		754C0465247E0E4A00A12CF7 /* VWAP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754C0464247E0E4A00A12CF7 /* VWAP.swift */; };
-		754C046D247E0E5D00A12CF7 /* ManualLineEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754C0467247E0E5D00A12CF7 /* ManualLineEntry.swift */; };
-		754C046E247E0E5D00A12CF7 /* Resistance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754C0468247E0E5D00A12CF7 /* Resistance.swift */; };
-		754C046F247E0E5D00A12CF7 /* Array+Resistance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754C0469247E0E5D00A12CF7 /* Array+Resistance.swift */; };
+		754C046D247E0E5D00A12CF7 /* Array+ManualLine.Entry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754C0467247E0E5D00A12CF7 /* Array+ManualLine.Entry.swift */; };
+		754C046E247E0E5D00A12CF7 /* ManualLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754C0468247E0E5D00A12CF7 /* ManualLine.swift */; };
+		754C046F247E0E5D00A12CF7 /* Array+ManualLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754C0469247E0E5D00A12CF7 /* Array+ManualLine.swift */; };
 		754C0470247E0E5D00A12CF7 /* Array+ManualLines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754C046A247E0E5D00A12CF7 /* Array+ManualLines.swift */; };
-		754C0471247E0E5D00A12CF7 /* Angle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754C046B247E0E5D00A12CF7 /* Angle.swift */; };
-		754C0472247E0E5D00A12CF7 /* Array+Point.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754C046C247E0E5D00A12CF7 /* Array+Point.swift */; };
+		754C0471247E0E5D00A12CF7 /* ManualLine.Angle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754C046B247E0E5D00A12CF7 /* ManualLine.Angle.swift */; };
 		754C0475247E0E6E00A12CF7 /* SimpleMovingAvg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754C0474247E0E6E00A12CF7 /* SimpleMovingAvg.swift */; };
 		754C0500247E17DD00A12CF7 /* Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754C04B9247E17D600A12CF7 /* Dictionary.swift */; };
 		754C0502247E17DD00A12CF7 /* UNNotificationCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754C04BB247E17D600A12CF7 /* UNNotificationCategory.swift */; };
@@ -202,6 +201,11 @@
 		75B3F1CB24927DE300C5BF87 /* SaveHistoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B3F1CA24927DE300C5BF87 /* SaveHistoryTests.swift */; };
 		75B3F1CD249280AA00C5BF87 /* TDIteration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B3F1CC249280AA00C5BF87 /* TDIteration.swift */; };
 		75E9714C248C11DE00FED161 /* SWSWebSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E9714B248C11DE00FED161 /* SWSWebSocket.swift */; };
+		75FE49B924A335C70057CD31 /* NotesConvoWithSean.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75FE49B824A335C70057CD31 /* NotesConvoWithSean.swift */; };
+		75FE49BB24A3361E0057CD31 /* ManualLineIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75FE49BA24A3361E0057CD31 /* ManualLineIndicator.swift */; };
+		75FE49BD24A34CA90057CD31 /* Array+ManualLine.Indicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75FE49BC24A34CA90057CD31 /* Array+ManualLine.Indicator.swift */; };
+		75FE49BF24A3CD1F0057CD31 /* Array+ManualLine.Indicator.Percent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75FE49BE24A3CD1F0057CD31 /* Array+ManualLine.Indicator.Percent.swift */; };
+		75FE49C124A3CD970057CD31 /* Array+ManualLine.Indicator.score.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75FE49C024A3CD970057CD31 /* Array+ManualLine.Indicator.score.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -302,12 +306,11 @@
 		754C045F247E0E4000A12CF7 /* MovAvgExponential.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovAvgExponential.swift; sourceTree = "<group>"; };
 		754C0460247E0E4000A12CF7 /* RSI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RSI.swift; sourceTree = "<group>"; };
 		754C0464247E0E4A00A12CF7 /* VWAP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VWAP.swift; sourceTree = "<group>"; };
-		754C0467247E0E5D00A12CF7 /* ManualLineEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManualLineEntry.swift; sourceTree = "<group>"; };
-		754C0468247E0E5D00A12CF7 /* Resistance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Resistance.swift; sourceTree = "<group>"; };
-		754C0469247E0E5D00A12CF7 /* Array+Resistance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Resistance.swift"; sourceTree = "<group>"; };
+		754C0467247E0E5D00A12CF7 /* Array+ManualLine.Entry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+ManualLine.Entry.swift"; sourceTree = "<group>"; };
+		754C0468247E0E5D00A12CF7 /* ManualLine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManualLine.swift; sourceTree = "<group>"; };
+		754C0469247E0E5D00A12CF7 /* Array+ManualLine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+ManualLine.swift"; sourceTree = "<group>"; };
 		754C046A247E0E5D00A12CF7 /* Array+ManualLines.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+ManualLines.swift"; sourceTree = "<group>"; };
-		754C046B247E0E5D00A12CF7 /* Angle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Angle.swift; sourceTree = "<group>"; };
-		754C046C247E0E5D00A12CF7 /* Array+Point.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Point.swift"; sourceTree = "<group>"; };
+		754C046B247E0E5D00A12CF7 /* ManualLine.Angle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManualLine.Angle.swift; sourceTree = "<group>"; };
 		754C0474247E0E6E00A12CF7 /* SimpleMovingAvg.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleMovingAvg.swift; sourceTree = "<group>"; };
 		754C04B9247E17D600A12CF7 /* Dictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dictionary.swift; sourceTree = "<group>"; };
 		754C04BB247E17D600A12CF7 /* UNNotificationCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UNNotificationCategory.swift; sourceTree = "<group>"; };
@@ -424,6 +427,11 @@
 		75B3F1CA24927DE300C5BF87 /* SaveHistoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveHistoryTests.swift; sourceTree = "<group>"; };
 		75B3F1CC249280AA00C5BF87 /* TDIteration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TDIteration.swift; sourceTree = "<group>"; };
 		75E9714B248C11DE00FED161 /* SWSWebSocket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWSWebSocket.swift; sourceTree = "<group>"; };
+		75FE49B824A335C70057CD31 /* NotesConvoWithSean.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesConvoWithSean.swift; sourceTree = "<group>"; };
+		75FE49BA24A3361E0057CD31 /* ManualLineIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManualLineIndicator.swift; sourceTree = "<group>"; };
+		75FE49BC24A34CA90057CD31 /* Array+ManualLine.Indicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+ManualLine.Indicator.swift"; sourceTree = "<group>"; };
+		75FE49BE24A3CD1F0057CD31 /* Array+ManualLine.Indicator.Percent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+ManualLine.Indicator.Percent.swift"; sourceTree = "<group>"; };
+		75FE49C024A3CD970057CD31 /* Array+ManualLine.Indicator.score.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+ManualLine.Indicator.score.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -469,6 +477,8 @@
 		754C03BA247E068400A12CF7 /* API */ = {
 			isa = PBXGroup;
 			children = (
+				75E9714A248C11BE00FED161 /* SwiftWebSocket */,
+				753BAEDD24897CE400F64519 /* SocketHelpers */,
 				755D0399248CA0CC00FFABC8 /* Finviz */,
 				754C03BB247E068E00A12CF7 /* TDAmeritrade */,
 			);
@@ -664,6 +674,8 @@
 		754C0446247E0DAC00A12CF7 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				754C0476247E151F00A12CF7 /* Interview */,
+				754C046A247E0E5D00A12CF7 /* Array+ManualLines.swift */,
 				754C044C247E0DBD00A12CF7 /* Array+Int.swift */,
 				754C05682485D8A300A12CF7 /* StringAny.swift */,
 				754C0449247E0DBC00A12CF7 /* Codable.swift */,
@@ -683,11 +695,13 @@
 		754C045B247E0DCC00A12CF7 /* TOSIndicators */ = {
 			isa = PBXGroup;
 			children = (
+				75B3F1B6248E096300C5BF87 /* TickerEnum */,
 				754C045C247E0E3700A12CF7 /* MACD.swift */,
 				754C045F247E0E4000A12CF7 /* MovAvgExponential.swift */,
 				754C045E247E0E4000A12CF7 /* Point.swift */,
 				754C0460247E0E4000A12CF7 /* RSI.swift */,
 				754C0464247E0E4A00A12CF7 /* VWAP.swift */,
+				75FE49B724A31EE60057CD31 /* ScottIndicators */,
 				755E1495249FECB800AD3F5B /* SeanIndicators */,
 				754C0473247E0E6600A12CF7 /* SMA */,
 				754C0466247E0E5200A12CF7 /* ManualLines */,
@@ -698,12 +712,9 @@
 		754C0466247E0E5200A12CF7 /* ManualLines */ = {
 			isa = PBXGroup;
 			children = (
-				754C046B247E0E5D00A12CF7 /* Angle.swift */,
-				754C046A247E0E5D00A12CF7 /* Array+ManualLines.swift */,
-				754C046C247E0E5D00A12CF7 /* Array+Point.swift */,
-				754C0469247E0E5D00A12CF7 /* Array+Resistance.swift */,
-				754C0467247E0E5D00A12CF7 /* ManualLineEntry.swift */,
-				754C0468247E0E5D00A12CF7 /* Resistance.swift */,
+				75FE49B824A335C70057CD31 /* NotesConvoWithSean.swift */,
+				75FE49C324A3DF7B0057CD31 /* ManualLine */,
+				75FE49C224A3CEA00057CD31 /* Array+ManualLine */,
 			);
 			path = ManualLines;
 			sourceTree = "<group>";
@@ -799,7 +810,6 @@
 				755E14A424A08EF200AD3F5B /* RSIIndicator.swift */,
 				755E14A624A0960700AD3F5B /* SImpleRSIIndicator.swift */,
 				755E14A824A099D400AD3F5B /* VWAPIndicators.swift */,
-				755E14AA24A11D8900AD3F5B /* CandleShapeIndicators.swift */,
 			);
 			path = SeanIndicators;
 			sourceTree = "<group>";
@@ -865,14 +875,10 @@
 				75A4FC4C247E049C00E4DC0B /* ViewController.swift */,
 				7565787D248ACE630037490D /* Credentials.strings */,
 				755E146D249B743800AD3F5B /* Models+Predictable */,
-				75B3F1B6248E096300C5BF87 /* TickerEnum */,
-				75E9714A248C11BE00FED161 /* SwiftWebSocket */,
-				753BAEDD24897CE400F64519 /* SocketHelpers */,
-				754C0476247E151F00A12CF7 /* Interview */,
 				754C045B247E0DCC00A12CF7 /* TOSIndicators */,
-				754C0446247E0DAC00A12CF7 /* Extensions */,
 				754C0441247E0D8800A12CF7 /* CreateCSV */,
 				754C03BA247E068400A12CF7 /* API */,
+				754C0446247E0DAC00A12CF7 /* Extensions */,
 				75A4FC51247E049F00E4DC0B /* Assets.xcassets */,
 				75A4FC53247E049F00E4DC0B /* Main.storyboard */,
 				754C0550247F4CF900A12CF7 /* Info.plist */,
@@ -947,6 +953,36 @@
 				75E9714B248C11DE00FED161 /* SWSWebSocket.swift */,
 			);
 			path = SwiftWebSocket;
+			sourceTree = "<group>";
+		};
+		75FE49B724A31EE60057CD31 /* ScottIndicators */ = {
+			isa = PBXGroup;
+			children = (
+				755E14AA24A11D8900AD3F5B /* CandleShapeIndicators.swift */,
+			);
+			path = ScottIndicators;
+			sourceTree = "<group>";
+		};
+		75FE49C224A3CEA00057CD31 /* Array+ManualLine */ = {
+			isa = PBXGroup;
+			children = (
+				754C0467247E0E5D00A12CF7 /* Array+ManualLine.Entry.swift */,
+				754C0469247E0E5D00A12CF7 /* Array+ManualLine.swift */,
+				75FE49BC24A34CA90057CD31 /* Array+ManualLine.Indicator.swift */,
+				75FE49BE24A3CD1F0057CD31 /* Array+ManualLine.Indicator.Percent.swift */,
+				75FE49C024A3CD970057CD31 /* Array+ManualLine.Indicator.score.swift */,
+			);
+			path = "Array+ManualLine";
+			sourceTree = "<group>";
+		};
+		75FE49C324A3DF7B0057CD31 /* ManualLine */ = {
+			isa = PBXGroup;
+			children = (
+				754C046B247E0E5D00A12CF7 /* ManualLine.Angle.swift */,
+				75FE49BA24A3361E0057CD31 /* ManualLineIndicator.swift */,
+				754C0468247E0E5D00A12CF7 /* ManualLine.swift */,
+			);
+			path = ManualLine;
 			sourceTree = "<group>";
 		};
 		76498586BE80AA00FA3E2E3E /* Pods */ = {
@@ -1107,7 +1143,8 @@
 				754C0520247E17DD00A12CF7 /* Array+ElementType.swift in Sources */,
 				754C0470247E0E5D00A12CF7 /* Array+ManualLines.swift in Sources */,
 				755E149F24A0354F00AD3F5B /* EmaIndicator.swift in Sources */,
-				754C0471247E0E5D00A12CF7 /* Angle.swift in Sources */,
+				75FE49BD24A34CA90057CD31 /* Array+ManualLine.Indicator.swift in Sources */,
+				754C0471247E0E5D00A12CF7 /* ManualLine.Angle.swift in Sources */,
 				754C050A247E17DD00A12CF7 /* IndexPath.swift in Sources */,
 				754C0418247E0CFC00A12CF7 /* StreamerSubscriptionKey.swift in Sources */,
 				754C055F2480552100A12CF7 /* oauth2.swift in Sources */,
@@ -1128,6 +1165,7 @@
 				754C051F247E17DD00A12CF7 /* TimeInterval.swift in Sources */,
 				754C03BF247E06B800A12CF7 /* CancelTime.swift in Sources */,
 				754C0410247E0CDC00A12CF7 /* QuoteEquity.swift in Sources */,
+				75FE49C124A3CD970057CD31 /* Array+ManualLine.Indicator.score.swift in Sources */,
 				753BAEE524897E2B00F64519 /* Stream+Event.swift in Sources */,
 				754C0461247E0E4000A12CF7 /* Point.swift in Sources */,
 				754C0445247E0D9A00A12CF7 /* DataFrame.swift in Sources */,
@@ -1152,7 +1190,7 @@
 				754C053C247E17DD00A12CF7 /* String.swift in Sources */,
 				755E1464249AC98E00AD3F5B /* Instrument.swift in Sources */,
 				753BAEE924897E6700F64519 /* OutputStream.swift in Sources */,
-				754C046F247E0E5D00A12CF7 /* Array+Resistance.swift in Sources */,
+				754C046F247E0E5D00A12CF7 /* Array+ManualLine.swift in Sources */,
 				754C0475247E0E6E00A12CF7 /* SimpleMovingAvg.swift in Sources */,
 				756B233F248823D200EB31C2 /* Stream.swift in Sources */,
 				754C05732487509700A12CF7 /* TDSocketURL.swift in Sources */,
@@ -1171,6 +1209,7 @@
 				755D03A7248DF7EC00FFABC8 /* Order+Enums.swift in Sources */,
 				754C0438247E0D4A00A12CF7 /* StreamerInfo.swift in Sources */,
 				754C03FF247E0C9900A12CF7 /* Underlying.swift in Sources */,
+				75FE49B924A335C70057CD31 /* NotesConvoWithSean.swift in Sources */,
 				754C041C247E0D1500A12CF7 /* TransactionItem.swift in Sources */,
 				753BAEE324897E0D00F64519 /* InputStream.swift in Sources */,
 				754C0411247E0CDC00A12CF7 /* QuoteFutureOption.swift in Sources */,
@@ -1220,11 +1259,11 @@
 				754C0412247E0CDC00A12CF7 /* QuoteIndex.swift in Sources */,
 				754C0435247E0D4A00A12CF7 /* PrincipalQuotes.swift in Sources */,
 				754C0538247E17DD00A12CF7 /* UNUserNotificationCenter.swift in Sources */,
-				754C046E247E0E5D00A12CF7 /* Resistance.swift in Sources */,
+				754C046E247E0E5D00A12CF7 /* ManualLine.swift in Sources */,
 				754C040F247E0CDC00A12CF7 /* ETF.swift in Sources */,
 				754C055D2480520200A12CF7 /* UserPrincipalsURL.swift in Sources */,
 				754C0513247E17DD00A12CF7 /* Data.swift in Sources */,
-				754C046D247E0E5D00A12CF7 /* ManualLineEntry.swift in Sources */,
+				754C046D247E0E5D00A12CF7 /* Array+ManualLine.Entry.swift in Sources */,
 				754C0428247E0D3300A12CF7 /* URL+String.swift in Sources */,
 				754C0462247E0E4000A12CF7 /* MovAvgExponential.swift in Sources */,
 				754C0451247E0DBD00A12CF7 /* String+Plist.swift in Sources */,
@@ -1233,7 +1272,6 @@
 				754C0454247E0DBD00A12CF7 /* URL.swift in Sources */,
 				755D03A3248DED1100FFABC8 /* Collection+JSON.swift in Sources */,
 				754C045D247E0E3700A12CF7 /* MACD.swift in Sources */,
-				754C0472247E0E5D00A12CF7 /* Array+Point.swift in Sources */,
 				754C03BD247E06B200A12CF7 /* Token.swift in Sources */,
 				75A6C38C2492ACE80070779E /* HeartBeat.swift in Sources */,
 				754C03D6247E06F900A12CF7 /* OrderStrategy.swift in Sources */,
@@ -1245,6 +1283,7 @@
 				754C05692485D8A400A12CF7 /* StringAny.swift in Sources */,
 				75E9714C248C11DE00FED161 /* SWSWebSocket.swift in Sources */,
 				754C0543247E17DD00A12CF7 /* Keychain.swift in Sources */,
+				75FE49BF24A3CD1F0057CD31 /* Array+ManualLine.Indicator.Percent.swift in Sources */,
 				754C040E247E0CDC00A12CF7 /* QuoteOption.swift in Sources */,
 				754C0500247E17DD00A12CF7 /* Dictionary.swift in Sources */,
 				755D03A5248DF6AC00FFABC8 /* Orders.swift in Sources */,
@@ -1254,6 +1293,7 @@
 				754C0415247E0CDC00A12CF7 /* QuoteForex.swift in Sources */,
 				755E146F249B745500AD3F5B /* Predictable.swift in Sources */,
 				754C03C5247E06C600A12CF7 /* Mover.swift in Sources */,
+				75FE49BB24A3361E0057CD31 /* ManualLineIndicator.swift in Sources */,
 				754C0539247E17DD00A12CF7 /* TravelMethod.swift in Sources */,
 				754C0515247E17DD00A12CF7 /* URL+HELPERS.swift in Sources */,
 				75B3F1C1248EDBCD00C5BF87 /* GeneralOrderURL.swift in Sources */,
@@ -1369,7 +1409,7 @@
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_OPTIMIZATION_LEVEL = 1;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -1384,9 +1424,10 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				"OTHER_SWIFT_FLAGS[arch=*]" = "-Xfrontend -warn-long-function-bodies=100 -Xfrontend -warn-long-expression-type-checking=100 -Onone";
 				SDKROOT = macosx;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 			};
 			name = Debug;
 		};
@@ -1428,6 +1469,7 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 1;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -1438,6 +1480,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
+				"SWIFT_ACTIVE_COMPILATION_CONDITIONS[arch=*]" = "";
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 			};

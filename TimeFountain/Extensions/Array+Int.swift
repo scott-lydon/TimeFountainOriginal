@@ -16,6 +16,16 @@ extension Array where Element: Equatable {
     }
 }
 
+extension Array {
+    
+    func sum<Generic: AdditiveArithmetic>(of action: (Element) -> Generic) -> Generic {
+        var sum: Generic = .zero
+        for element in self {
+           sum += action(element)
+        }
+        return sum
+    }
+}
 
 
 extension Array {
@@ -42,6 +52,7 @@ extension Array {
     }
     
     typealias MapIndexType = (Int, Element) -> Element
+    @discardableResult
     func enumerate(_ mapIndex: MapIndexType) -> [Element] {
         (0..<count).map {
             mapIndex($0, self[$0])

@@ -241,7 +241,7 @@ private class UTF8 {
     var codepoint : UInt32 = 0      // the actual codepoint
     var bcount = 0
     init() { text = "" }
-    func append(_ byte : UInt8) throws {
+    func addToEnd(_ byte : UInt8) throws {
         if count == 0 {
             if byte <= 0x7F {
                 text.append(String(UnicodeScalar(byte)))
@@ -303,7 +303,7 @@ private class UTF8 {
             }
         }
         for i in 0 ..< length {
-            try append(bytes[i])
+            try addToEnd(bytes[i])
         }
         bcount += length
     }
@@ -1567,7 +1567,7 @@ private enum TCPConnSecurity {
 // sockets are opened.
 private class Manager {
     var queue = DispatchQueue(label: "SwiftWebSocketInstance", attributes: [])
-    var once = Int()
+    var once: Int = 0
     var mutex = pthread_mutex_t()
     var cond = pthread_cond_t()
     var websockets = Set<InnerWebSocket>()
