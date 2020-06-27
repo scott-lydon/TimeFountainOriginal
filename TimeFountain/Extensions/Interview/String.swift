@@ -147,7 +147,7 @@ public extension String {
         let fileManager = FileManager.default
         do {
             let path = try fileManager.url(
-                for: .documentDirectory,
+                for: .desktopDirectory,
                 in: .allDomainsMask,
                 appropriateFor: nil,
                 create: false
