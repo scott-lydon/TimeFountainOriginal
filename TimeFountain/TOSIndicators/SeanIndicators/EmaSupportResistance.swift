@@ -21,7 +21,7 @@ import Foundation
 ///        1. Could also be an indicator of a good time to sell.
 
 /// Nearness lines are based on 20% not 30%
-enum EMASMASupportResistance {
+enum EMASMASupportResistance: String {
     ///   *
     /// - - -
     ///
@@ -236,10 +236,11 @@ enum EMASMASupportResistance {
         let twentyBelowSMA = sma - twentyPercent
         let twentyAboveEma = ema + twentyPercent
         let twentyBelowEma = ema - twentyPercent
+        ///
         if ema > sma {
             if close > twentyAboveEma {
                 self = .farAboveSupportAndEma
-            } else if ema...twentyBelowEma ~= close {
+            } else if ema...twentyAboveEma ~= close {
                 self = .aboveSupportAndEma
             } else if twentyBelowEma...ema ~= close {
                 self = .aboveSupportJustBelowEma

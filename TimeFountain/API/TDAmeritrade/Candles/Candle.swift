@@ -21,4 +21,8 @@ struct Candle: Codable {
     enum Component {
         case close, high, low, candleOpen
     }
+    
+    var slope: Double {
+        close - candleOpen
+    }
 }

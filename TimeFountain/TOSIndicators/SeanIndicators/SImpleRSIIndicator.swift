@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum SimpleRSIPercentile {
+enum SimpleRSIPercentile: String {
     case low, mid, top
     
     init(rsi: Double) {

@@ -16,10 +16,11 @@ extension TimeFountainTests {
     func testGetHistoryTest() {
         let GetHistoryTestExpectation = expectation(description: "GetHistoryTest")
         let ticker = "TSLA"
-        URL.priceHistory(
+        let url = URL.priceHistory(
             period: .days(.ten, .oneMinute),
             ticker: ticker
-        ).getData { data in
+        )
+        url.getData { data in
             guard let candleList = CandleList(data) else {
                 XCTAssert(false)
                 return
@@ -29,12 +30,12 @@ extension TimeFountainTests {
                 return
             }
             XCTAssert(true)
-            guard let _ = dataframe.convertToCSV(named: ticker + "test") else {
-                XCTAssert(false)
-                return
-            }
+            let _ = dataframe.save(ticker: "test")
+            /// TODO test how to save.
+            
             GetHistoryTestExpectation.fulfill()
         }
+        print(url)
         waitForExpectations(timeout: 5, handler: nil)
     }
 }

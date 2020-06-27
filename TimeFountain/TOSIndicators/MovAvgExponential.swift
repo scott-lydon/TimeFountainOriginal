@@ -42,17 +42,20 @@ import Foundation
 
 
 extension Array where Element == Double {
-    ///The exponential moving average (EMA) is a technical chart indicator that tracks the price of an investment (like a stock or commodity) over time. The EMA is a type of weighted moving average (WMA) that gives more weighting or importance to recent price data. Like the simple moving average, the exponential moving average is used to see price trends over time, and watching several EMAs at the same time is easy to do with moving average ribbons.
-    ///
-    ///EMA=Price(t)×k+EMA(y)×(1−k)
-    ///where:
-    ///t=today
-    ///y=yesterday
-    ///N=number of days in EMA
-    ///k=2÷(N+1)
-    ///
-    ///  Given an array of prices
-    func emas(for range: Int, smoothing: Int = 2) -> [Double?] {
+    /**  The exponential moving average (EMA) is a technical chart indicator that tracks the price of an investment (like a stock or commodity) over time. The EMA is a type of weighted moving average (WMA) that gives more weighting or importance to recent price data. Like the simple moving average, the exponential moving average is used to see price trends over time, and watching several EMAs at the same time is easy to do with moving average ribbons.
+    - Parameter
+        - range: How far back to make the moving average.
+        - smoothing:  If the smoothing factor is increased, more recent observations have more influence
+    EMA=Price(t)×k+EMA(y)×(1−k)
+    where:
+    t=today
+    y=yesterday
+    N=number of days in EMA
+    k=2÷(N+1)
+    
+      Given an array of prices
+     */
+    func emas(for range: Int = 180, smoothing: Int = 2) -> [Double?] {
         var ema: Double?
         let multiplier: Double = Double(smoothing) / (Double(range) + 1)
         return (0..<count).map {

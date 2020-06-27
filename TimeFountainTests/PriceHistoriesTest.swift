@@ -20,8 +20,15 @@ extension TimeFountainTests {
             ticker: "TSLA"
         ) { dataFrame in
             //var dataFrame = dataFrame
+            print(dataFrame ?? "nil")
+            if let column = dataFrame?.columns.first {
+                XCTAssert(column.cells.count > 0)
+            } else {
+                XCTAssert(false)
+            }
             PriceHistoriesTestExpectation.fulfill()
         }
+        print(urls)
         XCTAssert(urls.count > 0)
         waitForExpectations(timeout: 5, handler: nil)
     }

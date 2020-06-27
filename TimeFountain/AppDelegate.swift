@@ -14,11 +14,9 @@ extension ViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         AppDelegate.refreshTokenAction = { [weak self] in
-            print(#line)
             self?.viewDidLoadAndRefreshtokenIsReady()
         }
         if AppDelegate.refreshedToken {
-            print(#line)
             viewDidLoadAndRefreshtokenIsReady()
         }
     }
@@ -52,13 +50,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         URL.refreshToken { token in
             print("Tokens refreshed.")
-            print("Access token: ", token.accessToken)
             AppDelegate.refreshedToken = true
         }
         let minutes = 60.0
         Timer.scheduledTimer(withTimeInterval: 29 * minutes, repeats: true) { _ in
             URL.refreshToken { _ in
-                print("Tokens refreshed.")
+               print("Tokens refreshed.")
             }
         }
     }

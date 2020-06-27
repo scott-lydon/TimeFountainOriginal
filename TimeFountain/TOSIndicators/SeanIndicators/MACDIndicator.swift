@@ -17,7 +17,7 @@ import Foundation
 ///2. Arrows
 ///    1. Green Up Arrow indicates a potential good buy.
 ///    2. Red Down Arrow indicates a potential time to sell.
-enum MACDIntersection {
+enum MACDIntersection: String {
     
     /// ends on negative, downtrend
     case negNegNeg

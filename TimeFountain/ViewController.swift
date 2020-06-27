@@ -12,7 +12,9 @@ class ViewController: NSViewController, NSTableViewDelegate, NSTableViewDataSour
     let model = TSLA()
     @IBOutlet weak var optionsTable: NSTableView!
     
+    /// View did load
     func viewDidLoadAndRefreshtokenIsReady() {
+        print(#line, ":", Int())
         optionsTable.delegate = self
         optionsTable.dataSource = self
         setDataFrames()
@@ -20,14 +22,28 @@ class ViewController: NSViewController, NSTableViewDelegate, NSTableViewDataSour
     
     func setDataFrames() {
         URL.finviz { symbols in
-            symbols.forEach { ticker in
-                URL.priceHistories(ticker: ticker) { dataFrame in
-                    dataFrame?.convertToCSV(ticker: ticker)
+            let firstOne = URL.priceHistories(tickers: ["TSLA"]).first
+            firstOne?.getData { data in
+                guard let candleList = CandleList(data) else {
+                    return
                 }
+                print(data.serialized)
+                assert(!candleList.candles.isEmpty, "")
+                guard let dataframe = DataFrame(candleList) else {
+                    return
+                }
+                let csvPath = dataframe.save(ticker: "TSLA.test")
+               // let csvpath = dataframe
+               // print(csvPath)
+               // print(csvPath.absoluteString, csvPath.relativePath)
+               // print(csvPath.absoluteString, csvPath.relativePath)
+                //                URL.priceHistories(ticker: ticker) { dataFrame in
+                //                    dataFrame?.convertToCSV(ticker: ticker)
+                //                }
             }
         }
     }
-        
+    
     func runBot() {
         let model = TSLA()
         let ticker = String(describing: model.self)
@@ -43,5 +59,16 @@ class ViewController: NSViewController, NSTableViewDelegate, NSTableViewDataSour
     
     @IBAction func dataFramesTapped(_ sender: NSButtonCell) {
         setDataFrames()
+    }
+}
+
+
+extension ViewController {
+    func numberOfRows(in tableView: NSTableView) -> Int {
+        return 0
+    }
+    
+    func tableView(_ tableView: NSTableView, objectValueFor tableColumn: NSTableColumn?, row: Int) -> Any? {
+        return nil
     }
 }

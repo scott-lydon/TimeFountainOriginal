@@ -204,3 +204,12 @@ extension String {
         var description: String
     }
 }
+
+
+
+extension Array where Element == String  {
+    
+    static var tickers: [String] {
+        "tickers".localized(fileName: "Ticker").components(separatedBy: ", ")
+    }
+}

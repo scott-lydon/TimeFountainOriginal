@@ -17,23 +17,23 @@ import Foundation
 ///    1. Indicator that the stock is on an uptrend is when it’s trading price is between Middle VWAP and Top VWAP
 ///    2. Indicator that the stock is on an downtrend is when it’s trading price is between the Middle VWAP and the Bottom VWAP
 
-
-extension Array where Element == Double {
-    
-    func simpleVwapIndicators(vwaps: [Double?]) -> [MACDIntersection?] {
-        [nil, nil] + (2..<count).map {
-            guard let firstVWAP = vwaps[$0 - 2], let secondVWAP = vwaps[$0 - 1], let thirdVWAP = vwaps[$0] else { return nil }
-            return MACDIntersection.simpleVWAP(
-                firstVWAP: firstVWAP,
-                firstClose: self[$0 - 2],
-                secondVWAP: secondVWAP,
-                secondClose: self[$0 - 1],
-                thirdVWAP: thirdVWAP,
-                thirdClose: self[$0]
-            )
-        }
-    }
-}
+//
+//extension Array where Element == Double {
+//    
+//    func simpleVwapIndicators(vwaps: [Double?]) -> [MACDIntersection?] {
+//        [nil, nil] + (2..<count).map {
+//            guard let firstVWAP = vwaps[$0 - 2], let secondVWAP = vwaps[$0 - 1], let thirdVWAP = vwaps[$0] else { return nil }
+//            return MACDIntersection.simpleVWAP(
+//                firstVWAP: firstVWAP,
+//                firstClose: self[$0 - 2],
+//                secondVWAP: secondVWAP,
+//                secondClose: self[$0 - 1],
+//                thirdVWAP: thirdVWAP,
+//                thirdClose: self[$0]
+//            )
+//        }
+//    }
+//}
 
 extension MACDIntersection {
     

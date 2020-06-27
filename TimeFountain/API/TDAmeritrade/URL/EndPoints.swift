@@ -79,7 +79,9 @@ extension URL {
     }
     
     static var transactions: URL? {
-        URL(string: .baseURL + "accounts/" + .account_id + "/transactions")
+        // Separated in order to speed up compile checking. 
+        let string: String = .baseURL + "accounts/" + .account_id + "/transactions"
+        return URL(string: string)
     }
     
     static var preferences: URL? {

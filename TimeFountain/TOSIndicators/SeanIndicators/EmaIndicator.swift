@@ -20,7 +20,7 @@ import Foundation
 ///        1. Could also be an indicator of a good time to sell.
 /// -  Strategy
 ///     We will flatten this enum.
-enum EmaIndicator {
+enum EmaIndicator: String {
     ///  \   / close
     ///   *
     ///  /   \ ema
@@ -94,13 +94,15 @@ extension Array where Element == Candle {
         map {$0.close}
     }
     
-    func breakOuts(_ emas: [Double?])-> [EmaIndicator?] {
-        [nil] + (1..<count).map {
+    /// Self = Prices
+    func breakOuts(for range: Int = 180, smoothing: Int = 2) -> [EmaIndicator?] {
+        let emas = closes.emas(for: range, smoothing: smoothing)
+        return [nil] + (1..<count).map {
             guard let candle1 = self[safe: $0 - 1],
                 let ema1 = emas[safe: $0 - 1] as? Double,
                 let candle2 = self[safe: $0],
                 let ema2 = emas[safe: $0] as? Double else {
-                    assert(false)
+                    //emas will be nil at first so this is acceptable.
                     return nil
             }
             return EmaIndicator(candle1, ema1, candle2, ema2: ema2)

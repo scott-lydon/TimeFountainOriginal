@@ -11,7 +11,7 @@ import Foundation
 typealias PriceMovementAfter = SMAEMACrossed
 
 
-enum SMAEMACrossed {
+enum SMAEMACrossed: String {
     case upward, downward, no
     
     static func fromPrice(_ first: Double, _ second: Double) -> SMAEMACrossed {

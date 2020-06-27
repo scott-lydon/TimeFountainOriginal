@@ -18,13 +18,15 @@ extension TimeFountainTests {
         let streamed = expectation(description: "streamed a response")
         URL.stream(
             [.quotes(
-                QuoteParams([.CBLI], fields: .Symbol, .Close_Price)
+                QuoteParams(["CBLI"], .Symbol, .Close_Price)
                 )
             ]
         ) { message in
             guard let data = message.data(using: .utf8) else { return }
             if let _ = StreamedQuote(data) {
                 streamed.fulfill()
+            } else if let response = Response(data) {
+                print(response.response.first?.content.msg ?? "nil response in list")
             }
         }
         waitForExpectations(timeout: 10, handler: nil)
@@ -39,7 +41,8 @@ extension TimeFountainTests {
             if let heartBeat = HeartBeat(data) {
                 print("Yay, we are winning, we have a heartbeat: \(heartBeat)")
                 heartBeatExpectation.fulfill()
-                
+            } else if let response = Response(data) {
+                print("Response message: ", response.response.first?.content.msg)
             }
         }
         waitForExpectations(timeout: 20, handler: nil)

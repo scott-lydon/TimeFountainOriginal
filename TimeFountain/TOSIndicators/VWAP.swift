@@ -69,7 +69,28 @@ struct VWAP {
     var lower: Double
 }
 
+typealias SimpleVWAP = MACDIntersection
+
 extension Array where Element == Candle {
+    
+    /// - Parameters
+    ///     - range: The default value is 180, a guess to line up with sma and ema defaults.
+    ///     - vwaps: volume weighted average.
+    func simpleVwapIndicators(range: Int = 180) -> [SimpleVWAP?] {
+        let closes: [Double] = self.closes
+        let vwaps = self.vwaps(range)
+        return [nil, nil] + (2..<count).map {
+            guard let firstVWAP = vwaps[$0 - 2], let secondVWAP = vwaps[$0 - 1], let thirdVWAP = vwaps[$0] else { return nil }
+            return MACDIntersection.simpleVWAP(
+                firstVWAP: firstVWAP,
+                firstClose: closes[$0 - 2],
+                secondVWAP: secondVWAP,
+                secondClose: closes[$0 - 1],
+                thirdVWAP: thirdVWAP,
+                thirdClose: closes[$0]
+            )
+        }
+    }
     
 ///    Find the average price the stock traded at over the first five-minute period of the day. To do this, add the high, low, and close, then divide by three. Multiply this by the volume for that period. Record the result in a spreadsheet, under column PV.
 ///    Divide PV by the volume for that period. This will give the VWAP value.
@@ -77,7 +98,7 @@ extension Array where Element == Candle {
     ///
     /// 100 * 10, 8 * 300, 11 * 200 / 100 + 300 + 200 = 9.33
     ///
-    func vwaps(_ range: Int) -> [Double?] {
+    func vwaps(_ range: Int = 180) -> [Double?] {
         var numeratorSum: Double = 0
         var volumes: Double = 0
         return enumerate { index, candle in

@@ -33,7 +33,7 @@ public extension String {
     }
     
     static var generateBoundaryString: String {
-        return "Boundary-\(NSUUID().uuidString)"
+        "Boundary-\(NSUUID().uuidString)"
     }
     
     // MARK - self variations
@@ -118,7 +118,7 @@ public extension String {
     
     func save(root: FileManager.SearchPathDirectory, pathStr: String) -> URL? {
         let fileManager = FileManager.default
-        var fileURL: URL?
+        var returnURL: URL?
         do {
             let path = try fileManager.url(
                 for: root,
@@ -127,22 +127,89 @@ public extension String {
                 create: true
             )
             let url = path.appendingPathComponent(pathStr)
-           fileURL = url
-//            guard let fileURL = URL(string: "/Users/scottlydon/Desktop/iOS/DataFrame/TSLA/priceHistory/1590632452.csv") else { return }
+            //guard let url = URL(string: "/Users/scottlydon/Desktop/"+pathStr) else { return nil }
+            //  guard let url = URL(string: "/Users/scottlydon/Desktop/iOS/DataFrame/TSLA/priceHistory/1590632452.csv") else { return nil }
+            returnURL = url
+            print(url.absoluteString)
             // TODO https://stackoverflow.com/questions/41162610/create-directory-in-swift-3-0
-            try write(to: url, atomically: true, encoding: .utf8)
+            try write(
+                to: url,
+                atomically: true,
+                encoding: .utf8
+            )
         } catch let err {
             print("error creating file: \(err.localizedDescription)")
         }
-        return fileURL
+        return returnURL
     }
     
-    func save() {
+    func createCSV(ticker: String) {
+        let fileManager = FileManager.default
+        do {
+            let path = try fileManager.url(
+                for: .documentDirectory,
+                in: .allDomainsMask,
+                appropriateFor: nil,
+                create: false
+            )
+            let fileURL = path.appendingPathComponent("\(ticker)_" + .currentDate + ".csv")
+            print(fileURL.absoluteString)
+            try write(
+                to: fileURL,
+                atomically: true,
+                encoding: .utf8
+            )
+        } catch let error {
+            print("error creating file", error.localizedDescription)
+        }
+    }
+    
+    static var currentDate: String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd-HH:mm:ss"
+        return dateFormatter.string(from: Date())
+    }
+    
+    
+    /**
+            ## Saves a file locally using the FileManager.createFile method.
+     - Parameters
+            - path: Full absolute path including the file name and extension.  For example: /Users/scottlydon/Desktop/iOS/DataFrame/TSLA/priceHistory/1590632452.csv
+     */
+    @discardableResult
+    func save(path: String = "/Users/scottlydon/Desktop/iOS/DataFrame/TSLA/priceHistory/1590632452.csv") -> String {
         let fileManager = FileManager()
         fileManager.createFile(
-            atPath: "/Users/scottlydon/Desktop/iOS/DataFrame/TSLA/priceHistory/1590632452.csv",
+            atPath: path,
             contents: data(using: .utf8),
             attributes: nil
         )
+        return path
+    }
+    
+    /**
+        - Parameters
+            - ticker: A stock ticker or symbol.
+            -   named: file name.  Something unique is good.  the default value is the current time in seconds.
+     */
+    static func localPath(
+        ticker: String,
+        named: String = Int(Date().timeIntervalSince1970).description
+    ) -> String {
+        "/Users/scottlydon/Desktop/iOS/DataFrame/"+ticker+"/priceHistory/"+named+".csv"
+    }
+    
+    /**
+       ## Use this when you are already setting the FileManager.SearchPathDirectory
+        - Parameters
+            - ticker: A stock ticker or symbol.
+            -   named: file name.  Something unique is good.  the default value is the current time in seconds.
+     */
+    static func partialLocalPath(
+        ticker: String,
+        named: String = Int(Date().timeIntervalSince1970).description
+    ) -> String {
+        "/iOS/DataFrame/"+ticker+"/priceHistory/"+named+".csv"
     }
 }
+

@@ -13,6 +13,27 @@ enum Trend: Int {
     case down = -1
     case level = 0
     
+    init(_ slope: Double) {
+        if slope > 0 {
+            self = .up
+        } else if slope < 0 {
+            self = .down
+        } else {
+            self = .level
+        }
+    }
+    
+    var string: String {
+        switch self {
+        case .up:
+            return "up"
+        case .down:
+            return "down"
+        case .level:
+            return "level"
+        }
+    }
+    
     init(_ candle1: Candle, _ candle2: Candle) {
         if candle1.average > candle2.average {
             self = .down

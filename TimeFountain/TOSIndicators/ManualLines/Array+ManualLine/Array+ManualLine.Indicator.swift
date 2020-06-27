@@ -32,7 +32,7 @@ extension Array where Element == Point {
     var manualLines: [ManualLine] {
         var lines:[ManualLine] = []
         for (i,e) in self.enumerated() {
-            
+            /// https://towardsdatascience.com/programmatic-identification-of-support-resistance-trend-lines-with-python-d797a4a90530
         }
         return lines
     }

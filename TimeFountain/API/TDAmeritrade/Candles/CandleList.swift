@@ -17,8 +17,12 @@ struct CandleList: Codable {
         candles.map {$0.close}
     }
     
-    var dates: [Double] {
+    var timestamps: [Double] {
         candles.map { $0.datetime }
+    }
+    
+    var dates: [Date] {
+        candles.map { Date(timeIntervalSince1970: $0.datetime)}
     }
     
     init(candles: [Candle] = [], empty: Bool = true, symbol: String) {

@@ -207,12 +207,15 @@ struct QuoteParams: Parameters {
 //    init(_ tickers: [Ticker], fields: Field...) {
 //        self.init(tickers, fields)
 //    }
-    
+//    
 //    init(_ tickers: [Ticker], _ fields: [Field]) {
 //        self.keys = tickers.map { $0.rawValue }.joined(separator: ",")
 //        self.fields = fields.map { String($0.rawValue) }.joined(separator: ",")
 //    }
-    
+//
+    init(_ tickers: [String], _ fields: Field...) {
+        self.init(tickers, fields)
+    }
     
     init(_ tickers: [String], _ fields: [Field]) {
         self.keys = tickers.map { $0 }.joined(separator: ",")

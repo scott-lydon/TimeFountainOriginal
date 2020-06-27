@@ -11,7 +11,7 @@ import Foundation
 ///Usage:
 ///1. RSI indicator closer to 30 and/or Blue indicates a stock is oversold, and therefore underpriced potentially indicating a good buy
 ///2. RSI indicator closer to 60 and/or Red indicates a stock is overbought  and therefore overpriced and potentially indicating a bad buy
-enum RSIPercentile {
+enum RSIPercentile: String {
     case belowZero, lowerTen, lowerTwenty, lowerThirty, lowerForty, lowerFifty, upperFifty, upperSixty, upperSeventy, upperEighty, upperNinety, above100
     
     init(rsi: Double) {
@@ -38,6 +38,7 @@ enum RSIPercentile {
         } else if 90...100 ~= rsi {
             self = .upperNinety
         } else {
+            print("WARNING: RSI is above 100%")
             self = .above100
         }
     }
@@ -52,5 +53,4 @@ extension Array where Element == Double {
             return RSIPercentile(rsi: rsi)
         }
     }
-    
 }

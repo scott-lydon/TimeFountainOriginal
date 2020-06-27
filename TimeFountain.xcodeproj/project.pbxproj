@@ -201,6 +201,8 @@
 		75B3F1CB24927DE300C5BF87 /* SaveHistoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B3F1CA24927DE300C5BF87 /* SaveHistoryTests.swift */; };
 		75B3F1CD249280AA00C5BF87 /* TDIteration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B3F1CC249280AA00C5BF87 /* TDIteration.swift */; };
 		75E9714C248C11DE00FED161 /* SWSWebSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E9714B248C11DE00FED161 /* SWSWebSocket.swift */; };
+		75F0CE8B24A51A6B006C3430 /* TDResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F0CE8A24A51A6B006C3430 /* TDResponse.swift */; };
+		75F0CE8D24A566CD006C3430 /* Ticker.strings in Resources */ = {isa = PBXBuildFile; fileRef = 75F0CE8C24A566CD006C3430 /* Ticker.strings */; };
 		75FE49B924A335C70057CD31 /* NotesConvoWithSean.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75FE49B824A335C70057CD31 /* NotesConvoWithSean.swift */; };
 		75FE49BB24A3361E0057CD31 /* ManualLineIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75FE49BA24A3361E0057CD31 /* ManualLineIndicator.swift */; };
 		75FE49BD24A34CA90057CD31 /* Array+ManualLine.Indicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75FE49BC24A34CA90057CD31 /* Array+ManualLine.Indicator.swift */; };
@@ -427,6 +429,8 @@
 		75B3F1CA24927DE300C5BF87 /* SaveHistoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveHistoryTests.swift; sourceTree = "<group>"; };
 		75B3F1CC249280AA00C5BF87 /* TDIteration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TDIteration.swift; sourceTree = "<group>"; };
 		75E9714B248C11DE00FED161 /* SWSWebSocket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWSWebSocket.swift; sourceTree = "<group>"; };
+		75F0CE8A24A51A6B006C3430 /* TDResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TDResponse.swift; sourceTree = "<group>"; };
+		75F0CE8C24A566CD006C3430 /* Ticker.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Ticker.strings; sourceTree = "<group>"; };
 		75FE49B824A335C70057CD31 /* NotesConvoWithSean.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesConvoWithSean.swift; sourceTree = "<group>"; };
 		75FE49BA24A3361E0057CD31 /* ManualLineIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManualLineIndicator.swift; sourceTree = "<group>"; };
 		75FE49BC24A34CA90057CD31 /* Array+ManualLine.Indicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+ManualLine.Indicator.swift"; sourceTree = "<group>"; };
@@ -489,6 +493,7 @@
 			isa = PBXGroup;
 			children = (
 				754C03C6247E06CE00A12CF7 /* OrderLegCollection.swift */,
+				75F0CE8A24A51A6B006C3430 /* TDResponse.swift */,
 				75B3F1CC249280AA00C5BF87 /* TDIteration.swift */,
 				754C03C4247E06C600A12CF7 /* Mover.swift */,
 				754C03C1247E06BF00A12CF7 /* Hours.swift */,
@@ -934,6 +939,7 @@
 			isa = PBXGroup;
 			children = (
 				75B3F1B4248E077700C5BF87 /* TickerEnum.swift */,
+				75F0CE8C24A566CD006C3430 /* Ticker.strings */,
 			);
 			path = TickerEnum;
 			sourceTree = "<group>";
@@ -1104,6 +1110,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75F0CE8D24A566CD006C3430 /* Ticker.strings in Resources */,
 				7565787E248ACE630037490D /* Credentials.strings in Resources */,
 				75A4FC52247E049F00E4DC0B /* Assets.xcassets in Resources */,
 				75A4FC55247E049F00E4DC0B /* Main.storyboard in Resources */,
@@ -1219,6 +1226,7 @@
 				754C03E9247E0C6800A12CF7 /* Option.swift in Sources */,
 				754C03C3247E06BF00A12CF7 /* Hours.swift in Sources */,
 				754C0413247E0CDC00A12CF7 /* QuoteMutualFund.swift in Sources */,
+				75F0CE8B24A51A6B006C3430 /* TDResponse.swift in Sources */,
 				754C0429247E0D3300A12CF7 /* PeriodFrequencies.swift in Sources */,
 				75A4FC50247E049C00E4DC0B /* TimeFountain.xcdatamodeld in Sources */,
 				754C03F1247E0C8000A12CF7 /* InstrumentDetails.swift in Sources */,
@@ -1491,6 +1499,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = TimeFountain/TimeFountain.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 8L7Z3WU967;
@@ -1500,6 +1509,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				"OTHER_SWIFT_FLAGS[arch=*]" = "-Xfrontend -warn-long-function-bodies=200 -Xfrontend -warn-long-expression-type-checking=200 -Onone";
 				PRODUCT_BUNDLE_IDENTIFIER = ScottLydon.TimeFountain;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -1511,6 +1521,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = TimeFountain/TimeFountain.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 8L7Z3WU967;

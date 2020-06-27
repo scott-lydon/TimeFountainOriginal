@@ -20,6 +20,6 @@ extension Array where Element == [String] {
 
 extension Array where Element == String {
     var commaSeparatedNewLine: String {
-        return self.joined(separator: ",") + "\n"
+         joined(separator: ",") + "\n"
     }
 }

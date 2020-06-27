@@ -36,16 +36,17 @@ class TDAmeritradeURL {
         return kv(.apikey, apiKey)
     }
     
-    func period(_ period: URL.Period) -> TDAmeritradeURL {
-        kv(period.dictionary)
+    func period(_ period: URL.Period?) -> TDAmeritradeURL {
+        guard let period = period else { return self }
+        return kv(period.dictionary)
     }
     
     func endDate(_ endDate: Date?) -> TDAmeritradeURL {
-        kv(.endDate, endDate?.timeIntervalSince1970.string)
+        kv(.endDate, endDate?.timeIntervalSince1970.int?.string)
     }
     
     func startDate(_ startDate: Date?) -> TDAmeritradeURL {
-        kv(.startDate, startDate?.timeIntervalSince1970.string)
+        kv(.startDate, startDate?.timeIntervalSince1970.int?.string)
     }
     
     func needsExtendedHoursData(_ needsExtendedHoursData: Bool?) -> TDAmeritradeURL {
@@ -97,5 +98,12 @@ class TDAmeritradeURL {
     var build: URL {
         str.removeLast()
         return URL(string: str)!
+    }
+}
+
+
+extension Double {
+    var int: Int? {
+        Int(self)
     }
 }

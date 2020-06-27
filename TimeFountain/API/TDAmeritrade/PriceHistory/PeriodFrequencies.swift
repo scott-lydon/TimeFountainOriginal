@@ -14,7 +14,7 @@ extension Array where Element == URL {
     
     func callEnumerations(
         waitTime: Double = 0,
-        expressive: Bool = false,
+        showURLBeingCalled: Bool = false,
         enumerateCall: @escaping Enumerate,
         finished: @escaping Action
     ) {
@@ -22,7 +22,7 @@ extension Array where Element == URL {
         group.enter(count)
         enumerate { index, url in
             DispatchQueue.main.asyncAfter(deadline: .now() + waitTime) {
-                if expressive {
+                if showURLBeingCalled {
                     print("Dispatch called with waitTime: \(waitTime), at: \(Date().clockTime)\n about to call: \(url.absoluteString)")
                 }
                 url.getData { data in
@@ -94,10 +94,8 @@ extension URL {
             tickersFinish.notify(queue: DispatchQueue.main) {
                 allCandles.candles.sort { $0.datetime > $1.datetime }
                 guard let dataframe = DataFrame(allCandles) else { return }
-                let csv = dataframe.convertToCSV(
-                    named: ticker + "_" + Date().timeIntervalSince1970.string
-                )
-                print(csv?.absoluteString ?? "nil")
+                let csv = dataframe.save(ticker: ticker)
+               // print(csv?.absoluteString ?? "nil")
                 completion()
             }
         }
@@ -105,6 +103,19 @@ extension URL {
     
     typealias DataFrameAction = (DataFrame?) -> Void
     
+    static func priceHistories(
+        apiKey: String? = Bundle.td_api_key,
+        period: Period = .days(.ten, .oneMinute),
+        needExtendedHoursData: Bool = false, // true for swing trades, false for day trades.
+        tickers: [String]
+    ) -> [URL] {
+        tickers.map {
+            URL.priceHistory(
+                period: period,
+                ticker: $0
+            )
+        }
+    }
     
     @discardableResult
     static func priceHistories(
@@ -132,12 +143,16 @@ extension URL {
         )
         urls.callEnumerations(
             waitTime: 0.5,
-            expressive: true,
             enumerateCall: { index, url, data in
                 if let candleListCandles = CandleList(data)?.candles {
                     candles.append(contentsOf: candleListCandles)
+                } else if let response = Response(data){
+                    print("ERROR: Should not reach, \(#function), \(#line): \(data.serialized)")
+                } else if let error = TDError(data) {
+                    print(#line, ": ", data.serialized)
+                    print(data.serialized)
                 } else {
-                    print("ERROR: Should not reach.")
+                    print("ERROR: Unknown issue, weird response.")
                 }
         }, finished: {
             dataFrameAction(
@@ -153,13 +168,45 @@ extension URL {
         return urls
     }
     
-
+    static func priceHistory(
+        apiKey: String? = Bundle.td_api_key,
+        period: Period = .days(.ten, .oneMinute),
+        endDate: Date? = nil,
+        needExtendedHoursData: Bool? = false, // true for swing trades, false for day trades.
+        ticker: String
+    ) -> URL {
+        URL.priceHistory(
+            apiKey: apiKey,
+            period: period,
+            endDate: endDate,
+            startDate: nil,
+            needExtendedHoursData: needExtendedHoursData, // true for swing trades, false for day trades.
+            ticker: ticker
+        )
+    }
+    
+    static func priceHistory(
+        apiKey: String? = Bundle.td_api_key,
+        endDate: Date,
+        startDate: Date,
+        needExtendedHoursData: Bool? = false, // true for swing trades, false for day trades.
+        ticker: String
+    ) -> URL {
+        URL.priceHistory(
+            apiKey: apiKey,
+            period: nil,
+            endDate: endDate,
+            startDate: startDate,
+            needExtendedHoursData: needExtendedHoursData, // true for swing trades, false for day trades.
+            ticker: ticker
+        )
+    }
     
     
     /// Header: Authorization: Bearer <access token>
     static func priceHistory(
         apiKey: String? = Bundle.td_api_key,
-        period: Period = .days(.ten, .oneMinute),
+        period: Period? = .days(.ten, .oneMinute),
         endDate: Date? = nil,
         startDate: Date? = nil,
         needExtendedHoursData: Bool? = false, // true for swing trades, false for day trades.
@@ -214,6 +261,26 @@ extension URL {
                 dict[.frequencyType] = dailyWeeklyMonthly.rawValue
             case .ytd(let dailyWeekly):
                 dict[.period] = 1.string
+                dict[.frequency] = 1.string
+                dict[.frequencyType] = dailyWeekly.rawValue
+            }
+            return dict
+        }
+        
+        var dictionaryWithoutPeriod: [TDAmeritradeURL.Key: String] {
+            var dict: [TDAmeritradeURL.Key: String] = [:]
+            dict[.periodType] = string
+            switch self {
+            case .days(let dayCount, let minute):
+                dict[.frequency] = minute.rawValue
+                dict[.frequencyType] = Minute.path
+            case .months(let monthCount, let dailyWeekly):
+                dict[.frequency] = 1.string
+                dict[.frequencyType] = dailyWeekly.rawValue
+            case .years(let yearCount, let dailyWeeklyMonthly):
+                dict[.frequency] = 1.string
+                dict[.frequencyType] = dailyWeeklyMonthly.rawValue
+            case .ytd(let dailyWeekly):
                 dict[.frequency] = 1.string
                 dict[.frequencyType] = dailyWeekly.rawValue
             }

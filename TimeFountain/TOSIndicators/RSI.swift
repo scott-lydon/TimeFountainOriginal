@@ -48,7 +48,7 @@ extension Array where Element == Double {
         var negativeSum: Double = 0
         var previousPositiveSum: Double = 0
         var previousNegativeSum: Double = 0
-        return [nil] + enumerate { index, gain in
+        return enumerate { index, gain in
             positiveSum += gain.positiveOnly
             negativeSum += abs(gain.negativeOnly)
             if let earlyGain = self[safe: index - length] {
